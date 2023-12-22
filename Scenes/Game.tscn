@@ -3,10 +3,10 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
-offset_left = 638.0
-offset_top = 279.0
-offset_right = 684.0
-offset_bottom = 302.0
-scale = Vector2(13.0096, 17.1065)
+offset_left = 793.0
+offset_top = 377.0
+offset_right = 839.0
+offset_bottom = 400.0
+scale = Vector2(4.54613, 6.79406)
 text = "Game
 "

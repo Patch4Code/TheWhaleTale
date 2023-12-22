@@ -1,5 +1,2 @@
-res://MainMenu.tscn
-res://Scenes/MainMenu.tscn
-res://Scenes/Game.tscn
-res://Scenes/MainMenu.gd
 res://Scripts/MainMenu.tscn
+res://Scenes/Game.tscn
