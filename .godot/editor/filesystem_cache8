@@ -1,4 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1703257203
+::res://::1703266003
 icon.svg::CompressedTexture2D::8282323974453515629::1702840579::1702840588::1::::<><>::
-MainMenu.tscn::PackedScene::8445518944364116618::1702841032::0::1::::<><>::
+::res://Scenes/::1703265991
+Game.tscn::PackedScene::5906431521634219920::1703265974::0::1::::<><>::
+MainMenu.gd::GDScript::-1::1703265991::0::1::::<>Node2D<>::
+MainMenu.tscn::PackedScene::8445518944364116618::1703265991::0::1::::<><>::res://Video/WhaleTaleExpanded_animation.ogv<>res://Scenes/MainMenu.gd
+::res://Scripts/::1703266003
+::res://TheWhaleTale/::1703257323
+::res://Video/::1703263815
+WhaleTaleExpanded_animation.ogv::VideoStreamTheora::-1::1703263585::0::1::::<><>::

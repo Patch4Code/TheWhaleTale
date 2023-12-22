@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://dslcp0l81tdok"]
+
+[ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_yy4aw"]
+[ext_resource type="VideoStream" path="res://Video/WhaleTaleExpanded_animation.ogv" id="2_apoj6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5d02"]
+bg_color = Color(0.0313726, 0.0509804, 0.211765, 1)
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_yy4aw")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1921.0
+offset_bottom = 1082.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h5d02")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = 111.0
+offset_top = 43.0
+offset_right = 1809.0
+offset_bottom = 1005.0
+stream = ExtResource("2_apoj6")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Play" type="Button" parent="."]
+offset_left = 736.0
+offset_top = 352.0
+offset_right = 1184.0
+offset_bottom = 463.0
+theme_override_font_sizes/font_size = 75
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 736.0
+offset_top = 572.0
+offset_right = 1184.0
+offset_bottom = 683.0
+theme_override_font_sizes/font_size = 75
+text = "Quit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
