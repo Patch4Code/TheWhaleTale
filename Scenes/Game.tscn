@@ -3,10 +3,10 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
-offset_left = 760.0
-offset_top = 410.0
-offset_right = 806.0
-offset_bottom = 433.0
-scale = Vector2(8.84161, 9.38393)
-text = "Game
-"
+offset_left = 485.0
+offset_top = 383.0
+offset_right = 1463.0
+offset_bottom = 660.0
+theme_override_font_sizes/font_size = 100
+text = "Hier wird das Game 
+in zukunft eingefügt"

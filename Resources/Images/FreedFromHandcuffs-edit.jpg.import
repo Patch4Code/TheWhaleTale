@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck07qf133284s"
-path="res://.godot/imported/papagei-edit.jpg-e96cc821d459f0411ae70d99066a1b32.ctex"
+uid="uid://dpiwwxlk8j66s"
+path="res://.godot/imported/FreedFromHandcuffs-edit.jpg-858524d6df0a4ddeb22b1c0d3400edbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/papagei-edit.jpg"
-dest_files=["res://.godot/imported/papagei-edit.jpg-e96cc821d459f0411ae70d99066a1b32.ctex"]
+source_file="res://Resources/Images/FreedFromHandcuffs-edit.jpg"
+dest_files=["res://.godot/imported/FreedFromHandcuffs-edit.jpg-858524d6df0a4ddeb22b1c0d3400edbb.ctex"]
 
 [params]
 

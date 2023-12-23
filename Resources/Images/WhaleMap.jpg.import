@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg03tvwukdne5"
-path="res://.godot/imported/ship-edit.jpg-3642b21bb22dba98a9a09597db61a368.ctex"
+uid="uid://hetl1mk52t4v"
+path="res://.godot/imported/WhaleMap.jpg-e0f187f7c3526090c38ce78fa1638f61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/ship-edit.jpg"
-dest_files=["res://.godot/imported/ship-edit.jpg-3642b21bb22dba98a9a09597db61a368.ctex"]
+source_file="res://Resources/Images/WhaleMap.jpg"
+dest_files=["res://.godot/imported/WhaleMap.jpg-e0f187f7c3526090c38ce78fa1638f61.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kxgp8oen8br6"
-path="res://.godot/imported/verschluckt.jpeg-ed0b7837037d184b7cf4de80eee8fc44.ctex"
+uid="uid://ck07qf133284s"
+path="res://.godot/imported/papagei-edit.jpg-c62d546483361ac5f3315628b02f62e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/verschluckt.jpeg"
-dest_files=["res://.godot/imported/verschluckt.jpeg-ed0b7837037d184b7cf4de80eee8fc44.ctex"]
+source_file="res://Resources/Images/papagei-edit.jpg"
+dest_files=["res://.godot/imported/papagei-edit.jpg-c62d546483361ac5f3315628b02f62e4.ctex"]
 
 [params]
 

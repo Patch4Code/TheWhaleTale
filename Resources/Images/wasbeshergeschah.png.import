@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hetl1mk52t4v"
-path="res://.godot/imported/WhaleMap.jpg-3cc33d7bcc01ea44dbed7f84739c52aa.ctex"
+uid="uid://etfxii4lxer1"
+path="res://.godot/imported/wasbeshergeschah.png-21a69550a9b47cf2d538704c266c9db4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/WhaleMap.jpg"
-dest_files=["res://.godot/imported/WhaleMap.jpg-3cc33d7bcc01ea44dbed7f84739c52aa.ctex"]
+source_file="res://Resources/Images/wasbeshergeschah.png"
+dest_files=["res://.godot/imported/wasbeshergeschah.png-21a69550a9b47cf2d538704c266c9db4.ctex"]
 
 [params]
 

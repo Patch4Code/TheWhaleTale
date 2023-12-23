@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg1382flwro8"
-path="res://.godot/imported/textrahmen.png-700340b3dbf8c56064d42d475c9b1fc2.ctex"
+uid="uid://dg03tvwukdne5"
+path="res://.godot/imported/ship-edit.jpg-817f8c065bb02034f2ff2f33405a5ba8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/textrahmen.png"
-dest_files=["res://.godot/imported/textrahmen.png-700340b3dbf8c56064d42d475c9b1fc2.ctex"]
+source_file="res://Resources/Images/ship-edit.jpg"
+dest_files=["res://.godot/imported/ship-edit.jpg-817f8c065bb02034f2ff2f33405a5ba8.ctex"]
 
 [params]
 
