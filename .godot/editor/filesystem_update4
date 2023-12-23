@@ -1,2 +1,5 @@
-res://Scripts/MainMenu.tscn
+res://Scenes/Recap.tscn
+res://Scenes/MainMenu.tscn
 res://Scenes/Game.tscn
+res://Scripts/Recap.gd
+res://Scripts/MainMenu.gd

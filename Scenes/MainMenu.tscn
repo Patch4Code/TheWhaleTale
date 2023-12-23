@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://dslcp0l81tdok"]
 
-[ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_yy4aw"]
-[ext_resource type="VideoStream" path="res://Video/WhaleTaleExpanded3_animation.ogv" id="2_7cmyu"]
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_nfkup"]
+[ext_resource type="VideoStream" path="res://Video/WhaleTaleExpanded3_animation.ogv" id="2_xn0lw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5d02"]
 bg_color = Color(0.0313726, 0.0509804, 0.211765, 1)
 
 [node name="MainMenu" type="Node2D"]
-script = ExtResource("1_yy4aw")
+script = ExtResource("1_nfkup")
 
 [node name="Panel" type="Panel" parent="."]
 visible = false
@@ -20,7 +20,7 @@ offset_left = -1.0
 offset_top = -30.0
 offset_right = 1921.0
 offset_bottom = 1083.0
-stream = ExtResource("2_7cmyu")
+stream = ExtResource("2_xn0lw")
 autoplay = true
 expand = true
 loop = true

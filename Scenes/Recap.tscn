@@ -1,0 +1,205 @@
+[gd_scene load_steps=10 format=3 uid="uid://dhes3oyduxs6t"]
+
+[ext_resource type="Script" path="res://Scripts/Recap.gd" id="1_fbum5"]
+[ext_resource type="Texture2D" uid="uid://dg1382flwro8" path="res://Images/textrahmen.png" id="1_rvuo7"]
+[ext_resource type="Texture2D" uid="uid://kxgp8oen8br6" path="res://Images/verschluckt.jpeg" id="1_ymdfc"]
+[ext_resource type="Texture2D" uid="uid://etfxii4lxer1" path="res://Images/wasbeshergeschah.png" id="2_o1bj5"]
+[ext_resource type="Texture2D" uid="uid://dg03tvwukdne5" path="res://Images/ship-edit.jpg" id="3_dh54v"]
+[ext_resource type="Texture2D" uid="uid://ck07qf133284s" path="res://Images/papagei-edit.jpg" id="4_4g5a0"]
+[ext_resource type="Texture2D" uid="uid://dpiwwxlk8j66s" path="res://Images/FreedFromHandcuffs-edit.jpg" id="5_2xrji"]
+[ext_resource type="Texture2D" uid="uid://hetl1mk52t4v" path="res://Images/WhaleMap.jpg" id="6_2tosc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydbb5"]
+bg_color = Color(0.368627, 0.631373, 0.713726, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fbum5")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1921.0
+offset_bottom = 1078.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ydbb5")
+
+[node name="verschluckt" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="verschluckt"]
+layout_mode = 2
+offset_left = 1232.0
+offset_top = 465.0
+offset_right = 1722.0
+offset_bottom = 678.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Du wurdest von 
+einem gewaltigen
+ Wal verschluckt"
+
+[node name="Textrahmen" type="Sprite2D" parent="verschluckt"]
+position = Vector2(1463, 551)
+scale = Vector2(0.63375, 0.63375)
+texture = ExtResource("1_rvuo7")
+
+[node name="Verschluckt" type="Sprite2D" parent="verschluckt"]
+position = Vector2(498, 542)
+scale = Vector2(0.883789, 0.955128)
+texture = ExtResource("1_ymdfc")
+
+[node name="Button1" type="Button" parent="verschluckt"]
+offset_left = 1465.0
+offset_top = 877.0
+offset_right = 1844.0
+offset_bottom = 992.0
+theme_override_font_sizes/font_size = 50
+text = "Weiter"
+
+[node name="Schiff" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Ship-edit" type="Sprite2D" parent="Schiff"]
+position = Vector2(498.25, 541.75)
+scale = Vector2(0.884277, 0.955566)
+texture = ExtResource("3_dh54v")
+
+[node name="Label" type="Label" parent="Schiff"]
+offset_left = 1232.25
+offset_top = 464.25
+offset_right = 1722.25
+offset_bottom = 677.25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "..."
+
+[node name="Textrahmen" type="Sprite2D" parent="Schiff"]
+position = Vector2(1463.25, 550.25)
+scale = Vector2(0.63375, 0.63375)
+texture = ExtResource("1_rvuo7")
+
+[node name="Button2" type="Button" parent="Schiff"]
+offset_left = 1465.0
+offset_top = 877.0
+offset_right = 1844.0
+offset_bottom = 992.0
+theme_override_font_sizes/font_size = 50
+text = "Weiter"
+
+[node name="Papagei" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Papagei"]
+offset_left = 1232.25
+offset_top = 464.25
+offset_right = 1722.25
+offset_bottom = 677.25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "..."
+
+[node name="Textrahmen" type="Sprite2D" parent="Papagei"]
+position = Vector2(1463.25, 550.25)
+scale = Vector2(0.63375, 0.63375)
+texture = ExtResource("1_rvuo7")
+
+[node name="Papagei-edit" type="Sprite2D" parent="Papagei"]
+position = Vector2(498.5, 541.5)
+scale = Vector2(0.883789, 0.956055)
+texture = ExtResource("4_4g5a0")
+
+[node name="Button3" type="Button" parent="Papagei"]
+offset_left = 1465.0
+offset_top = 877.0
+offset_right = 1844.0
+offset_bottom = 992.0
+theme_override_font_sizes/font_size = 50
+text = "Weiter"
+
+[node name="befreit" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="befreit"]
+offset_left = 1232.25
+offset_top = 464.25
+offset_right = 1722.25
+offset_bottom = 677.25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "..."
+
+[node name="Textrahmen" type="Sprite2D" parent="befreit"]
+position = Vector2(1463.25, 550.25)
+scale = Vector2(0.63375, 0.63375)
+texture = ExtResource("1_rvuo7")
+
+[node name="FreedFromHandcuffs-edit" type="Sprite2D" parent="befreit"]
+position = Vector2(499, 542)
+scale = Vector2(0.882813, 0.957031)
+texture = ExtResource("5_2xrji")
+
+[node name="Button4" type="Button" parent="befreit"]
+offset_left = 1465.0
+offset_top = 877.0
+offset_right = 1844.0
+offset_bottom = 992.0
+theme_override_font_sizes/font_size = 50
+text = "Weiter"
+
+[node name="Karte" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Karte"]
+offset_left = 1232.25
+offset_top = 464.25
+offset_right = 1722.25
+offset_bottom = 677.25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "..."
+
+[node name="Textrahmen" type="Sprite2D" parent="Karte"]
+position = Vector2(1463.25, 550.25)
+scale = Vector2(0.63375, 0.63375)
+texture = ExtResource("1_rvuo7")
+
+[node name="WhaleMap" type="Sprite2D" parent="Karte"]
+position = Vector2(499.75, 542.032)
+scale = Vector2(0.881348, 0.957094)
+texture = ExtResource("6_2tosc")
+
+[node name="Button5" type="Button" parent="Karte"]
+offset_left = 1465.0
+offset_top = 877.0
+offset_right = 1844.0
+offset_bottom = 992.0
+theme_override_font_sizes/font_size = 50
+text = "Weiter"
+
+[node name="Wasbeshergeschah" type="Sprite2D" parent="."]
+position = Vector2(1453, 114)
+texture = ExtResource("2_o1bj5")
+
+[connection signal="pressed" from="verschluckt/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Schiff/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Papagei/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="befreit/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Karte/Button5" to="." method="_on_button_5_pressed"]
