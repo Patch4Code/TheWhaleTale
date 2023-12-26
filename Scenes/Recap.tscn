@@ -12,7 +12,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydbb5"]
 bg_color = Color(0.368627, 0.631373, 0.713726, 1)
 
-[node name="Node2D" type="Node2D"]
+[node name="RecapView" type="Node2D"]
 script = ExtResource("1_fbum5")
 
 [node name="Panel" type="Panel" parent="."]

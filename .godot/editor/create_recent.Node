@@ -1,7 +1,13 @@
-Label
-Control
 Panel
+CollisionShape2D
+StaticBody2D
+TileMap
+CharacterBody2D
+AnimationPlayer
+AnimatedSprite2D
+Camera2D
+Control
+Label
 Button
 Container
-Camera2D
 VideoStreamPlayer

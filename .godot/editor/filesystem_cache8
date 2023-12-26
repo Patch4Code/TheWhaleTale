@@ -1,9 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1703351655
-export_presets.cfg::TextFile::-1::1703281154::0::1::::<><>::
+::res://::1703549150
+export_presets.cfg::TextFile::-1::1703351800::0::1::::<><>::
 icon.svg::CompressedTexture2D::8282323974453515629::1702840579::1702840588::1::::<><>::
-::res://Resources/::1703351581
-::res://Resources/Images/::1703351507
+::res://Characters/::1703549681
+Player.tscn::PackedScene::5880634730610293072::1703549681::0::1::::<><>::uid://cglo1endr14a8::::res://Resources/Sprites/Player/Attack_1.png<>uid://881w03i3jj5q::::res://Resources/Sprites/Player/Idle.png<>res://Scripts/Player.gd<>uid://b1yaht3asevtf::::res://Resources/Sprites/Player/Attack_2.png<>uid://d0ty2lpyc1y8p::::res://Resources/Sprites/Player/Attack_3.png<>uid://c830sxu8bei1v::::res://Resources/Sprites/Player/Dead.png<>uid://dr61m1tjlh48x::::res://Resources/Sprites/Player/Jump.png<>uid://325vic8dca5::::res://Resources/Sprites/Player/Hurt.png<>uid://bxvq28lgitia4::::res://Resources/Sprites/Player/Idle_2.png<>uid://bm6m4r4wu8llc::::res://Resources/Sprites/Player/Run.png<>uid://diwm05rgmetfc::::res://Resources/Sprites/Player/Walk.png
+::res://Resources/::1703528201
+::res://Resources/Images/::1703544123
+artwork-depicting-the-interior-of-a-giant-whales-stomach-envisioned-as-the-background-for-a-2d-gam-444932045.png::CompressedTexture2D::7564258670136360210::1702917537::1703544123::1::::<><>::
 FreedFromHandcuffs-edit.jpg::CompressedTexture2D::8229986014517782916::1703333568::1703351507::1::::<><>::
 papagei-edit.jpg::CompressedTexture2D::5528311068181400712::1703286923::1703351507::1::::<><>::
 ship-edit.jpg::CompressedTexture2D::7633739700538901010::1703286629::1703351507::1::::<><>::
@@ -11,13 +14,29 @@ textrahmen.png::CompressedTexture2D::224583216702756609::1703342847::1703351507:
 verschluckt.jpeg::CompressedTexture2D::749761968687100349::1703282787::1703351507::1::::<><>::
 wasbeshergeschah.png::CompressedTexture2D::320323643981382900::1703341931::1703351507::1::::<><>::
 WhaleMap.jpg::CompressedTexture2D::500754067718267699::1703339807::1703351507::1::::<><>::
+::res://Resources/Sprites/::1703528234
+::res://Resources/Sprites/Player/::1703528239
+Attack_1.png::CompressedTexture2D::5217579283385249173::1688304543::1703528239::1::::<><>::
+Attack_2.png::CompressedTexture2D::4260889226159124511::1688304585::1703528239::1::::<><>::
+Attack_3.png::CompressedTexture2D::8954712345642167297::1688304631::1703528239::1::::<><>::
+Dead.png::CompressedTexture2D::7148427094098408569::1688304767::1703528239::1::::<><>::
+Hurt.png::CompressedTexture2D::59496625219393678::1688304728::1703528239::1::::<><>::
+Idle.png::CompressedTexture2D::2385975591956420280::1688304183::1703528239::1::::<><>::
+Idle_2.png::CompressedTexture2D::4045137459070259413::1688304672::1703528239::1::::<><>::
+Jump.png::CompressedTexture2D::8418069570022809525::1688304483::1703528239::1::::<><>::
+Run.png::CompressedTexture2D::3293463848385678956::1688304419::1703528239::1::::<><>::
+Walk.png::CompressedTexture2D::7766963961784704600::1688304219::1703528239::1::::<><>::
+::res://Resources/Tiles/::1703549755
+Living Tissue_bakground.png::CompressedTexture2D::1678213088608358775::1449070818::1703549758::1::::<><>::
+Living Tissue_tileset.png::CompressedTexture2D::5856843862547959834::1449071182::1703546505::1::::<><>::
 ::res://Resources/Videos/::1703281238
 WhaleTaleExpanded3_animation.ogv::VideoStreamTheora::-1::1703280679::0::1::::<><>::
-::res://Scenes/::1703351628
-Game.tscn::PackedScene::5906431521634219920::1703351617::0::1::::<><>::
-MainMenu.tscn::PackedScene::8445518944364116618::1703351628::0::1::::<><>::res://Scripts/MainMenu.gd<>res://Resources/Videos/WhaleTaleExpanded3_animation.ogv
-Recap.tscn::PackedScene::7659985148227069265::1703351617::0::1::::<><>::res://Scripts/Recap.gd<>uid://dg1382flwro8::::res://Resources/Images/textrahmen.png<>uid://kxgp8oen8br6::::res://Resources/Images/verschluckt.jpeg<>uid://etfxii4lxer1::::res://Resources/Images/wasbeshergeschah.png<>uid://dg03tvwukdne5::::res://Resources/Images/ship-edit.jpg<>uid://ck07qf133284s::::res://Resources/Images/papagei-edit.jpg<>uid://dpiwwxlk8j66s::::res://Resources/Images/FreedFromHandcuffs-edit.jpg<>uid://hetl1mk52t4v::::res://Resources/Images/WhaleMap.jpg
-::res://Scripts/::1703345084
+::res://Scenes/::1703549715
+Game.tscn::PackedScene::5906431521634219920::1703549715::0::1::::<><>::uid://cppdmlkms1rv3::::res://Resources/Tiles/Living Tissue_tileset.png<>uid://cp1vgvib6wjsi::::res://Characters/Player.tscn
+MainMenu.tscn::PackedScene::8445518944364116618::1703549680::0::1::::<><>::res://Scripts/MainMenu.gd<>res://Resources/Videos/WhaleTaleExpanded3_animation.ogv
+Recap.tscn::PackedScene::7659985148227069265::1703549680::0::1::::<><>::res://Scripts/Recap.gd<>uid://dg1382flwro8::::res://Resources/Images/textrahmen.png<>uid://kxgp8oen8br6::::res://Resources/Images/verschluckt.jpeg<>uid://etfxii4lxer1::::res://Resources/Images/wasbeshergeschah.png<>uid://dg03tvwukdne5::::res://Resources/Images/ship-edit.jpg<>uid://ck07qf133284s::::res://Resources/Images/papagei-edit.jpg<>uid://dpiwwxlk8j66s::::res://Resources/Images/FreedFromHandcuffs-edit.jpg<>uid://hetl1mk52t4v::::res://Resources/Images/WhaleMap.jpg
+::res://Scripts/::1703545338
 MainMenu.gd::GDScript::-1::1703345084::0::1::::<>Node2D<>::
+Player.gd::GDScript::-1::1703545338::0::1::::<>CharacterBody2D<>::
 Recap.gd::GDScript::-1::1703345072::0::1::::<>Node2D<>::
 ::res://TheWhaleTale/::1703257323
