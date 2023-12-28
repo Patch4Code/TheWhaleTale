@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://jmuthp3i7yeq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pe08f"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_pe08f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

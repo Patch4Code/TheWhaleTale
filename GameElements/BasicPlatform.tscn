@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://vii3eg5umd2p"]
+
+[ext_resource type="Texture2D" uid="uid://cb0pdkpd6sogq" path="res://Resources/Textures/Wood.jpg" id="1_8ioqu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkowp"]
+size = Vector2(256, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4ro8"]
+size = Vector2(256, 64)
+
+[node name="BasicPlatform" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, -7.15256e-07)
+scale = Vector2(0.5, 0.363636)
+texture = ExtResource("1_8ioqu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fkowp")
+one_way_collision = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_m4ro8")

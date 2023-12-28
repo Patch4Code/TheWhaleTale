@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://eva78arnen6g"]
+
+[ext_resource type="Texture2D" uid="uid://cb0pdkpd6sogq" path="res://Resources/Textures/Wood.jpg" id="1_5r0yd"]
+[ext_resource type="Script" path="res://Scripts/CounterPlatform.gd" id="1_vafuj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkowp"]
+size = Vector2(256, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4ro8"]
+size = Vector2(256, 16)
+
+[node name="CounterPlatform" type="StaticBody2D"]
+script = ExtResource("1_vafuj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, -7.15256e-07)
+scale = Vector2(0.5, 0.363636)
+texture = ExtResource("1_5r0yd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fkowp")
+one_way_collision = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_m4ro8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
