@@ -1,8 +1,6 @@
-res://Scenes/Gameworld.tscn
-res://GameElements/BasicPlatform.tscn
+res://GameElements/Laser.tscn
+res://Scripts/Laser.gd
 res://Scenes/MainMenu.tscn
 res://Scenes/Recap.tscn
 res://Characters/Player.tscn
-res://GameElements/CounterPlatform.tscn
-res://Scripts/CounterPlatform.gd
-res://Scenes/Game.tscn
+res://Scenes/Gameworld.tscn
