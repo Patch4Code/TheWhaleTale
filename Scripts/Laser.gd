@@ -31,10 +31,10 @@ func _process(delta):
 		
 		line.add_point(line.to_local(pt))
 		
-		if coll.is_in_group("LightSensor"):
-			print("Lightsensor active")
-		else:
-			print("Lightsensor not active")
+		#if coll.is_in_group("LightSensor"):
+			#print("Lightsensor active")
+		#else:
+			#print("Lightsensor not active")
 		
 		if not coll.is_in_group("Mirror"):
 			break

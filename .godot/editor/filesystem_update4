@@ -1,1 +1,11 @@
 res://Mobs/Fish.tscn
+res://Mobs/skeleton.tscn
+res://Mobs/Fish.gd
+res://Scenes/MainMenu.tscn
+res://Scenes/Recap.tscn
+res://Characters/Player.tscn
+res://Scenes/Gameworld.tscn
+res://GameElements/Laser.tscn
+res://GameElements/Mirror.tscn
+res://GameElements/door.tscn
+res://Scripts/Laser.gd
