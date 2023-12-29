@@ -5,6 +5,9 @@ const MAX_BOUNCES = 5
 @onready var ray = $RayCast2D
 @onready var line = $Line2D
 
+func _ready():
+	var door_script = get_node("res://Scripts/door.gd")
+
 func _process(delta):
 	
 	line.clear_points()
@@ -27,6 +30,11 @@ func _process(delta):
 		var pt = ray.get_collision_point()
 		
 		line.add_point(line.to_local(pt))
+		
+		if coll.is_in_group("LightSensor"):
+			print("Lightsensor active")
+		else:
+			print("Lightsensor not active")
 		
 		if not coll.is_in_group("Mirror"):
 			break
