@@ -1,6 +1,7 @@
-AnimationPlayer
-CollisionShape2D
 AnimatedSprite2D
+CollisionShape2D
+CharacterBody2D
+AnimationPlayer
 StaticBody2D
 Sprite2D
 Area2D
@@ -9,6 +10,5 @@ Node2D
 GPUParticles2D
 Line2D
 RayCast2D
-CharacterBody2D
 Panel
 TileMap
