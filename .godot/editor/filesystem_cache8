@@ -1,17 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1703868737
+::res://::1703880632
 icon.svg::CompressedTexture2D::8282323974453515629::1703795146::1703867674::1::::<><>::
-::res://Characters/::1703867393
+::res://Characters/::1703880510
 PapageiTest.tscn::PackedScene::657720787850216504::1703795146::0::1::::<><>::
-Player.tscn::PackedScene::5880634730610293072::1703867393::0::1::::<><>::uid://cglo1endr14a8::::res://Resources/Sprites/Player/Attack_1.png<>uid://881w03i3jj5q::::res://Resources/Sprites/Player/Idle.png<>res://Scripts/Player.gd<>uid://b1yaht3asevtf::::res://Resources/Sprites/Player/Attack_2.png<>uid://d0ty2lpyc1y8p::::res://Resources/Sprites/Player/Attack_3.png<>uid://c830sxu8bei1v::::res://Resources/Sprites/Player/Dead.png<>uid://dr61m1tjlh48x::::res://Resources/Sprites/Player/Jump.png<>uid://325vic8dca5::::res://Resources/Sprites/Player/Hurt.png<>uid://bxvq28lgitia4::::res://Resources/Sprites/Player/Idle_2.png<>uid://bm6m4r4wu8llc::::res://Resources/Sprites/Player/Run.png<>uid://diwm05rgmetfc::::res://Resources/Sprites/Player/Walk.png
-::res://GameElements/::1703867659
+Player.tscn::PackedScene::5880634730610293072::1703880510::0::1::::<><>::uid://cglo1endr14a8::::res://Resources/Sprites/Player/Attack_1.png<>uid://881w03i3jj5q::::res://Resources/Sprites/Player/Idle.png<>res://Scripts/Player.gd<>uid://b1yaht3asevtf::::res://Resources/Sprites/Player/Attack_2.png<>uid://d0ty2lpyc1y8p::::res://Resources/Sprites/Player/Attack_3.png<>uid://c830sxu8bei1v::::res://Resources/Sprites/Player/Dead.png<>uid://dr61m1tjlh48x::::res://Resources/Sprites/Player/Jump.png<>uid://325vic8dca5::::res://Resources/Sprites/Player/Hurt.png<>uid://bxvq28lgitia4::::res://Resources/Sprites/Player/Idle_2.png<>uid://bm6m4r4wu8llc::::res://Resources/Sprites/Player/Run.png<>uid://diwm05rgmetfc::::res://Resources/Sprites/Player/Walk.png
+::res://GameElements/::1703880510
 BasicPlatform.tscn::PackedScene::1491016697355119633::1703795146::0::1::::<><>::uid://cb0pdkpd6sogq::::res://Resources/Textures/Wood.jpg
 CounterPlatform.tscn::PackedScene::324166186852844136::1703867393::0::1::::<><>::uid://cb0pdkpd6sogq::::res://Resources/Textures/Wood.jpg<>res://Scripts/CounterPlatform.gd
-door.tscn::PackedScene::9165016424765434313::1703867659::0::1::::<><>::res://Scripts/door.gd<>uid://miovjgbu3yjo::::res://Resources/Sprites/Door/strange_door_closed_anim_strip_10.png<>uid://nmhp1ukajnve::::res://Resources/Sprites/Door/strange_door_opening_anim_strip_14.png
-Laser.tscn::PackedScene::8888611544330745286::1703867659::0::1::::<><>::res://Scripts/Laser.gd
-Mirror.tscn::PackedScene::5147884951889655284::1703867659::0::1::::<><>::res://Scripts/Mirror.gd<>uid://cy33krubqvm25::::res://Resources/Textures/glas.png
-::res://Mobs/::1703869283
-Fish.tscn::PackedScene::5752495023876189903::1703869283::0::1::::<><>::uid://b5o8w7qc0s818::::res://Mobs/Sprites/Fish/Attack.png<>uid://b5mwjpbigy5al::::res://Mobs/Sprites/Fish/Death.png<>uid://dqycvbntsxrwx::::res://Mobs/Sprites/Fish/Idle.png<>uid://bh74uxk06ycc4::::res://Mobs/Sprites/Fish/Walk.png
+door.tscn::PackedScene::9165016424765434313::1703880510::0::1::::<><>::res://Scripts/door.gd<>uid://miovjgbu3yjo::::res://Resources/Sprites/Door/strange_door_closed_anim_strip_10.png<>uid://nmhp1ukajnve::::res://Resources/Sprites/Door/strange_door_opening_anim_strip_14.png
+Laser.tscn::PackedScene::8888611544330745286::1703880510::0::1::::<><>::res://Scripts/Laser.gd
+Mirror.tscn::PackedScene::5147884951889655284::1703880510::0::1::::<><>::res://Scripts/Mirror.gd<>uid://cy33krubqvm25::::res://Resources/Textures/glas.png
+::res://Mobs/::1703880632
+Fish.gd::GDScript::-1::1703878802::0::1::::<>CharacterBody2D<>::
+Fish.tscn::PackedScene::5752495023876189903::1703880510::0::1::::<><>::res://Mobs/Fish.gd<>uid://b5o8w7qc0s818::::res://Mobs/Sprites/Fish/Attack.png<>uid://b5mwjpbigy5al::::res://Mobs/Sprites/Fish/Death.png<>uid://dqycvbntsxrwx::::res://Mobs/Sprites/Fish/Idle.png<>uid://bh74uxk06ycc4::::res://Mobs/Sprites/Fish/Walk.png<>uid://vqksvejv5ph3::::res://Mobs/Sprites/Fish/Hurt.png
+Skeleton.gd::GDScript::-1::1703880148::0::1::::<>CharacterBody2D<>::
+skeleton.tscn::PackedScene::3993737242760562624::1703880632::0::1::::<><>::uid://c26qjt7a02um::::res://Mobs/Sprites/Skeleton/Attack_1.png<>res://Mobs/Skeleton.gd<>uid://bjrthrts861lv::::res://Mobs/Sprites/Skeleton/Attack_2.png<>uid://ct5yhipxo26sk::::res://Mobs/Sprites/Skeleton/Dead.png<>uid://c1i3s8rcqkg1u::::res://Mobs/Sprites/Skeleton/Attack_3.png<>uid://clwu7nkhlouuc::::res://Mobs/Sprites/Skeleton/Idle.png<>uid://dac4lptck0igi::::res://Mobs/Sprites/Skeleton/Walk.png<>uid://b0e1bd5sr67qg::::res://Mobs/Sprites/Skeleton/Hurt.png<>uid://bcybfesndlm54::::res://Mobs/Sprites/Skeleton/Run.png
 ::res://Mobs/Sprites/::1703869330
 ::res://Mobs/Sprites/Fish/::1703869052
 Attack.png::CompressedTexture2D::4523031935207211513::1703869049::1703869052::1::::<><>::
@@ -19,7 +22,7 @@ Death.png::CompressedTexture2D::4518211161636332131::1703869049::1703869052::1::
 Hurt.png::CompressedTexture2D::1507636184289338534::1703869050::1703869052::1::::<><>::
 Idle.png::CompressedTexture2D::8331987624536850751::1703869050::1703869052::1::::<><>::
 Walk.png::CompressedTexture2D::2945600410620921145::1703869050::1703869052::1::::<><>::
-::res://Mobs/Sprites/Skeleton/::1703869331
+::res://Mobs/Sprites/Skeleton/::1703869345
 Attack_1.png::CompressedTexture2D::198027189630300712::1703869330::1703869345::1::::<><>::
 Attack_2.png::CompressedTexture2D::3054381744785727739::1703869330::1703869345::1::::<><>::
 Attack_3.png::CompressedTexture2D::6616000303740154352::1703869330::1703869345::1::::<><>::
@@ -63,15 +66,15 @@ Living Tissue_bakground.png::CompressedTexture2D::1678213088608358775::170379514
 Living Tissue_tileset.png::CompressedTexture2D::5856843862547959834::1703795146::1703795146::1::::<><>::
 ::res://Resources/Videos/::1703795146
 WhaleTaleExpanded3_animation.ogv::VideoStreamTheora::-1::1703795146::0::1::::<><>::
-::res://Scenes/::1703867659
+::res://Scenes/::1703880510
 Game.tscn::PackedScene::5906431521634219920::1703867659::0::1::::<><>::uid://cppdmlkms1rv3::::res://Resources/Tiles/Living Tissue_tileset.png<>uid://cp1vgvib6wjsi::::res://Characters/Player.tscn<>uid://x566ot2pasip::::res://Resources/Tiles/Living Tissue_bakground.png
-Gameworld.tscn::PackedScene::6541429160076907928::1703867659::0::1::::<><>::uid://cppdmlkms1rv3::::res://Resources/Tiles/Living Tissue_tileset.png<>uid://x566ot2pasip::::res://Resources/Tiles/Living Tissue_bakground.png<>uid://cp1vgvib6wjsi::::res://Characters/Player.tscn<>uid://vii3eg5umd2p::::res://GameElements/BasicPlatform.tscn<>uid://eva78arnen6g::::res://GameElements/CounterPlatform.tscn<>uid://dyvyesk2eycvu::::res://GameElements/Laser.tscn<>uid://cflw6bqhglar1::::res://GameElements/Mirror.tscn<>uid://cy33krubqvm25::::res://Resources/Textures/glas.png<>uid://d3tuqmuqyyhwb::::res://GameElements/door.tscn
-MainMenu.tscn::PackedScene::8445518944364116618::1703867393::0::1::::<><>::res://Scripts/MainMenu.gd<>res://Resources/Videos/WhaleTaleExpanded3_animation.ogv
-Recap.tscn::PackedScene::7659985148227069265::1703867393::0::1::::<><>::res://Scripts/Recap.gd<>uid://dg1382flwro8::::res://Resources/Images/textrahmen.png<>uid://kxgp8oen8br6::::res://Resources/Images/verschluckt.jpeg<>uid://etfxii4lxer1::::res://Resources/Images/wasbeshergeschah.png<>uid://dg03tvwukdne5::::res://Resources/Images/ship-edit.jpg<>uid://ck07qf133284s::::res://Resources/Images/papagei-edit.jpg<>uid://dpiwwxlk8j66s::::res://Resources/Images/FreedFromHandcuffs-edit.jpg<>uid://hetl1mk52t4v::::res://Resources/Images/WhaleMap.jpg
-::res://Scripts/::1703867659
+Gameworld.tscn::PackedScene::6541429160076907928::1703880640::0::1::::<><>::uid://cppdmlkms1rv3::::res://Resources/Tiles/Living Tissue_tileset.png<>uid://x566ot2pasip::::res://Resources/Tiles/Living Tissue_bakground.png<>uid://cp1vgvib6wjsi::::res://Characters/Player.tscn<>uid://vii3eg5umd2p::::res://GameElements/BasicPlatform.tscn<>uid://eva78arnen6g::::res://GameElements/CounterPlatform.tscn<>uid://dyvyesk2eycvu::::res://GameElements/Laser.tscn<>uid://cflw6bqhglar1::::res://GameElements/Mirror.tscn<>uid://cy33krubqvm25::::res://Resources/Textures/glas.png<>uid://d3tuqmuqyyhwb::::res://GameElements/door.tscn<>uid://cn7s0t86neh2n::::res://Mobs/Fish.tscn<>uid://bw5uje3xlvp7m::::res://Mobs/skeleton.tscn
+MainMenu.tscn::PackedScene::8445518944364116618::1703880510::0::1::::<><>::res://Scripts/MainMenu.gd<>res://Resources/Videos/WhaleTaleExpanded3_animation.ogv
+Recap.tscn::PackedScene::7659985148227069265::1703880510::0::1::::<><>::res://Scripts/Recap.gd<>uid://dg1382flwro8::::res://Resources/Images/textrahmen.png<>uid://kxgp8oen8br6::::res://Resources/Images/verschluckt.jpeg<>uid://etfxii4lxer1::::res://Resources/Images/wasbeshergeschah.png<>uid://dg03tvwukdne5::::res://Resources/Images/ship-edit.jpg<>uid://ck07qf133284s::::res://Resources/Images/papagei-edit.jpg<>uid://dpiwwxlk8j66s::::res://Resources/Images/FreedFromHandcuffs-edit.jpg<>uid://hetl1mk52t4v::::res://Resources/Images/WhaleMap.jpg
+::res://Scripts/::1703877124
 CounterPlatform.gd::GDScript::-1::1703795146::0::1::::<>StaticBody2D<>::
 door.gd::GDScript::-1::1703867659::0::1::::<>StaticBody2D<>::
-Laser.gd::GDScript::-1::1703867659::0::1::::<>Node2D<>::
+Laser.gd::GDScript::-1::1703877124::0::1::::<>Node2D<>::
 MainMenu.gd::GDScript::-1::1703795146::0::1::::<>Node2D<>::
 Mirror.gd::GDScript::-1::1703867659::0::1::::<>StaticBody2D<>::
 Player.gd::GDScript::-1::1703795146::0::1::::<>CharacterBody2D<>::

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var HP = 10
-var SPEED = 25
+var SPEED = 10
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
 var chase = false
@@ -51,6 +51,9 @@ func _on_player_death_body_entered(body): #has to be edited to be damaged by wea
 		print(HP)
 		get_node("AnimatedSprite2D").play("Hurt")
 		await get_node("AnimatedSprite2D").animation_finished
+		get_node("AnimatedSprite2D").play("Idle")
+		
+		
 		if HP <= 0:
 			velocity.x = 0
 			chase = false

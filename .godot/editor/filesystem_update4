@@ -9,3 +9,6 @@ res://GameElements/Laser.tscn
 res://GameElements/Mirror.tscn
 res://GameElements/door.tscn
 res://Scripts/Laser.gd
+res://Mobs/skeleton.gd
+res://Mobs/Skeleton.tscn
+res://Mobs/Skeleton.gd

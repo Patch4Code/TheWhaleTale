@@ -1,0 +1,85 @@
+extends CharacterBody2D
+var HP = 10
+var SpeedFaktor 
+var SPEED = 5
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var player
+var chase = false
+var attacking = false
+var health = 10  
+
+func _ready():
+	get_node("AnimatedSprite2D").play("Idle") #idle
+	SpeedFaktor = 1
+
+func _physics_process(delta):
+	velocity.y += gravity * delta
+	
+	if chase == true:
+		if get_node("AnimatedSprite2D").animation != "Death" and get_node("AnimatedSprite2D").animation != "Hurt" :
+			if attacking == false:
+				if SpeedFaktor == 1:
+					get_node("AnimatedSprite2D").play("Walk") 
+				if SpeedFaktor != 1:
+					get_node("AnimatedSprite2D").play("Run")
+			player = get_node("../Player")
+			var direction  = (player.position - self.position).normalized()
+	
+			if direction.x > 0:
+				get_node("AnimatedSprite2D").flip_h = false
+
+			else:
+				get_node("AnimatedSprite2D").flip_h = true
+			
+			velocity.x += direction.x * SPEED * SpeedFaktor
+
+	else:
+		if get_node("AnimatedSprite2D").animation != "Death" and get_node("AnimatedSprite2D").animation != "Hurt" :
+			get_node("AnimatedSprite2D").play("Idle")
+			velocity.x = 0
+	move_and_slide()
+
+
+func _on_player_detection_body_entered(body):
+	if body.name == "Player":
+		chase = true
+		
+
+func _on_player_detection_body_exited(body):
+	if body.name == "Player":
+		chase = false
+		
+func _on_player_death_body_entered(body): #has to be edited to be damaged by weapon
+	if body.name == "Player":
+		HP = HP - 5
+		print(HP)
+		get_node("AnimatedSprite2D").play("Hurt")
+		await get_node("AnimatedSprite2D").animation_finished
+		get_node("AnimatedSprite2D").play("Idle")
+		
+		
+		if HP <= 0:
+			velocity.x = 0
+			chase = false
+			get_node("AnimatedSprite2D").play("Death")
+			await get_node("AnimatedSprite2D").animation_finished
+			self.queue_free()
+
+
+func _on_player_attack_body_entered(body):
+	if body.name == "Player":
+		attacking = true;
+		get_node("AnimatedSprite2D").play("Attack_1")
+		#body.HP -= 1 #Has to be added in later to reduce player health 
+
+
+func _on_player_attack_body_exited(body):
+	attacking = false
+
+
+func _on_player_detection_run_body_entered(body):
+	SpeedFaktor = 5
+
+
+func _on_player_detection_run_body_exited(body):
+	SpeedFaktor = 1

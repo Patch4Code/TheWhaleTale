@@ -147,11 +147,14 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_d677f")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_ujawn")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_d677f")
 }],
 "loop": false,
 "name": &"Hurt",
@@ -196,7 +199,7 @@ animations = [{
 size = Vector2(208, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g72pt"]
-size = Vector2(34, 26)
+size = Vector2(29, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d78wf"]
 size = Vector2(48, 16)
@@ -213,9 +216,7 @@ shape = SubResource("RectangleShape2D_sgnhe")
 position = Vector2(8, 0)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_1hljj")
-animation = &"Hurt"
-frame = 1
-frame_progress = 1.0
+animation = &"Walk"
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 visible = false
@@ -227,9 +228,11 @@ shape = SubResource("RectangleShape2D_0e17p")
 [node name="PlayerDeath" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
+position = Vector2(-1.5, 2)
 shape = SubResource("RectangleShape2D_g72pt")
 
 [node name="PlayerAttack" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAttack"]
 position = Vector2(0, 8)
