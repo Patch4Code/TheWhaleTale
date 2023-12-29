@@ -6,6 +6,8 @@
 script = ExtResource("1_q4raw")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 3
+collide_with_areas = true
 
 [node name="Line2D" type="Line2D" parent="."]
 
