@@ -1,8 +1,6 @@
 extends StaticBody2D
 
-@onready var animated_sprite = $AnimatedSprite2D
-@onready var tween = get_tree().create_tween()
-var fade_duration = 0.5
+@onready var anim = get_node("AnimationPlayer")
 
 var rng = RandomNumberGenerator.new()
 var elements_active = true
@@ -21,22 +19,28 @@ func create_timer():
 func _on_timer_timeout():
 	# Deaktiviere das Area2D und mache den AnimatedSprite unsichtbar
 	if elements_active:
-		$Area2D.monitoring  = false
-		$AnimatedSprite2D.visible = false
-		
+		anim.play("vanish")
 		$Timer.wait_time = 3.0
-	
 	else:
-		$Area2D.monitoring = true
-		$AnimatedSprite2D.visible = true 
-		
+		anim.play("appear")		
 		$Timer.wait_time = 6.0
 
 	elements_active = not elements_active
 	$Timer.start()
 
 
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "appear":
+		$Area2D.monitoring  = true
+		anim.play("Idle")
+	elif anim_name == "vanish":
+		$Area2D.monitoring = false
+
+
 
 func _on_area_2d_body_entered(body):
 	if body.name == "Player":
 		print("Acid Fall entered")
+
+
+
