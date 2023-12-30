@@ -1,9 +1,9 @@
-res://GameElements/Laser.tscn
-res://Scripts/Laser.gd
-res://GameElements/door.tscn
-res://Scripts/door.gd
 res://Scenes/Gameworld.tscn
+res://Shader/Water.gdshader
+res://Shader/Acid.gdshader
 res://Scenes/MainMenu.tscn
 res://Scenes/Recap.tscn
 res://Characters/Player.tscn
+res://GameElements/Laser.tscn
 res://GameElements/Mirror.tscn
+res://GameElements/door.tscn

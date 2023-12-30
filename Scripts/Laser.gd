@@ -60,10 +60,10 @@ func _process(delta):
 	
 	#lightsensor handling
 	if (coll != null) and coll.is_in_group("LightSensor"):
-		print("Lightsensor active")
+		#print("Lightsensor active")
 		emit_signal("open_door_signal")
 	elif coll != null:
-		print("Lightsensor not active")
+		#print("Lightsensor not active")
 		emit_signal("close_door_signal")
 			
 	
