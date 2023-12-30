@@ -1,9 +1,11 @@
 res://Scenes/Gameworld.tscn
 res://Shader/Water.gdshader
 res://Shader/Acid.gdshader
+res://Shader/AcidFall.gdshader
+res://GameElements/AcidFall.tscn
 res://Scenes/MainMenu.tscn
 res://Scenes/Recap.tscn
 res://Characters/Player.tscn
-res://GameElements/Laser.tscn
-res://GameElements/Mirror.tscn
-res://GameElements/door.tscn
+res://Characters/Octupus.tscn
+res://Scripts/AcidFall1.gd
+res://Scripts/AcidFall.gd
