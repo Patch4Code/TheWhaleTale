@@ -1,12 +1,9 @@
-res://GameElements/Mirror.tscn
-res://Scenes/MainMenu.tscn
-res://Scenes/Recap.tscn
-res://Characters/Player.tscn
-res://Scenes/Gameworld.tscn
 res://GameElements/Laser.tscn
-res://Scripts/Mirror.gd
-res://Scripts/Player.gd
-res://Scripts/LightSensor.gd
 res://Scripts/Laser.gd
 res://GameElements/door.tscn
 res://Scripts/door.gd
+res://Scenes/Gameworld.tscn
+res://Scenes/MainMenu.tscn
+res://Scenes/Recap.tscn
+res://Characters/Player.tscn
+res://GameElements/Mirror.tscn
