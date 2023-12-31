@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdd6pj2v06vay"]
+
+[ext_resource type="Texture2D" uid="uid://cy33krubqvm25" path="res://Resources/Textures/glas.png" id="1_eg6xu"]
+[ext_resource type="Shader" path="res://Shader/FogWall.gdshader" id="1_fhw4n"]
+[ext_resource type="Script" path="res://Scripts/FogWall.gd" id="1_qdld3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3y6y"]
+size = Vector2(192, 48)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v0xih"]
+shader = ExtResource("1_fhw4n")
+shader_parameter/colorMode = 0
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/timescale = -0.06
+shader_parameter/hScrollSpeedFactor = 0.0
+shader_parameter/vScrollSpeedFactor = 1.0
+shader_parameter/entropyFactor = 0.4
+shader_parameter/sharpness = 6.5
+
+[node name="FogWall" type="StaticBody2D"]
+script = ExtResource("1_qdld3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(30, -96)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_m3y6y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.0470588)
+material = SubResource("ShaderMaterial_v0xih")
+position = Vector2(32, -97)
+scale = Vector2(0.64, 1.94)
+texture = ExtResource("1_eg6xu")
