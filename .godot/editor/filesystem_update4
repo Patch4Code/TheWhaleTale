@@ -1,9 +1,14 @@
+res://Scripts/FogOfWar.gd
+res://Scripts/FogWall.gd
 res://Scenes/Gameworld.tscn
 res://Shader/Water.gdshader
 res://Shader/Acid.gdshader
+res://Shader/FogOfWar.gdshader
 res://Shader/FogWall.gdshader
 res://Shader/AcidFall.gdshader
+res://GameElements/coinSlottscn.tscn
 res://Scenes/MainMenu.tscn
 res://Scenes/Recap.tscn
 res://Characters/Player.tscn
 res://GameElements/FogWall.tscn
+res://Scripts/coinSlott.gd
