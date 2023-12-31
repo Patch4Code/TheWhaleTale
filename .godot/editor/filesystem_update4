@@ -1,10 +1,9 @@
+res://Scenes/Gameworld.tscn
 res://Shader/Water.gdshader
 res://Shader/Acid.gdshader
-res://Shader/AcidFall.gdshader
-res://GameElements/FogWall.tscn
 res://Shader/FogWall.gdshader
-res://Scenes/Gameworld.tscn
+res://Shader/AcidFall.gdshader
 res://Scenes/MainMenu.tscn
 res://Scenes/Recap.tscn
 res://Characters/Player.tscn
-res://Scripts/FogWall.gd
+res://GameElements/FogWall.tscn

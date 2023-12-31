@@ -1,13 +1,14 @@
+TileMap
+StaticBody2D
+CollisionPolygon2D
 Control
 Sprite2D
 CollisionShape2D
-StaticBody2D
 AnimationPlayer
 Timer
 Polygon2D
 Area2D
 AnimatedSprite2D
-CollisionPolygon2D
 CharacterBody2D
 Node2D
 GPUParticles2D
