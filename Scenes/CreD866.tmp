@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvgwlhid3rwcn"]
+
+[ext_resource type="Script" path="res://Scripts/CreditsText.gd" id="1_4mv5o"]
+[ext_resource type="Texture2D" uid="uid://cy33krubqvm25" path="res://Resources/Textures/glas.png" id="2_ytdca"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_4mv5o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(19.2, 10.8)
+texture = ExtResource("2_ytdca")

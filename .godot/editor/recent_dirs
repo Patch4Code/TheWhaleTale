@@ -1,11 +1,12 @@
 res://Scripts
-res://GameElements
+res://Scenes
+res://Characters
+res://Resources/Sprites/Parrot
 res://Shader
+res://GameElements
 res://Resources/Sprites/AcidFall
 res://Resources/Sprites/Octupus
-res://Characters
 res://Resources/Sprites/Door
-res://Scenes
 res://Resources/Sprites
 res://Resources/Sprites/Player
 C:/Users/Moritz/Downloads/whaletaletest

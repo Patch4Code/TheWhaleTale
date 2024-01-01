@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://bi23c6431qn5i"]
+
+[ext_resource type="Texture2D" uid="uid://hbvgm4rujbv" path="res://Resources/Sprites/Parrot/parrotSprite.png" id="1_3dont"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_on7di"]
+atlas = ExtResource("1_3dont")
+region = Rect2(0, 0, 182, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_by0wn"]
+atlas = ExtResource("1_3dont")
+region = Rect2(182, 0, 182, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uevgc"]
+atlas = ExtResource("1_3dont")
+region = Rect2(364, 0, 182, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53qmw"]
+atlas = ExtResource("1_3dont")
+region = Rect2(546, 0, 182, 156)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rac3l"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_on7di")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_by0wn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uevgc")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_53qmw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l4cqv"]
+radius = 48.0
+height = 128.0
+
+[node name="Parrot" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rac3l")
+autoplay = "default"
+frame_progress = 0.984399
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-16, 0)
+shape = SubResource("CapsuleShape2D_l4cqv")
+disabled = true

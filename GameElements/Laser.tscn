@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyvyesk2eycvu"]
+[gd_scene load_steps=3 format=3 uid="uid://dyvyesk2eycvu"]
 
 [ext_resource type="Script" path="res://Scripts/Laser.gd" id="1_q4raw"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8kh5m"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
 
 [node name="Laser" type="Node2D"]
 script = ExtResource("1_q4raw")
@@ -10,5 +14,11 @@ collision_mask = 3
 collide_with_areas = true
 
 [node name="Line2D" type="Line2D" parent="."]
+width = 7.0
+default_color = Color(0.992157, 1, 0.572549, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [node name="End" type="GPUParticles2D" parent="."]
+process_material = SubResource("ParticleProcessMaterial_8kh5m")
