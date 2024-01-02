@@ -4,7 +4,7 @@ const section_time := 2.0
 const line_time := 0.3
 const base_speed := 100
 const speed_up_multiplier := 10.0
-const title_color := Color.BLUE_VIOLET
+const title_color := Color.WEB_GRAY
 
 var speed_up := false
 
@@ -21,37 +21,95 @@ var lines := []
 
 var credits = [
 	[
-		"A game by Awesome Game Company"
+		"The Whale Tale"
 	],[
-		"Programming",
+		"Entwickler",
 		"Programmer Name",
-		"Programmer Name 2"
+		"Programmer Name 2",
+		"Programmer Name 3"
 	],[
-		"Art",
-		"Artist Name"
+		"Verwendete Assets",
+		"FREE FANTASY CHIBI MALE SPRITES PIXEL ART",
+		"https://craftpix.net",
+		"",
+		"Parrot by Luna16",
+		"https://www.spriters-resource.com",
+		"",
+		"Giant Octopus by Ragnarocker",
+		"https://www.spriters-resource.com",
+		"",
+		"PLATFORMER/METROIDVANIA ASSET PACK",
+		"https://itch.io",
+		"",
+		"WaterFall by JoMI",
+		"itch.io",
+		"",
+		"Living Tissue Platform Environment by Ansimuz",
+		"gamedevmarket.net",
+		"",
+		"OPP 2017 - Cave and mine cart by Open Pixel Project",
+		"itch.io",
+		"",
+		"styled pixel art wood planks tileset by iPixl",
+		"itch.io",
+		""
 	],[
-		"Music",
-		"Musician Name"
+		"Verwendeter Script- und Shadercode",
+		"godot-credits by benbishopnz",
+		"github.com",
+		"",
+		"Wind Waker 2d Water Shader Canvas_Item by GeistDev",
+		"godotshaders.com",
+		"",
+		"2D Procedural Water by flytrap",
+		"godotshaders.com",
+		"",
+		"Shard Noise by Zenryoku",
+		"godotshaders.com",
+		""
 	],[
-		"Sound Effects",
+		"Musik",
+		"Mysterious Adventure by Alexander Nakarada",
+		"(www.creatorchords.com)",
+		"Licensed under Creative Commons BY Attribution 4.0 License",
+		"",
+		"Track 2"
+		
+	],[
+		"Sound Effekte",
 		"SFX Name"
 	],[
-		"Testers",
-		"Name 1",
-		"Name 2",
-		"Name 3"
+		"Fonts und Designelemente",
+		"Bell MT Font by Richard Austin",
+		"",
+		"Baskerville Old Face Font by Isaac Moore",
+		"",
+		"Comic Sans Font by Vincent Connare",
+		"",
+		"Hand-drawn divider collection designed by Freepik",
+		"https://www.freepik.com",
+		""
 	],[
-		"Tools used",
+		"Verwendete Tools",
 		"Developed with Godot Engine",
 		"https://godotengine.org/license",
 		"",
-		"Art created with My Favourite Art Program",
-		"https://myfavouriteartprogram.com"
+		"Bing Image Creator based on DALL·E 3",
+		"https://www.bing.com/images/create",
+		"",
+		"Leonardo Ai - Image Creator",
+		"https://leonardo.ai",
+		"",
+		"LeiaPix AI _ Image Animation",
+		"leiapix.com",
+		"",
+		"Affinity Designer / Affinity Photo",
+		"https://affinity.serif.com/de/"
 	],[
-		"Special thanks",
-		"My parents",
-		"My friends",
-		"My pet rabbit"
+		"Besonderer Dank",
+		"Papagei - König des Schiffs",
+		"",
+		"Du bist cool! ;)"
 	]
 ]
 

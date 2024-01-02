@@ -1,14 +1,13 @@
-res://Scenes/GodotCredits.tscn
+res://Scenes/MainMenu.tscn
 res://Shader/Water.gdshader
 res://Shader/Acid.gdshader
 res://Shader/FogOfWar.gdshader
 res://Shader/FogWall.gdshader
 res://Shader/AcidFall.gdshader
-res://Scenes/MainMenu.tscn
 res://Scenes/Recap.tscn
 res://Characters/Player.tscn
 res://Scenes/Gameworld.tscn
 res://GameElements/Laser.tscn
 res://Characters/parrot.tscn
-res://Scripts/Credits.gd
 res://Scenes/Credits.tscn
+res://Scripts/Credits.gd
