@@ -30,16 +30,16 @@ var credits = [
 	],[
 		"Verwendete Assets",
 		"FREE FANTASY CHIBI MALE SPRITES PIXEL ART",
-		"https://craftpix.net",
+		"craftpix.net",
 		"",
 		"Parrot by Luna16",
-		"https://www.spriters-resource.com",
+		"spriters-resource.com",
 		"",
 		"Giant Octopus by Ragnarocker",
-		"https://www.spriters-resource.com",
+		"spriters-resource.com",
 		"",
 		"PLATFORMER/METROIDVANIA ASSET PACK",
-		"https://itch.io",
+		"itch.io",
 		"",
 		"WaterFall by JoMI",
 		"itch.io",
@@ -73,7 +73,13 @@ var credits = [
 		"(www.creatorchords.com)",
 		"Licensed under Creative Commons BY Attribution 4.0 License",
 		"",
-		"Track 2"
+		"Guitar Melody - 'Imitation' by jackson reang",
+		"samplefocus.com",
+		"",
+		" 'I am the Sea' - Epic Pirate Battle Music",
+		"supported by #TheROOMnoCopyRMusic",
+		"youtube.com",
+		""
 		
 	],[
 		"Sound Effekte",
@@ -87,24 +93,24 @@ var credits = [
 		"Comic Sans Font by Vincent Connare",
 		"",
 		"Hand-drawn divider collection designed by Freepik",
-		"https://www.freepik.com",
+		"www.freepik.com",
 		""
 	],[
 		"Verwendete Tools",
 		"Developed with Godot Engine",
-		"https://godotengine.org/license",
+		"godotengine.org/license",
 		"",
 		"Bing Image Creator based on DALL·E 3",
-		"https://www.bing.com/images/create",
+		"bing.com/images/create",
 		"",
 		"Leonardo Ai - Image Creator",
-		"https://leonardo.ai",
+		"leonardo.ai",
 		"",
 		"LeiaPix AI _ Image Animation",
 		"leiapix.com",
 		"",
 		"Affinity Designer / Affinity Photo",
-		"https://affinity.serif.com/de/"
+		"affinity.serif.com"
 	],[
 		"Besonderer Dank",
 		"Papagei - König des Schiffs",

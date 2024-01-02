@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dslcp0l81tdok"]
+[gd_scene load_steps=5 format=3 uid="uid://dslcp0l81tdok"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_nfkup"]
 [ext_resource type="VideoStream" path="res://Resources/Videos/WhaleTaleExpanded3_animation.ogv" id="2_xn0lw"]
+[ext_resource type="AudioStream" uid="uid://b2coextqbi7qt" path="res://MusicAndSounds/Clement-Panchout-_-Journey-_-2017.mp3" id="3_gp8it"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5d02"]
 bg_color = Color(0.0313726, 0.0509804, 0.211765, 1)
@@ -40,6 +41,11 @@ offset_right = 1127.0
 offset_bottom = 658.0
 theme_override_font_sizes/font_size = 60
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gp8it")
+volume_db = -23.0
+autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

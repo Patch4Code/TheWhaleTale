@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://yvoc3m0enuwh"]
+[gd_scene load_steps=3 format=3 uid="uid://yvoc3m0enuwh"]
 
 [ext_resource type="Script" path="res://Scripts/Credits.gd" id="1_20flt"]
+[ext_resource type="AudioStream" uid="uid://d3cnk0ctpjwey" path="res://MusicAndSounds/guitar-melody-imitation_170bpm_D__major.mp3" id="2_6xfjl"]
 
 [node name="Credits" type="Node2D"]
 script = ExtResource("1_20flt")
@@ -30,3 +31,8 @@ offset_bottom = 1119.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 text = "Credits line"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_6xfjl")
+volume_db = -16.0
+autoplay = true

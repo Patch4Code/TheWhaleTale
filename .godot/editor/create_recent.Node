@@ -12,4 +12,3 @@ Node2D
 TileMap
 StaticBody2D
 CollisionPolygon2D
-AnimationPlayer
