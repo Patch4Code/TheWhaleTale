@@ -1,10 +1,10 @@
 CollisionShape2D
 Area2D
+AnimationPlayer
+Sprite2D
+CharacterBody2D
 Node
 AnimationTree
-Sprite2D
-AnimationPlayer
-CharacterBody2D
 AnimatedSprite2D
 StaticBody2D
 Control

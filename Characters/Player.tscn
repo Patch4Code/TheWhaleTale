@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://cp1vgvib6wjsi"]
+[gd_scene load_steps=79 format=3 uid="uid://cp1vgvib6wjsi"]
 
 [ext_resource type="Texture2D" uid="uid://cglo1endr14a8" path="res://Resources/Sprites/Player/Attack_1.png" id="1_6e20w"]
 [ext_resource type="Texture2D" uid="uid://881w03i3jj5q" path="res://Resources/Sprites/Player/Idle.png" id="1_fh0j3"]
@@ -479,6 +479,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../PlayerAttackArea/AttackShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, false, true]
+}
 
 [sub_resource type="Animation" id="Animation_mudrf"]
 resource_name = "Dead"
@@ -677,6 +689,12 @@ _data = {
 "Run": SubResource("Animation_0liv1")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0oko"]
+size = Vector2(15.6454, 23.7931)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yx1nv"]
+size = Vector2(6, 10)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ibyri")
 
@@ -701,3 +719,22 @@ libraries = {
 "": SubResource("AnimationLibrary_hl3e2")
 }
 autoplay = "Idle"
+
+[node name="PlayerAttackArea" type="Area2D" parent="."]
+position = Vector2(0, 2)
+scale = Vector2(0.767, 0.58)
+
+[node name="AttackShape2D" type="CollisionShape2D" parent="PlayerAttackArea"]
+position = Vector2(13.0378, 0.172414)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_l0oko")
+disabled = true
+
+[node name="TakeDamageArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TakeDamageArea"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_yx1nv")
+
+[connection signal="body_entered" from="PlayerAttackArea" to="." method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="TakeDamageArea" to="." method="_on_take_damage_area_area_entered"]

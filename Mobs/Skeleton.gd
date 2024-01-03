@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var HP = 20
+var health = 20
 var SPEED = 5
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
@@ -7,7 +7,6 @@ var chase = false
 var attacking = false
 var damaged = false
 var death = false
-var health = 10 
 var anim
 
 func _ready():
@@ -45,18 +44,21 @@ func _physics_process(delta):
 		velocity.x = 0
 	
 	if damaged == true:
-		HP = HP - 5
-		print(HP)
+		health = health - 5
+		
 		if death == false:
 			anim.play("Hurt")
-			
+			damaged = false
+		await get_tree().create_timer(0.3).timeout
+		print(health)
 		
-		if HP <= 0:
+		
+		if health <= 0:
 			death = true
 			velocity.x = 0
 			anim.play("Death")
+			await get_tree().create_timer(1.0).timeout
 			self.queue_free()
-
 	move_and_slide()
 
 
@@ -69,24 +71,15 @@ func _on_player_detection_body_exited(body):
 	if body.name == "Player":
 		chase = false
 		
-func _on_player_death_body_entered(body): #has to be edited to be damaged by weapon
-	if body.name == "Player":
-		damaged = true
-		
-
-func _on_player_death_body_exited(body):
-	damaged = false
 
 func _on_player_attack_body_entered(body):
 	if body.name == "Player":
 		attacking = true;
 		anim.play("Attack")
-		#body.HP -= 1 #Has to be added in later to reduce player health 
-
 
 func _on_player_attack_body_exited(body):
 	attacking = false
-
-
-
-
+	
+func _on_player_death_area_entered(area):
+	if area.name == "PlayerAttackArea":
+		damaged = true

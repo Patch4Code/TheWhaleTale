@@ -11,3 +11,7 @@ res://Mobs/skelett.tscn
 res://Mobs/Skeleton.gd
 res://Mobs/PlayerHitFlipPos.gd
 res://Mobs/AttackShape2D.gd
+res://Mobs/Fish.gd
+res://Scripts/Player.gd
+res://Mobs/PirateBoss.tscn
+res://Mobs/PirateBoss.gd
