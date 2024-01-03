@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://cp1vgvib6wjsi"]
+[gd_scene load_steps=78 format=3 uid="uid://cp1vgvib6wjsi"]
 
 [ext_resource type="Texture2D" uid="uid://cglo1endr14a8" path="res://Resources/Sprites/Player/Attack_1.png" id="1_6e20w"]
 [ext_resource type="Texture2D" uid="uid://881w03i3jj5q" path="res://Resources/Sprites/Player/Idle.png" id="1_fh0j3"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bxvq28lgitia4" path="res://Resources/Sprites/Player/Idle_2.png" id="8_emqo1"]
 [ext_resource type="Texture2D" uid="uid://bm6m4r4wu8llc" path="res://Resources/Sprites/Player/Run.png" id="9_km61p"]
 [ext_resource type="Texture2D" uid="uid://diwm05rgmetfc" path="res://Resources/Sprites/Player/Walk.png" id="10_e1ud7"]
+[ext_resource type="AudioStream" uid="uid://de46v6jxw1nuy" path="res://MusicAndSounds/PlayerSounds/12_Step_wood_03.wav" id="12_c687d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fjmja"]
 radius = 5.0
@@ -701,3 +702,10 @@ libraries = {
 "": SubResource("AnimationLibrary_hl3e2")
 }
 autoplay = "Idle"
+
+[node name="walkSoundTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="WalkSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_c687d")
+volume_db = -5.0

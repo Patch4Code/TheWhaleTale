@@ -8,6 +8,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var anim = get_node("AnimationPlayer")
 
+@onready var walk_sound = $WalkSound
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -30,6 +31,10 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 		if velocity.y == 0:
 			anim.play("Run")
+			if $walkSoundTimer.time_left <= 0:
+				walk_sound.play()
+				walk_sound.pitch_scale = randf_range(0.8, 1.2)
+				$walkSoundTimer.start(0.2)		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if velocity.y == 0:

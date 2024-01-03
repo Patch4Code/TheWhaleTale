@@ -79,6 +79,11 @@ var credits = [
 		" 'I am the Sea' - Epic Pirate Battle Music",
 		"supported by #TheROOMnoCopyRMusic",
 		"youtube.com",
+		"",
+		"Journey (Cinematic) from 'yet-another-free-music-pack' by Clement Panchout",
+		"itch.io",
+		"clementpanchout.com",
+		"Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0)",
 		""
 		
 	],[
