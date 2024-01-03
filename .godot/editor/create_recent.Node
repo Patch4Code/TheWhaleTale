@@ -1,8 +1,9 @@
+Button
+Control
 Timer
 AudioStreamPlayer2D
 AudioStreamPlayer
 Label
-Control
 ColorRect
 Sprite2D
 CollisionShape2D
@@ -12,4 +13,3 @@ WorldEnvironment
 Area2D
 Node2D
 TileMap
-StaticBody2D

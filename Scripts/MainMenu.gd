@@ -15,3 +15,7 @@ func _on_play_pressed():
 	get_tree().root.add_child($AudioStreamPlayer)
 	get_tree().root.add_child(next_scene)
 	
+
+
+func _on_credits_pressed():
+	get_tree().change_scene_to_file("res://Scenes/Credits.tscn")

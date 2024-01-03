@@ -10,4 +10,3 @@ res://Scenes/Gameworld.tscn
 res://GameElements/Laser.tscn
 res://Characters/parrot.tscn
 res://Scenes/Credits.tscn
-res://Scripts/Player.gd

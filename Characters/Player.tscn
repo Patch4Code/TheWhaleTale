@@ -690,7 +690,7 @@ shape = SubResource("CapsuleShape2D_fjmja")
 position = Vector2(-1, -1)
 scale = Vector2(0.234375, 0.234375)
 sprite_frames = SubResource("SpriteFrames_qqbnn")
-animation = &"Idle"
+animation = &"Attack3"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -708,4 +708,4 @@ one_shot = true
 
 [node name="WalkSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_c687d")
-volume_db = -5.0
+volume_db = -8.0

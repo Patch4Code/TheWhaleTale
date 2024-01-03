@@ -27,19 +27,27 @@ expand = true
 loop = true
 
 [node name="Play" type="Button" parent="."]
-offset_left = 804.0
-offset_top = 372.0
-offset_right = 1127.0
-offset_bottom = 463.0
-theme_override_font_sizes/font_size = 60
+offset_left = 822.0
+offset_top = 357.0
+offset_right = 1097.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 40
 text = "Play"
 
+[node name="Credits" type="Button" parent="."]
+offset_left = 822.0
+offset_top = 536.0
+offset_right = 1097.0
+offset_bottom = 611.0
+theme_override_font_sizes/font_size = 40
+text = "Credits"
+
 [node name="Quit" type="Button" parent="."]
-offset_left = 805.0
-offset_top = 567.0
-offset_right = 1127.0
-offset_bottom = 658.0
-theme_override_font_sizes/font_size = 60
+offset_left = 822.0
+offset_top = 634.0
+offset_right = 1097.0
+offset_bottom = 709.0
+theme_override_font_sizes/font_size = 40
 text = "Quit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -48,4 +56,5 @@ volume_db = -23.0
 autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

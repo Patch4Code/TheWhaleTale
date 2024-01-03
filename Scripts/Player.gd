@@ -57,7 +57,7 @@ func _physics_process(delta):
 			if $walkSoundTimer.time_left <= 0:
 				walk_sound.play()
 				walk_sound.pitch_scale = randf_range(0.8, 1.2)
-				$walkSoundTimer.start(0.2)		
+				$walkSoundTimer.start(0.25)		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if velocity.y == 0:
