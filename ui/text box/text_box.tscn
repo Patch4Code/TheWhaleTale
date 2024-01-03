@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc6onthcrj7bi"]
+
+[ext_resource type="Script" path="res://ui/text box/text_box.gd" id="1_wbac4"]
+[ext_resource type="Texture2D" uid="uid://x17uym5k1pvf" path="res://ui/text box/speech_bubble.png" id="2_185pm"]
+
+[sub_resource type="SystemFont" id="SystemFont_42qkt"]
+font_italic = true
+
+[node name="TextBox" type="MarginContainer"]
+offset_right = 32.0
+offset_bottom = 32.0
+script = ExtResource("1_wbac4")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_185pm")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_42qkt")
+vertical_alignment = 1
+
+[node name="LetterDisplayTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="LetterDisplayTimer" to="." method="_on_letter_display_timer_timeout"]
