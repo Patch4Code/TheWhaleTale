@@ -1,42 +1,62 @@
 extends CharacterBody2D
-var HP = 10
-var SpeedFaktor 
+var HP = 20
 var SPEED = 5
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
 var chase = false
 var attacking = false
-var health = 10  
+var damaged = false
+var death = false
+var health = 10 
+var anim
 
 func _ready():
-	get_node("AnimatedSprite2D").play("Idle") #idle
-	SpeedFaktor = 1
+	anim = get_node("SkelettAnimationPlayer") 
+	anim.play("Idle") #idle
+	player = get_node("../Player")
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	
-	if chase == true:
-		if get_node("AnimatedSprite2D").animation != "Death" and get_node("AnimatedSprite2D").animation != "Hurt" :
-			if attacking == false:
-				if SpeedFaktor == 1:
-					get_node("AnimatedSprite2D").play("Walk") 
-				if SpeedFaktor != 1:
-					get_node("AnimatedSprite2D").play("Run")
-			player = get_node("../Player")
-			var direction  = (player.position - self.position).normalized()
+	#Decide Position and move
+	if chase == true && attacking == false && damaged == false && death == false:
+		anim.play("Walk") 
+		var direction  = (player.position - self.position).normalized()
+		if direction.x > 0:
+			get_node("Sprite2D").flip_h = false
+			if $PlayerHit/AttackShape2D.position.x < 0:
+				$PlayerHit/AttackShape2D.position.x *= -1
+				$PlayerAttack/CollisionShape2D.position.x *= -1
+		else:
+			get_node("Sprite2D").flip_h = true
+			if $PlayerHit/AttackShape2D.position.x > 0:
+				$PlayerHit/AttackShape2D.position.x *= -1
+				$PlayerAttack/CollisionShape2D.position.x *= -1
+		velocity.x += direction.x * SPEED
+
+#Attack if enemy is in Range 
+	if chase == true && attacking == true && damaged == false && death == false:
+		anim.play("Attack")
+		
+
+#Play idle if no condition is met
+	if chase == false && attacking == false && damaged == false && death == false:
+		anim.play("Idle")
+		velocity.x = 0
 	
-			if direction.x > 0:
-				get_node("AnimatedSprite2D").flip_h = false
-
-			else:
-				get_node("AnimatedSprite2D").flip_h = true
+	if damaged == true:
+		HP = HP - 5
+		print(HP)
+		if death == false:
+			anim.play("Hurt")
 			
-			velocity.x += direction.x * SPEED * SpeedFaktor
-
-	else:
-		if get_node("AnimatedSprite2D").animation != "Death" and get_node("AnimatedSprite2D").animation != "Hurt" :
-			get_node("AnimatedSprite2D").play("Idle")
+		
+		if HP <= 0:
+			death = true
 			velocity.x = 0
+			anim.play("Death")
+			self.queue_free()
+
 	move_and_slide()
 
 
@@ -51,25 +71,16 @@ func _on_player_detection_body_exited(body):
 		
 func _on_player_death_body_entered(body): #has to be edited to be damaged by weapon
 	if body.name == "Player":
-		HP = HP - 5
-		print(HP)
-		get_node("AnimatedSprite2D").play("Hurt")
-		await get_node("AnimatedSprite2D").animation_finished
-		get_node("AnimatedSprite2D").play("Idle")
+		damaged = true
 		
-		
-		if HP <= 0:
-			velocity.x = 0
-			chase = false
-			get_node("AnimatedSprite2D").play("Death")
-			await get_node("AnimatedSprite2D").animation_finished
-			self.queue_free()
 
+func _on_player_death_body_exited(body):
+	damaged = false
 
 func _on_player_attack_body_entered(body):
 	if body.name == "Player":
 		attacking = true;
-		get_node("AnimatedSprite2D").play("Attack_1")
+		anim.play("Attack")
 		#body.HP -= 1 #Has to be added in later to reduce player health 
 
 
@@ -77,9 +88,5 @@ func _on_player_attack_body_exited(body):
 	attacking = false
 
 
-func _on_player_detection_run_body_entered(body):
-	SpeedFaktor = 5
 
 
-func _on_player_detection_run_body_exited(body):
-	SpeedFaktor = 1

@@ -1,6 +1,4 @@
-res://Mobs/Fish.tscn
-res://Mobs/skeleton.tscn
-res://Mobs/Fish.gd
+res://Mobs/Skeleton.tscn
 res://Scenes/MainMenu.tscn
 res://Scenes/Recap.tscn
 res://Characters/Player.tscn
@@ -8,7 +6,8 @@ res://Scenes/Gameworld.tscn
 res://GameElements/Laser.tscn
 res://GameElements/Mirror.tscn
 res://GameElements/door.tscn
-res://Scripts/Laser.gd
-res://Mobs/skeleton.gd
-res://Mobs/Skeleton.tscn
+res://Mobs/Fish.tscn
+res://Mobs/skelett.tscn
 res://Mobs/Skeleton.gd
+res://Mobs/PlayerHitFlipPos.gd
+res://Mobs/AttackShape2D.gd
