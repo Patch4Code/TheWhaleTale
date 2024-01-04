@@ -690,7 +690,7 @@ shape = SubResource("CapsuleShape2D_fjmja")
 position = Vector2(-1, -1)
 scale = Vector2(0.234375, 0.234375)
 sprite_frames = SubResource("SpriteFrames_qqbnn")
-animation = &"Attack3"
+animation = &"Idle"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
