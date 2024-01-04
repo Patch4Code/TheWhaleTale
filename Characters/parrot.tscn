@@ -40,8 +40,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l4cqv"]
-radius = 48.0
-height = 128.0
+radius = 64.0
+height = 176.0
 
 [node name="Parrot" type="CharacterBody2D"]
 script = ExtResource("1_ala0d")

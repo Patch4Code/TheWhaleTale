@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://cp1vgvib6wjsi"]
+[gd_scene load_steps=79 format=3 uid="uid://cp1vgvib6wjsi"]
 
 [ext_resource type="Texture2D" uid="uid://cglo1endr14a8" path="res://Resources/Sprites/Player/Attack_1.png" id="1_6e20w"]
 [ext_resource type="Texture2D" uid="uid://881w03i3jj5q" path="res://Resources/Sprites/Player/Idle.png" id="1_fh0j3"]
@@ -678,6 +678,10 @@ _data = {
 "Run": SubResource("Animation_0liv1")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ncfll"]
+radius = 5.0
+height = 20.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ibyri")
 
@@ -709,3 +713,15 @@ one_shot = true
 [node name="WalkSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_c687d")
 volume_db = -8.0
+
+[node name="detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+shape = SubResource("CapsuleShape2D_ncfll")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(64, 2.08165e-12)
+collision_mask = 4
+
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]

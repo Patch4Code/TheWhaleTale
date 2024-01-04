@@ -1,0 +1,40 @@
+~ main
+
+if global.given_octootto_item == false
+	Octootto: [[Hi|Hello|Howdy]]... how may I help?
+	- Who are you?
+		Octootto: I'm just... otto, nothing more
+		Octootto: the otto that can speak lol.
+		- I think I have something for you.
+			Octootto: Oh.. really?
+			- yes, found something with your name on it
+				if global.found_octootto_item == true 
+					Octootto: Ahhh, a chest, i must have dropped it, thank you so much!
+					set global.given_octootto_item = true
+					=> END
+				else: 
+					Octootto: Ahh, weird it has my name, but that's not mine!
+					Octootto: Thanks for letting me know!
+					=> END
+			- no, just joking => END
+		- goodbye. => END
+	- I think I have something for you.
+		Octootto: Oh.. really?
+		- yes, found something with your name on it
+			if global.found_octootto_item == true 
+				Octootto: Ahhh. a chest, i must have dropped it, thank you so much!
+				set global.given_octootto_item = true
+				=> END
+			else: 
+				Octootto: Ahh, weird it has my name, but that's not mine!
+				Octootto: Thanks for letting me know!
+				=> END
+		- no, just joking => END
+	- goodbye. => END
+else:
+	Octootto: [[Hi|Hello|Howdy]], thank you so much for finding my chest!
+	Octootto: I don't know what i would have done without you
+	Octootto: I am working on a massive surprise for you!
+	=> END
+
+=> END

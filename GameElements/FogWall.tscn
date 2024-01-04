@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://bdd6pj2v06vay"]
 
 [ext_resource type="Texture2D" uid="uid://cy33krubqvm25" path="res://Resources/Textures/glas.png" id="1_eg6xu"]
+[ext_resource type="Shader" path="res://Shader/FogWall.gdshader" id="1_fhw4n"]
 [ext_resource type="Script" path="res://Scripts/FogWall.gd" id="1_qdld3"]
-[ext_resource type="Shader" path="res://Shader/FogWall2.gdshader" id="2_p4hhy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3y6y"]
 size = Vector2(192, 48)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v0xih"]
-shader = ExtResource("2_p4hhy")
+shader = ExtResource("1_fhw4n")
 shader_parameter/colorMode = 0
 shader_parameter/color = Color(0, 0, 0, 1)
 shader_parameter/timescale = -0.06
