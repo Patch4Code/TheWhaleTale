@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bi23c6431qn5i"]
+[gd_scene load_steps=9 format=3 uid="uid://bi23c6431qn5i"]
 
 [ext_resource type="Texture2D" uid="uid://hbvgm4rujbv" path="res://Resources/Sprites/Parrot/parrotSprite.png" id="1_3dont"]
+[ext_resource type="Script" path="res://Scripts/parrot.gd" id="1_ala0d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_on7di"]
 atlas = ExtResource("1_3dont")
@@ -43,6 +44,7 @@ radius = 48.0
 height = 128.0
 
 [node name="Parrot" type="CharacterBody2D"]
+script = ExtResource("1_ala0d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rac3l")

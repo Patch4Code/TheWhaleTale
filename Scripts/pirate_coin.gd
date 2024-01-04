@@ -8,7 +8,10 @@ func _process(delta):
 	if player_inside_zone:
 		if Input.is_action_pressed("Interact"):
 			
-			#Pagagei muss vor bossarena gespawned werden
+			#spawn parrot
+			var script_parrot = get_node("res://Characters/parrot.tscn")
+			if script_parrot:
+				script_parrot.set_process(true)
 			
 			#here the inventory is called with the signal
 			emit_signal("coin_collected")
