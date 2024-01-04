@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcj8gdsjxcyn3"]
+
+[ext_resource type="Texture2D" uid="uid://dg1382flwro8" path="res://Resources/Images/textrahmen.png" id="1_2s63x"]
+[ext_resource type="Script" path="res://Scripts/Ending.gd" id="1_yg8pr"]
+[ext_resource type="Texture2D" uid="uid://b54nrummf311q" path="res://Resources/Images/boatOverAcidLake.png" id="2_c7pxq"]
+[ext_resource type="FontFile" uid="uid://b2r7cala357u6" path="res://Resources/Fonts/Bell MT.ttf" id="3_yviui"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ae88"]
+bg_color = Color(0.368627, 0.631373, 0.713726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gii1"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Ending" type="Node2D"]
+script = ExtResource("1_yg8pr")
+
+[node name="RichtungRektum" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="RichtungRektum"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1921.0
+offset_bottom = 1078.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ae88")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="RichtungRektum"]
+layout_mode = 2
+offset_left = 1197.25
+offset_top = 357.25
+offset_right = 1887.25
+offset_bottom = 614.25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Du übergibst dem Oktopus den 
+Schatz, und er hält sein Wort. Mit 
+seinem Boot navigiert er dich über 
+den Säuresee - richtung Rektum 
+und richtung neuer Abenteuer ..."
+
+[node name="Textrahmen" type="Sprite2D" parent="RichtungRektum"]
+position = Vector2(1460.25, 452.25)
+scale = Vector2(0.63375, 0.63375)
+texture = ExtResource("1_2s63x")
+
+[node name="Säuresee" type="Sprite2D" parent="RichtungRektum"]
+position = Vector2(532.043, 542)
+scale = Vector2(0.236307, 0.238333)
+texture = ExtResource("2_c7pxq")
+
+[node name="Button1" type="Button" parent="RichtungRektum"]
+layout_mode = 0
+offset_left = 1465.0
+offset_top = 877.0
+offset_right = 1844.0
+offset_bottom = 992.0
+theme_override_font_sizes/font_size = 50
+text = "Weiter"
+
+[node name="ToBeContinued" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="ToBeContinued"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 4.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0gii1")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="ToBeContinued"]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 439.0
+offset_right = 1715.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("3_yviui")
+theme_override_font_sizes/font_size = 150
+text = "TO BE CONTINUED ..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="RichtungRektum/Button1" to="." method="_on_button_1_pressed"]

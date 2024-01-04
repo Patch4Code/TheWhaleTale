@@ -1,8 +1,9 @@
+Label
+Control
 Node2D
 CanvasLayer
 Button
 Sprite2D
-Control
 VBoxContainer
 MarginContainer
 CollisionShape2D
@@ -10,5 +11,4 @@ Area2D
 Timer
 AudioStreamPlayer2D
 AudioStreamPlayer
-Label
 ColorRect
