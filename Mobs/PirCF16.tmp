@@ -310,10 +310,10 @@ size = Vector2(32, 65)
 size = Vector2(121.75, 47.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6tnj"]
-size = Vector2(1211, 82)
+size = Vector2(1211, 130)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fsusd"]
-size = Vector2(102.5, 68)
+size = Vector2(102.5, 82)
 
 [node name="PirateBoss" type="CharacterBody2D"]
 script = ExtResource("1_7uakw")
@@ -351,6 +351,7 @@ shape = SubResource("RectangleShape2D_mdrou")
 disabled = true
 
 [node name="PlayerDetected" type="Area2D" parent="."]
+visible = false
 
 [node name="ViewDistance" type="CollisionShape2D" parent="PlayerDetected"]
 position = Vector2(-3.5, 0)
@@ -359,10 +360,9 @@ shape = SubResource("RectangleShape2D_v6tnj")
 [node name="PlayerInAttackRange" type="Area2D" parent="."]
 
 [node name="AreaForAttack" type="CollisionShape2D" parent="PlayerInAttackRange"]
-position = Vector2(51.75, 7)
+position = Vector2(51.75, 0)
 shape = SubResource("RectangleShape2D_fsusd")
 
-[connection signal="area_entered" from="DamagebleArea" to="." method="_on_damageble_area_area_entered"]
 [connection signal="body_entered" from="PlayerDetected" to="." method="_on_player_detected_body_entered"]
 [connection signal="body_exited" from="PlayerDetected" to="." method="_on_player_detected_body_exited"]
 [connection signal="body_entered" from="PlayerInAttackRange" to="." method="_on_player_in_attack_range_body_entered"]

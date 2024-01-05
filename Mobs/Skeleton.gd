@@ -75,7 +75,7 @@ func _on_player_detection_body_exited(body):
 func _on_player_attack_body_entered(body):
 	if body.name == "Player":
 		attacking = true;
-		anim.play("Attack")
+		#anim.play("Attack")
 
 func _on_player_attack_body_exited(body):
 	attacking = false

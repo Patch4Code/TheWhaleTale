@@ -58,6 +58,7 @@ func executeAttack():
 	
 func hit(damage : int):
 	health -= damage
+	anim.play("Hurt")
 	print(health)
 	if health <= 0:
 		death = true
@@ -68,6 +69,7 @@ func hit(damage : int):
 
 func _on_area_2d_body_entered(body):
 	#The damage is calculated inside each enemy 
+	#could be changed later for a capsulated damage System
 	pass
 
 
@@ -78,3 +80,5 @@ func _on_take_damage_area_area_entered(area):
 	if area.name == "PlayerAttackFish":
 		print("Fish hit")
 		hit(5)
+	if area.name == "AttackArea":
+		hit(15)
