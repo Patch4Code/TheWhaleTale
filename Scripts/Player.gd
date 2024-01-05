@@ -1,15 +1,11 @@
 extends CharacterBody2D
 
 const SPEED = 450.0
-const JUMP_VELOCITY = -500.0
-const jump_power = -1800.0
+const JUMP_VELOCITY = -550.0 #-500.0
 
-const acc = 50
-const friction = 70
+const wall_jump_pushback = 1000
 
-const wall_jump_pushback = 100
-
-const wall_slide_gravity = 100
+const wall_slide_gravity = 30 #980 #100
 var is_wall_sliding = false
 
 var octootto_in_range = false
@@ -21,14 +17,12 @@ var platform_vol
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-#var gravity = 120
 
 @onready var anim = get_node("AnimationPlayer")
 
 @onready var walk_sound = $WalkSound
 
 func _physics_process(delta):
-	
 	if in_chest_dec == true:
 		if Input.is_action_just_pressed("ui_down"):
 			global.found_octootto_item = true
@@ -43,10 +37,24 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		anim.play("Jump")
-
+	if Input.is_action_just_pressed("ui_accept"):
+		if is_on_floor():
+			velocity.y = JUMP_VELOCITY
+			anim.play("Jump")
+		
+		if is_on_wall():
+			var direction_is_left = get_node("AnimatedSprite2D").flip_h
+			#left wall
+			if direction_is_left and Input.is_action_pressed("ui_right"):
+				velocity.y = JUMP_VELOCITY-150
+				velocity.x = -wall_jump_pushback
+				print("left wall")
+			#right wall
+			if not direction_is_left and Input.is_action_pressed("ui_left"):
+				velocity.y = JUMP_VELOCITY-150
+				velocity.x = wall_jump_pushback
+				print("right wall")
+		
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -70,9 +78,9 @@ func _physics_process(delta):
 	if velocity.y > 0:
 		anim.play("Fall")
 
-	move_and_slide()
-	jump()
 	wall_slide(delta)
+	move_and_slide()
+	
 
 
 func _on_detection_area_body_entered(body):
@@ -98,19 +106,6 @@ func _on_chestdetection_body_exited(body):
 		in_chest_dec = false
 
 
-func jump():
-	#velocity.y += gravity
-	if Input.is_action_just_pressed("ui_up"):
-		if is_on_floor():
-			velocity.y = jump_power
-		if is_on_wall() and Input.is_action_pressed("ui_right"):
-			velocity.y = jump_power
-			velocity.x = -wall_jump_pushback
-		if is_on_wall() and Input.is_action_pressed("ui_left"):
-			velocity.y = jump_power
-			velocity.x = wall_jump_pushback
-
-
 func wall_slide(delta):
 	if is_on_wall() and !is_on_floor():
 		if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"):
@@ -123,3 +118,4 @@ func wall_slide(delta):
 	if is_wall_sliding:
 		velocity.y += (wall_slide_gravity * delta)
 		velocity.y = min(velocity.y, wall_slide_gravity)
+		#velocity.y = clamp(velocity.y, wall_slide_gravity, 50)

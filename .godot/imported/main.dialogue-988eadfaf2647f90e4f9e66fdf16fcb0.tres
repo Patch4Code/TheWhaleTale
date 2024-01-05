@@ -1,0 +1,494 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_1cupk"]
+
+[resource]
+script = ExtResource("1_1cupk")
+using_states = PackedStringArray()
+titles = {
+"main": "3"
+}
+character_names = PackedStringArray("Octootto")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "main",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"next_id_after": "40",
+"parent_id": "8",
+"responses": PackedStringArray("10", "19"),
+"tags": PackedStringArray(),
+"text": "yes, found something with your name on it",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "yes, found something with your name on it",
+"type": "response"
+},
+"11": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "found_octootto_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"id": "11",
+"next_conditional_id": "15",
+"next_id": "12",
+"next_id_after": "40",
+"parent_id": "10",
+"type": "condition"
+},
+"12": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"parent_id": "11",
+"tags": PackedStringArray(),
+"text": "Ahhh, a chest, i must have dropped it, thank you so much!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahhh, a chest, i must have dropped it, thank you so much!",
+"type": "dialogue"
+},
+"13": {
+"id": "13",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "given_octootto_item"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "14",
+"parent_id": "11",
+"type": "mutation"
+},
+"14": {
+"id": "14",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "11",
+"type": "goto"
+},
+"15": {
+"id": "15",
+"next_conditional_id": "40",
+"next_id": "16",
+"next_id_after": "40",
+"parent_id": "10",
+"type": "condition"
+},
+"16": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "Ahh, weird it has my name, but that's not mine!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahh, weird it has my name, but that's not mine!",
+"type": "dialogue"
+},
+"17": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "Thanks for letting me know!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thanks for letting me know!",
+"type": "dialogue"
+},
+"18": {
+"id": "18",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "15",
+"type": "goto"
+},
+"19": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "end",
+"next_id_after": "40",
+"parent_id": "8",
+"tags": PackedStringArray(),
+"text": "no, just joking",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "no, just joking",
+"type": "response"
+},
+"20": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "end",
+"next_id_after": "40",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "goodbye.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "goodbye.",
+"type": "response"
+},
+"21": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"next_id_after": "40",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "I think I have something for you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I think I have something for you.",
+"type": "response"
+},
+"22": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"parent_id": "21",
+"tags": PackedStringArray(),
+"text": "Oh.. really?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh.. really?",
+"type": "dialogue"
+},
+"23": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"next_id_after": "40",
+"parent_id": "21",
+"responses": PackedStringArray("23", "32"),
+"tags": PackedStringArray(),
+"text": "yes, found something with your name on it",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "yes, found something with your name on it",
+"type": "response"
+},
+"24": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "found_octootto_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"id": "24",
+"next_conditional_id": "28",
+"next_id": "25",
+"next_id_after": "40",
+"parent_id": "23",
+"type": "condition"
+},
+"25": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"parent_id": "24",
+"tags": PackedStringArray(),
+"text": "Ahhh. a chest, i must have dropped it, thank you so much!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahhh. a chest, i must have dropped it, thank you so much!",
+"type": "dialogue"
+},
+"26": {
+"id": "26",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "given_octootto_item"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "27",
+"parent_id": "24",
+"type": "mutation"
+},
+"27": {
+"id": "27",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "24",
+"type": "goto"
+},
+"28": {
+"id": "28",
+"next_conditional_id": "40",
+"next_id": "29",
+"next_id_after": "40",
+"parent_id": "23",
+"type": "condition"
+},
+"29": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"parent_id": "28",
+"tags": PackedStringArray(),
+"text": "Ahh, weird it has my name, but that's not mine!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahh, weird it has my name, but that's not mine!",
+"type": "dialogue"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "given_octootto_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"id": "3",
+"next_conditional_id": "34",
+"next_id": "4",
+"next_id_after": "40",
+"type": "condition"
+},
+"30": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "30",
+"next_id": "31",
+"parent_id": "28",
+"tags": PackedStringArray(),
+"text": "Thanks for letting me know!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thanks for letting me know!",
+"type": "dialogue"
+},
+"31": {
+"id": "31",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "28",
+"type": "goto"
+},
+"32": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "32",
+"next_id": "end",
+"next_id_after": "40",
+"parent_id": "21",
+"tags": PackedStringArray(),
+"text": "no, just joking",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "no, just joking",
+"type": "response"
+},
+"33": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "33",
+"next_id": "end",
+"next_id_after": "40",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "goodbye.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "goodbye.",
+"type": "response"
+},
+"34": {
+"id": "34",
+"next_conditional_id": "40",
+"next_id": "35",
+"next_id_after": "40",
+"type": "condition"
+},
+"35": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "35",
+"next_id": "36",
+"parent_id": "34",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello|Howdy]], thank you so much for finding my chest!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello|Howdy]], thank you so much for finding my chest!",
+"type": "dialogue"
+},
+"36": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "36",
+"next_id": "37",
+"parent_id": "34",
+"tags": PackedStringArray(),
+"text": "I don't know what i would have done without you",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I don't know what i would have done without you",
+"type": "dialogue"
+},
+"37": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "37",
+"next_id": "38",
+"parent_id": "34",
+"tags": PackedStringArray(),
+"text": "I am working on a massive surprise for you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I am working on a massive surprise for you!",
+"type": "dialogue"
+},
+"38": {
+"id": "38",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "34",
+"type": "goto"
+},
+"4": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello|Howdy]]... how may I help?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello|Howdy]]... how may I help?",
+"type": "dialogue"
+},
+"40": {
+"id": "40",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"next_id_after": "40",
+"parent_id": "3",
+"responses": PackedStringArray("5", "21", "33"),
+"tags": PackedStringArray(),
+"text": "Who are you?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Who are you?",
+"type": "response"
+},
+"6": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "I'm just... otto, nothing more",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm just... otto, nothing more",
+"type": "dialogue"
+},
+"7": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "the otto that can speak lol.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "the otto that can speak lol.",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"next_id_after": "40",
+"parent_id": "5",
+"responses": PackedStringArray("8", "20"),
+"tags": PackedStringArray(),
+"text": "I think I have something for you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I think I have something for you.",
+"type": "response"
+},
+"9": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"parent_id": "8",
+"tags": PackedStringArray(),
+"text": "Oh.. really?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh.. really?",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"
