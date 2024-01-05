@@ -13,3 +13,5 @@ res://Scenes/Credits.tscn
 res://GameElements/pirate_coin.tscn
 res://Scenes/Ending.tscn
 res://Characters/Octupus.tscn
+res://Scripts/Player.gd
+res://GameElements/CounterPlatform.tscn

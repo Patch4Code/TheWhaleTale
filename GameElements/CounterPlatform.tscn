@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://eva78arnen6g"]
 
-[ext_resource type="Texture2D" uid="uid://cb0pdkpd6sogq" path="res://Resources/Textures/Wood.jpg" id="1_5r0yd"]
 [ext_resource type="Script" path="res://Scripts/CounterPlatform.gd" id="1_vafuj"]
+[ext_resource type="Texture2D" uid="uid://lmoe8ayengp4" path="res://Resources/Textures/woodcracked.jpg" id="2_5lcw1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkowp"]
 size = Vector2(256, 32)
@@ -15,7 +15,7 @@ script = ExtResource("1_vafuj")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.90735e-06, -7.15256e-07)
 scale = Vector2(0.5, 0.363636)
-texture = ExtResource("1_5r0yd")
+texture = ExtResource("2_5lcw1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_fkowp")

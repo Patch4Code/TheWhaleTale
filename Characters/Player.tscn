@@ -724,13 +724,5 @@ visible = false
 target_position = Vector2(64, 2.08165e-12)
 collision_mask = 4
 
-[node name="RightWall" type="RayCast2D" parent="."]
-rotation = -1.5708
-target_position = Vector2(0, 12)
-
-[node name="LeftWall" type="RayCast2D" parent="."]
-rotation = 1.5708
-target_position = Vector2(0, 12)
-
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
