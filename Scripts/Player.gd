@@ -12,6 +12,11 @@ var octootto_in_range = false
 
 var in_chest_dec = false
 
+#fightvariables
+var attack = false
+var death = false
+var health = 100
+
 @onready var raycast = get_node("RayCast2D")
 var platform_vol
 
@@ -23,63 +28,70 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var walk_sound = $WalkSound
 
 func _physics_process(delta):
-	if in_chest_dec == true:
-		if Input.is_action_just_pressed("ui_down"):
-			global.found_octootto_item = true
+	if death == false:
+		if in_chest_dec == true:
+			if Input.is_action_just_pressed("ui_down"):
+				global.found_octootto_item = true
 	
-	if octootto_in_range == true:
-		if Input.is_action_just_pressed("ui_up"):
-			DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"), "main")
-			return
+		if octootto_in_range == true:
+			if Input.is_action_just_pressed("ui_up"):
+				DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"), "main")
+				return
 	
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept"):
-		if is_on_floor():
-			velocity.y = JUMP_VELOCITY
-			anim.play("Jump")
+		# Add the gravity.
+		if not is_on_floor():
+			velocity.y += gravity * delta
+			
+		if Input.is_action_pressed("Attack"):
+			executeAttack()
+		# Handle jump.
+		if Input.is_action_just_pressed("ui_accept") and attack == false:
+			if is_on_floor():
+				velocity.y = JUMP_VELOCITY
+				anim.play("Jump")
 		
-		if is_on_wall():
-			var direction_is_left = get_node("AnimatedSprite2D").flip_h
-			#left wall
-			if direction_is_left and Input.is_action_pressed("ui_right"):
-				velocity.y = JUMP_VELOCITY-150
-				velocity.x = -wall_jump_pushback
-				print("left wall")
-			#right wall
-			if not direction_is_left and Input.is_action_pressed("ui_left"):
-				velocity.y = JUMP_VELOCITY-150
-				velocity.x = wall_jump_pushback
-				print("right wall")
+			if is_on_wall() and attack == false:
+				var direction_is_left = get_node("AnimatedSprite2D").flip_h
+				#left wall
+				if direction_is_left and Input.is_action_pressed("ui_right"):
+					velocity.y = JUMP_VELOCITY-150
+					velocity.x = -wall_jump_pushback
+					print("left wall")
+				#right wall
+				if not direction_is_left and Input.is_action_pressed("ui_left"):
+					velocity.y = JUMP_VELOCITY-150
+					velocity.x = wall_jump_pushback
+					print("right wall")
 		
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction == -1:
-		get_node("AnimatedSprite2D").flip_h = true
-	elif direction == 1:
-		get_node("AnimatedSprite2D").flip_h = false
-	if direction:
-		velocity.x = direction * SPEED
-		if velocity.y == 0:
-			anim.play("Run")
-			if $walkSoundTimer.time_left <= 0:
-				walk_sound.play()
-				walk_sound.pitch_scale = randf_range(0.8, 1.2)
-				$walkSoundTimer.start(0.25)		
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		if velocity.y == 0:
-			anim.play("Idle")
-	if velocity.y > 0:
-		anim.play("Fall")
+		# Get the input direction and handle the movement/deceleration.
+		# As good practice, you should replace UI actions with custom gameplay actions.
+		var direction = Input.get_axis("ui_left", "ui_right")
+		if direction == -1 and attack == false:
+			get_node("AnimatedSprite2D").flip_h = true
+			if $PlayerAttackArea/AttackShape2d.position.x > 0:
+				$PlayerAttackArea/AttackShape2d.position.x *= -1
+		elif direction == 1 and attack == false:
+			get_node("AnimatedSprite2D").flip_h = false
+			if $PlayerAttackArea/AttackShape2d.position.x < 0:
+				$PlayerAttackArea/AttackShape2d.position.x *= -1
+		if direction and attack == false:
+			velocity.x = direction * SPEED
+			if velocity.y == 0:
+				anim.play("Run")
+				if $walkSoundTimer.time_left <= 0:
+					walk_sound.play()
+					walk_sound.pitch_scale = randf_range(0.8, 1.2)
+					$walkSoundTimer.start(0.25)		
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			if velocity.y == 0 and attack == false:
+				anim.play("Idle")
+		if velocity.y > 0 and attack == false:
+			anim.play("Fall")
 
-	wall_slide(delta)
-	move_and_slide()
+		wall_slide(delta)
+		move_and_slide()
 	
 
 
@@ -119,3 +131,38 @@ func wall_slide(delta):
 		velocity.y += (wall_slide_gravity * delta)
 		velocity.y = min(velocity.y, wall_slide_gravity)
 		#velocity.y = clamp(velocity.y, wall_slide_gravity, 50)
+
+func executeAttack():
+	attack = true
+	anim.play("Attack")
+	velocity.x = 0 
+	await get_tree().create_timer(0.5).timeout
+	attack = false
+	
+func hit(damage : int):
+	health -= damage
+	anim.play("Hurt")
+	print(health)
+	if health <= 0:
+		death = true
+		anim.play("Dead")
+		await get_tree().create_timer(0.3).timeout
+		#self.queue_free()
+
+
+func _on_player_attack_area_body_entered(body):
+	#The damage is calculated inside each enemy 
+	#could be changed later for a capsulated damage System
+	pass
+
+
+func _on_take_damage_area_area_entered(area):
+	if area.name == "PlayerHit":
+		print("Skeleton hit")
+		hit(10)
+	if area.name == "PlayerAttackFish":
+		print("Fish hit")
+		hit(5)
+	if area.name == "AttackArea":
+		hit(15)
+

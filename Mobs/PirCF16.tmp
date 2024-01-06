@@ -1,0 +1,369 @@
+[gd_scene load_steps=21 format=3 uid="uid://03w37y1pnhv0"]
+
+[ext_resource type="Texture2D" uid="uid://b628iup0ymdu7" path="res://Mobs/Sprites/Pirate by seartsy/Death-4frm.png" id="1_0btdv"]
+[ext_resource type="Script" path="res://Mobs/PirateBoss.gd" id="1_7uakw"]
+[ext_resource type="Texture2D" uid="uid://26kyjdl801py" path="res://Mobs/Sprites/Pirate by seartsy/Hit-3frm.png" id="1_a5mod"]
+[ext_resource type="Texture2D" uid="uid://ckadlsunx451x" path="res://Mobs/Sprites/Pirate by seartsy/Idle-5frm.png" id="1_dodlh"]
+[ext_resource type="Texture2D" uid="uid://dr5nnlddvxpxg" path="res://Mobs/Sprites/Pirate by seartsy/Atk1-6frm.png" id="1_hoxgr"]
+[ext_resource type="Texture2D" uid="uid://bwk0hqabeb3j3" path="res://Mobs/Sprites/Pirate by seartsy/Run-6frm.png" id="1_sexqf"]
+[ext_resource type="Texture2D" uid="uid://cj2806dchbklb" path="res://Mobs/Sprites/Pirate by seartsy/Atk2-6frm.png" id="4_07lg1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ple2p"]
+radius = 17.0
+height = 90.0
+
+[sub_resource type="Animation" id="Animation_wgbey"]
+resource_name = "Attack_1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PirateSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_hoxgr")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PirateSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PirateSprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 1, 2, 3, 4, 5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AttackArea/SwordHitBox:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_k6ism"]
+resource_name = "Attack_2"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PirateSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_07lg1")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PirateSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PirateSprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AttackArea/SwordHitBox:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_l1k1n"]
+resource_name = "Death"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PirateSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_0btdv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PirateSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PirateSprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 3]
+}
+
+[sub_resource type="Animation" id="Animation_4lwmg"]
+resource_name = "Hurt"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PirateSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_a5mod")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PirateSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PirateSprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_tpbpw"]
+resource_name = "Idle"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PirateSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_dodlh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PirateSprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PirateSprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_a1cdd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PirateSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_h0ty4"]
+resource_name = "Run"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PirateSprite:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PirateSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PirateSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_sexqf")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rpbpa"]
+_data = {
+"Attack_1": SubResource("Animation_wgbey"),
+"Attack_2": SubResource("Animation_k6ism"),
+"Death": SubResource("Animation_l1k1n"),
+"Hurt": SubResource("Animation_4lwmg"),
+"Idle": SubResource("Animation_tpbpw"),
+"RESET": SubResource("Animation_a1cdd"),
+"Run": SubResource("Animation_h0ty4")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhx63"]
+size = Vector2(32, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdrou"]
+size = Vector2(121.75, 47.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6tnj"]
+size = Vector2(1211, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fsusd"]
+size = Vector2(102.5, 82)
+
+[node name="PirateBoss" type="CharacterBody2D"]
+script = ExtResource("1_7uakw")
+
+[node name="PirateSprite" type="Sprite2D" parent="."]
+position = Vector2(-0.999996, -8)
+scale = Vector2(1.7, 1.579)
+texture = ExtResource("1_dodlh")
+hframes = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-1, 1)
+shape = SubResource("CapsuleShape2D_ple2p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rpbpa")
+}
+autoplay = "Idle"
+
+[node name="DamagebleArea" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamagebleArea"]
+visible = false
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_fhx63")
+
+[node name="AttackArea" type="Area2D" parent="."]
+
+[node name="SwordHitBox" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(77, 0)
+shape = SubResource("RectangleShape2D_mdrou")
+disabled = true
+
+[node name="PlayerDetected" type="Area2D" parent="."]
+visible = false
+
+[node name="ViewDistance" type="CollisionShape2D" parent="PlayerDetected"]
+position = Vector2(-3.5, 0)
+shape = SubResource("RectangleShape2D_v6tnj")
+
+[node name="PlayerInAttackRange" type="Area2D" parent="."]
+
+[node name="AreaForAttack" type="CollisionShape2D" parent="PlayerInAttackRange"]
+position = Vector2(51.75, 0)
+shape = SubResource("RectangleShape2D_fsusd")
+
+[connection signal="body_entered" from="PlayerDetected" to="." method="_on_player_detected_body_entered"]
+[connection signal="body_exited" from="PlayerDetected" to="." method="_on_player_detected_body_exited"]
+[connection signal="body_entered" from="PlayerInAttackRange" to="." method="_on_player_in_attack_range_body_entered"]
+[connection signal="body_exited" from="PlayerInAttackRange" to="." method="_on_player_in_attack_range_body_exited"]
