@@ -77,7 +77,7 @@ func _on_player_attack_body_entered(body):
 		attacking = true;
 		#anim.play("Attack")
 
-func _on_player_attack_body_exited(body):
+func _on_player_attack_body_exited(_body):
 	attacking = false
 	
 func _on_player_death_area_entered(area):

@@ -8,7 +8,7 @@ const MAX_BOUNCES = 5
 signal open_door_signal
 signal close_door_signal
 
-func _process(delta):
+func _process(_delta):
 	
 	line.clear_points()
 	line.add_point(Vector2.ZERO)

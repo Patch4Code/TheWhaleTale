@@ -9,7 +9,7 @@ var player_inside_zone = false
 var coin_already_thrown_in = false
 
 
-func _process(delta):
+func _process(_delta):
 	
 	if player_inside_zone:
 		#Eingabe abfragen
@@ -24,7 +24,7 @@ func _process(delta):
 				print("Keine Münze vorhanden") #Einblendung dass man keine Münze hat
 
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	#Interagieren Anzeige einblenden
 	if not coin_already_thrown_in:
 		print("Coin Area entered")
@@ -32,7 +32,7 @@ func _on_area_2d_body_entered(body):
 		$InteractUI.visible = true
 	
 
-func _on_area_2d_body_exited(body):
+func _on_area_2d_body_exited(_body):
 	print("Coin Area exited")
 	player_inside_zone = false
 	$InteractUI.visible = false

@@ -75,5 +75,5 @@ func _on_player_attack_fish_body_entered(body):
 		get_node("AnimatedSprite2D").play("Attack")
 
 
-func _on_player_attack_fish_body_exited(body):
+func _on_player_attack_fish_body_exited(_body):
 	attacking = false

@@ -4,7 +4,7 @@ var player_inside_zone = false
 
 signal coin_collected
 
-func _process(delta):
+func _process(_delta):
 	if player_inside_zone:
 		if Input.is_action_pressed("Interact"):
 			

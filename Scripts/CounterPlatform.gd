@@ -5,7 +5,7 @@ var collisionShape: CollisionShape2D
 func _ready():
 	collisionShape = $CollisionShape2D
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	var time_to_collapse = 2
 	await get_tree().create_timer(time_to_collapse).timeout
 	collisionShape.disabled = true

@@ -166,7 +166,7 @@ func hit(damage : int):
 		#self.queue_free()
 
 
-func _on_player_attack_area_body_entered(body):
+func _on_player_attack_area_body_entered(_body):
 	#The damage is calculated inside each enemy 
 	#could be changed later for a capsulated damage System
 	pass
