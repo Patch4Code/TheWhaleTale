@@ -8,9 +8,11 @@ func _on_coin_slot_make_fogwall_passable():
 	$CollisionShape2D.one_way_collision = true
 	
 	
-func disable_fogwall():
+#func disable_fogwall():
+	
+
+
+
+func _on_pirate_boss_2_disable_fogwall():
 	$CollisionShape2D.disabled = true
 	$Sprite2D.visible = false
-
-
-

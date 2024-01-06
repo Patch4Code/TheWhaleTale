@@ -9,3 +9,6 @@ res://Scenes/Gameworld.gd
 res://Scenes/MainMenu.tscn
 res://Scenes/Recap.tscn
 res://Characters/Player.tscn
+res://Mobs/PirateBoss.tscn
+res://Mobs/PirateBoss.gd
+res://Scripts/FogWall.gd

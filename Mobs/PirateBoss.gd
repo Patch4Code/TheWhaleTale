@@ -15,6 +15,9 @@ var anim # contains the Animationsplayer#
 var player 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction
+
+signal disable_fogwall
+
 #Setup of the Boss
 func _ready():
 		anim = get_node("AnimationPlayer")
@@ -101,6 +104,7 @@ func Die():
 	death = true
 	anim.play("Death")
 	await get_tree().create_timer(1.0).timeout
+	emit_signal("disable_fogwall")
 	self.queue_free()
 
 #chatacter recieved damage Lock other animations 
