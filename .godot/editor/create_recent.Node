@@ -1,8 +1,8 @@
-Sprite2D
-Label
-Node2D
 CollisionShape2D
 Area2D
+Label
+Node2D
+Sprite2D
 Control
 RayCast2D
 StaticBody2D
