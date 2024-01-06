@@ -12,3 +12,4 @@ res://Characters/Player.tscn
 res://Mobs/PirateBoss.tscn
 res://Mobs/PirateBoss.gd
 res://Scripts/FogWall.gd
+res://Scripts/FogOfWar.gd
