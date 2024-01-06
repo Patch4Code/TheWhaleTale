@@ -27,6 +27,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var walk_sound = $WalkSound
 
+signal player_death
+var first_death_call = true
+
 func _physics_process(delta):
 	if death == false:
 		if in_chest_dec == true:
@@ -62,7 +65,7 @@ func _physics_process(delta):
 					velocity.y = JUMP_VELOCITY-150
 					velocity.x = wall_jump_pushback
 					print("right wall")
-		
+	
 
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
@@ -93,6 +96,18 @@ func _physics_process(delta):
 		wall_slide(delta)
 		move_and_slide()
 	
+	#on death
+	else:
+		if first_death_call:
+			anim.play("Dead")
+			first_death_call = false
+			emit_signal("player_death")
+		
+		
+func _on_gameworld_player_revived():
+	death = false
+	health = 100	
+	first_death_call = true
 
 
 func _on_detection_area_body_entered(body):
@@ -140,12 +155,13 @@ func executeAttack():
 	attack = false
 	
 func hit(damage : int):
-	health -= damage
-	anim.play("Hurt")
-	print(health)
-	if health <= 0:
+	if health > 0:
+		health -= damage
+		anim.play("Hurt")
+		print(health)
+	else:
 		death = true
-		anim.play("Dead")
+		#anim.play("Dead")
 		await get_tree().create_timer(0.3).timeout
 		#self.queue_free()
 
@@ -165,4 +181,7 @@ func _on_take_damage_area_area_entered(area):
 		hit(5)
 	if area.name == "AttackArea":
 		hit(15)
+
+
+
 

@@ -18,3 +18,7 @@ res://Mobs/Skeleton.tscn
 res://Mobs/Fish.tscn
 res://Mobs/PirateBoss.tscn
 res://global.gd
+res://Scenes/Gameworld.gd
+res://GameElements/ckeckpoint_1.tscn
+res://Scripts/ckeckpoint_1.gd
+res://Scripts/Player.gd

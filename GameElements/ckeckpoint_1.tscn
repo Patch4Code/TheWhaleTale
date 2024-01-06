@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkhr2jgv3fpxd"]
+
+[ext_resource type="Script" path="res://Scripts/ckeckpoint_1.gd" id="1_ewe2w"]
+
+[node name="Ckeckpoint1" type="Node2D"]
+script = ExtResource("1_ewe2w")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "checkpoint1"
