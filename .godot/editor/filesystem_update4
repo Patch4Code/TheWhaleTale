@@ -1,4 +1,4 @@
-res://Scenes/Gameworld.tscn
+res://Characters/parrot.tscn
 res://Shader/Water.gdshader
 res://Shader/Acid.gdshader
 res://Shader/FogOfWar.gdshader
@@ -8,13 +8,5 @@ res://Shader/FogWall2.gdshader
 res://Scenes/MainMenu.tscn
 res://Scenes/Recap.tscn
 res://Characters/Player.tscn
+res://Scenes/Gameworld.tscn
 res://Mobs/PirateBoss.tscn
-res://Scenes/Gameworld.gd
-res://Scripts/Player.gd
-res://Scripts/CounterPlatform.gd
-res://Scripts/Laser.gd
-res://Scripts/coinSlott.gd
-res://Scripts/pirate_coin.gd
-res://moving_platform.gd
-res://Mobs/Skeleton.gd
-res://Mobs/Fish.gd
