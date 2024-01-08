@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://03w37y1pnhv0"]
+[gd_scene load_steps=27 format=3 uid="uid://03w37y1pnhv0"]
 
 [ext_resource type="Texture2D" uid="uid://b628iup0ymdu7" path="res://Mobs/Sprites/Pirate by seartsy/Death-4frm.png" id="1_0btdv"]
 [ext_resource type="Script" path="res://Mobs/PirateBoss.gd" id="1_7uakw"]
@@ -7,6 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://dr5nnlddvxpxg" path="res://Mobs/Sprites/Pirate by seartsy/Atk1-6frm.png" id="1_hoxgr"]
 [ext_resource type="Texture2D" uid="uid://bwk0hqabeb3j3" path="res://Mobs/Sprites/Pirate by seartsy/Run-6frm.png" id="1_sexqf"]
 [ext_resource type="Texture2D" uid="uid://cj2806dchbklb" path="res://Mobs/Sprites/Pirate by seartsy/Atk2-6frm.png" id="4_07lg1"]
+[ext_resource type="AudioStream" uid="uid://dv2igdicgflk0" path="res://MusicAndSounds/EnemySounds/22_Slash_04.wav" id="8_kbwjs"]
+[ext_resource type="AudioStream" uid="uid://lxa8j5x3mhbd" path="res://MusicAndSounds/EnemySounds/03_Claw_03.wav" id="9_nmcuh"]
+[ext_resource type="AudioStream" uid="uid://dexpoqbskfu" path="res://MusicAndSounds/EnemySounds/15_Impact_flesh_02.wav" id="10_dblaj"]
+[ext_resource type="AudioStream" uid="uid://blteyp6aebxmi" path="res://MusicAndSounds/EnemySounds/69_Enemy_death_01.wav" id="11_m632q"]
+[ext_resource type="AudioStream" uid="uid://bswa0yy1yasls" path="res://MusicAndSounds/EnemySounds/arr-pirate-male-joshua-chivers-1-00-00.mp3" id="12_1ro23"]
+[ext_resource type="AudioStream" uid="uid://dmd3svjp32s2w" path="res://MusicAndSounds/EnemySounds/landlubber-pirate-male-joshua-chivers-1-00-01.mp3" id="13_c2soh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ple2p"]
 radius = 17.0
@@ -358,6 +364,33 @@ shape = SubResource("RectangleShape2D_v6tnj")
 [node name="AreaForAttack" type="CollisionShape2D" parent="PlayerInAttackRange"]
 position = Vector2(51.75, 7)
 shape = SubResource("RectangleShape2D_fsusd")
+
+[node name="attakSoundFast" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_kbwjs")
+volume_db = -8.0
+
+[node name="attackSoundHeavy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_nmcuh")
+volume_db = -8.0
+pitch_scale = 0.75
+
+[node name="getHitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_dblaj")
+volume_db = -8.0
+
+[node name="deathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_m632q")
+volume_db = -8.0
+pitch_scale = 0.5
+
+[node name="arrSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_1ro23")
+volume_db = -8.0
+
+[node name="landlubberSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_c2soh")
+volume_db = -8.0
+pitch_scale = 0.96
 
 [connection signal="area_entered" from="DamagebleArea" to="." method="_on_damageble_area_area_entered"]
 [connection signal="body_entered" from="PlayerDetected" to="." method="_on_player_detected_body_entered"]

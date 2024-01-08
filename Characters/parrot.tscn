@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bi23c6431qn5i"]
+[gd_scene load_steps=12 format=3 uid="uid://bi23c6431qn5i"]
 
 [ext_resource type="Script" path="res://Scripts/parrot.gd" id="1_ala0d"]
 [ext_resource type="Texture2D" uid="uid://dwdhiefa1ilxr" path="res://Resources/Sprites/Parrot/ParrotWithCrown2.png" id="2_repij"]
 [ext_resource type="Texture2D" uid="uid://dgcsktj6h3mjo" path="res://Resources/Textures/Interagieren Anzeige v1.png" id="3_j6251"]
+[ext_resource type="AudioStream" uid="uid://onjkt6jmhllt" path="res://MusicAndSounds/NPCsounds/Parrot Squawks - QuickSounds.com.mp3" id="4_dilhi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lspqp"]
 atlas = ExtResource("2_repij")
@@ -70,6 +71,10 @@ shape = SubResource("RectangleShape2D_job72")
 visible = false
 position = Vector2(0, -334)
 texture = ExtResource("3_j6251")
+
+[node name="parrotSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dilhi")
+volume_db = -8.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

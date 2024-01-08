@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhes3oyduxs6t"]
+[gd_scene load_steps=12 format=3 uid="uid://dhes3oyduxs6t"]
 
 [ext_resource type="Script" path="res://Scripts/Recap.gd" id="1_fbum5"]
 [ext_resource type="Texture2D" uid="uid://dg1382flwro8" path="res://Resources/Images/textrahmen.png" id="1_rvuo7"]
@@ -8,20 +8,22 @@
 [ext_resource type="Texture2D" uid="uid://ck07qf133284s" path="res://Resources/Images/papagei-edit.jpg" id="4_4g5a0"]
 [ext_resource type="Texture2D" uid="uid://dpiwwxlk8j66s" path="res://Resources/Images/FreedFromHandcuffs-edit.jpg" id="5_2xrji"]
 [ext_resource type="Texture2D" uid="uid://hetl1mk52t4v" path="res://Resources/Images/WhaleMap.jpg" id="6_2tosc"]
+[ext_resource type="Texture2D" uid="uid://ygt2pxfllt4x" path="res://Resources/Textures/Controlls.png" id="9_fn7f7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydbb5"]
 bg_color = Color(0.368627, 0.631373, 0.713726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffcxr"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="RecapView" type="Node2D"]
 script = ExtResource("1_fbum5")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = -1.0
-offset_top = 2.0
-offset_right = 1921.0
-offset_bottom = 1078.0
+offset_right = 1920.0
+offset_bottom = 1076.0
+scale = Vector2(1.00004, 1.01599)
 theme_override_styles/panel = SubResource("StyleBoxFlat_ydbb5")
-metadata/_edit_lock_ = true
 
 [node name="verschluckt" type="Control" parent="."]
 layout_mode = 3
@@ -195,15 +197,18 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Karte"]
 layout_mode = 0
-offset_left = 1185.0
-offset_top = 469.0
-offset_right = 1779.0
-offset_bottom = 682.0
+offset_left = 1198.0
+offset_top = 454.0
+offset_right = 1763.0
+offset_bottom = 739.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 37
-text = "Als Belohnung überreicht er 
-dir eine Karte des Walmagens, 
-die einen Geheimgang offenbart. "
+theme_override_font_sizes/font_size = 30
+text = "Als Belohnung überreicht er dir eine 
+Karte des Walmagens, die einen 
+Geheimgang offenbart. Mit der Karte 
+machst du dich auf und findest dich 
+in einem Versteckten Nebengang des 
+Walmagens wieder ..."
 
 [node name="Textrahmen" type="Sprite2D" parent="Karte"]
 position = Vector2(1463.25, 550.25)
@@ -228,8 +233,38 @@ text = "Weiter"
 position = Vector2(1453, 114)
 texture = ExtResource("2_o1bj5")
 
+[node name="Controlls" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Controlls"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -44.0
+offset_right = 29.0
+offset_bottom = 1087.0
+scale = Vector2(48.0903, 1.01077)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ffcxr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Controlls"]
+position = Vector2(964, 540)
+texture = ExtResource("9_fn7f7")
+
+[node name="Button6" type="Button" parent="Controlls"]
+layout_mode = 0
+offset_left = 1508.0
+offset_top = 873.0
+offset_right = 1820.0
+offset_bottom = 990.0
+theme_override_font_sizes/font_size = 50
+text = "Spiel starten"
+
 [connection signal="pressed" from="verschluckt/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Schiff/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Papagei/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="befreit/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Karte/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Controlls/Button6" to="." method="_on_button_6_pressed"]

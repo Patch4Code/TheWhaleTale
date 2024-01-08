@@ -19,6 +19,14 @@ var direction
 signal disable_fogwall
 signal drop_treasure
 
+@onready var attack_sound_fast = $attakSoundFast
+@onready var attack_sound_heavy = $attackSoundHeavy
+@onready var get_hit_sound = $getHitSound
+@onready var death_sound = $deathSound
+@onready var arr_sound = $arrSound
+@onready var landlubber_sound = $landlubberSound
+var pirate_already_greeted = false
+
 #Setup of the Boss
 func _ready():
 		anim = get_node("AnimationPlayer")
@@ -49,10 +57,14 @@ func _physics_process(delta):
 			#execute Walking movement
 			velocity.x += direction.x * SPEED
 			anim.play("Run")
+			if pirate_already_greeted == false:
+				landlubber_sound.play()
+				pirate_already_greeted = true
 		
 		#creates Timeout after each attack
 		if recharge == true:
 			attack = false
+			arr_sound.play()
 			anim.play("Idle")
 			await get_tree().create_timer(0.5).timeout
 			recharge = false
@@ -83,6 +95,7 @@ func _physics_process(delta):
 #----------------Functions Used in the Boss
 #Heavy attack deals more Damage but is slow:
 func StrongAttack():
+	attack_sound_heavy.play()
 	attack = true
 	chase = false
 	velocity.x = 0
@@ -92,6 +105,7 @@ func StrongAttack():
 	
 #fast but weaker attack
 func WeakAttack():
+	attack_sound_fast.play()
 	attack = true
 	chase = false
 	velocity.x = 0
@@ -102,6 +116,7 @@ func WeakAttack():
 #Character dies, death is used to lock other actions 
 #state death is final and ends "Statemachine"
 func Die():
+	death_sound.play()
 	death = true
 	anim.play("Death")
 	await get_tree().create_timer(1.0).timeout
@@ -111,6 +126,7 @@ func Die():
 
 #chatacter recieved damage Lock other animations 
 func Damaged():
+	get_hit_sound.play()
 	damaged = true
 	hurting = true
 	HEALTH -= 10

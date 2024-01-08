@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var parrot_before_boss_arena = false
 
+@onready var parrot_sound = $parrotSound
+
 var player_in_range = false
 
 func _ready():
@@ -18,6 +20,8 @@ func _on_pirate_coin_coin_collected():
 func _process(_delta):
 	if player_in_range:
 		if Input.is_action_just_pressed("Interact"):
+			if not global.parrot_dialog_open:
+				parrot_sound.play()
 			DialogueManager.show_dialogue_balloon(load("res://parrot.dialogue"), "parrot")
 			return
 

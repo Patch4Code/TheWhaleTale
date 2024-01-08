@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://onjkt6jmhllt"
+path="res://.godot/imported/Parrot Squawks - QuickSounds.com.mp3-cbe92e0a2a18ed72ee99d09f584051ac.mp3str"
+
+[deps]
+
+source_file="res://MusicAndSounds/NPCsounds/Parrot Squawks - QuickSounds.com.mp3"
+dest_files=["res://.godot/imported/Parrot Squawks - QuickSounds.com.mp3-cbe92e0a2a18ed72ee99d09f584051ac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

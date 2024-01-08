@@ -23,6 +23,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
 
 @onready var walk_sound = $WalkSound
+@onready var jump_sound = $JumpSound
+@onready var attack_sound = $AttackSound
+@onready var get_hit_sound = $getHitSound
+@onready var death_sound = $deathSound
 
 signal player_death
 var first_death_call = true
@@ -34,13 +38,15 @@ func _physics_process(delta):
 		if not is_on_floor():
 			velocity.y += gravity * delta
 			
-		if Input.is_action_pressed("Attack"):
+		if Input.is_action_just_pressed("Attack"):
+			attack_sound .play()
 			executeAttack()
 		# Handle jump.
 		if Input.is_action_just_pressed("Jump") and attack == false:
 			if is_on_floor():
 				velocity.y = JUMP_VELOCITY
-				anim.play("Jump")
+				jump_sound .play()
+				anim.play("Jump")  
 		
 			if is_on_wall() and attack == false:
 				var direction_is_left = get_node("AnimatedSprite2D").flip_h
@@ -88,6 +94,7 @@ func _physics_process(delta):
 	#on death
 	else:
 		if first_death_call:
+			death_sound.play()
 			anim.play("Dead")
 			first_death_call = false
 			emit_signal("player_death")
@@ -123,6 +130,7 @@ func executeAttack():
 func hit(damage : int):
 	if health > 0:
 		health -= damage
+		get_hit_sound.play()
 		anim.play("Hurt")
 		print(health)
 	if health <= 0:

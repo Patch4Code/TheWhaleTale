@@ -9,6 +9,10 @@ var damaged = false
 var death = false
 var anim
 
+@onready var attack_sound = $attackSound
+@onready var get_hit_sound = $getHitSound
+@onready var death_sound = $deathSound
+
 func _ready():
 	anim = get_node("SkelettAnimationPlayer") 
 	anim.play("Idle") #idle
@@ -35,6 +39,11 @@ func _physics_process(delta):
 
 #Attack if enemy is in Range 
 	if chase == true && attacking == true && damaged == false && death == false:
+		
+		if $attackSoundTimer.time_left <= 0:
+			attack_sound.play()
+			$attackSoundTimer.start(0.75)		
+		
 		anim.play("Attack")
 		
 
@@ -48,6 +57,7 @@ func _physics_process(delta):
 		
 		if death == false:
 			anim.play("Hurt")
+			get_hit_sound.play()
 			damaged = false
 		await get_tree().create_timer(0.3).timeout
 		print(health)
@@ -55,6 +65,7 @@ func _physics_process(delta):
 		
 		if health <= 0:
 			death = true
+			death_sound.play()
 			velocity.x = 0
 			anim.play("Death")
 			await get_tree().create_timer(1.0).timeout

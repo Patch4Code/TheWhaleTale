@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dtrbk0oicyuko"]
+[gd_scene load_steps=13 format=3 uid="uid://dtrbk0oicyuko"]
 
 [ext_resource type="Texture2D" uid="uid://dm4va71e4xfb6" path="res://Resources/Sprites/Octupus/Octopus.png" id="1_ee28o"]
 [ext_resource type="Script" path="res://Characters/Octupus.gd" id="1_i8qse"]
 [ext_resource type="Texture2D" uid="uid://dgcsktj6h3mjo" path="res://Resources/Textures/Interagieren Anzeige v1.png" id="2_20igm"]
+[ext_resource type="AudioStream" uid="uid://ck8ph5g7jg2xu" path="res://MusicAndSounds/NPCsounds/443585__hachiman935__balbuceos_01.wav" id="4_bvhmx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4tv1b"]
 atlas = ExtResource("1_ee28o")
@@ -83,6 +84,10 @@ visible = false
 position = Vector2(7.62939e-06, -184)
 scale = Vector2(0.263333, 0.263333)
 texture = ExtResource("2_20igm")
+
+[node name="ottoSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bvhmx")
+volume_db = -8.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cn7s0t86neh2n"]
+[gd_scene load_steps=37 format=3 uid="uid://cn7s0t86neh2n"]
 
 [ext_resource type="Script" path="res://Mobs/Fish.gd" id="1_4wesg"]
 [ext_resource type="Texture2D" uid="uid://b5o8w7qc0s818" path="res://Mobs/Sprites/Fish/Attack.png" id="1_vtes7"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dqycvbntsxrwx" path="res://Mobs/Sprites/Fish/Idle.png" id="3_6i66t"]
 [ext_resource type="Texture2D" uid="uid://bh74uxk06ycc4" path="res://Mobs/Sprites/Fish/Walk.png" id="4_f6jsm"]
 [ext_resource type="Texture2D" uid="uid://vqksvejv5ph3" path="res://Mobs/Sprites/Fish/Hurt.png" id="4_kgbso"]
+[ext_resource type="AudioStream" uid="uid://ekeuq44bd3sv" path="res://MusicAndSounds/EnemySounds/08_Bite_04.wav" id="7_armpt"]
+[ext_resource type="AudioStream" uid="uid://dexpoqbskfu" path="res://MusicAndSounds/EnemySounds/15_Impact_flesh_02.wav" id="8_2aim0"]
+[ext_resource type="AudioStream" uid="uid://blteyp6aebxmi" path="res://MusicAndSounds/EnemySounds/69_Enemy_death_01.wav" id="9_8uyby"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgnhe"]
 size = Vector2(38, 23)
@@ -235,6 +238,18 @@ shape = SubResource("RectangleShape2D_g72pt")
 [node name="CollisionShapeFish" type="CollisionShape2D" parent="PlayerAttackFish"]
 position = Vector2(2, 8)
 shape = SubResource("RectangleShape2D_d78wf")
+
+[node name="attackSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_armpt")
+volume_db = -8.0
+
+[node name="getHitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_2aim0")
+volume_db = -8.0
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_8uyby")
+volume_db = -8.0
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]

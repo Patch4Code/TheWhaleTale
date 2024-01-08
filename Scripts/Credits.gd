@@ -24,9 +24,9 @@ var credits = [
 		"The Whale Tale"
 	],[
 		"Entwickler",
-		"Programmer Name",
-		"Programmer Name 2",
-		"Programmer Name 3"
+		"Moritz N.",
+		"Michael R.",
+		"Felix E."
 	],[
 		"Verwendete Assets",
 		"FREE FANTASY CHIBI MALE SPRITES PIXEL ART",
@@ -54,7 +54,11 @@ var credits = [
 		"itch.io",
 		""
 	],[
-		"Verwendeter Script- und Shadercode",
+		"Verwendeter Script- und Shadercode sowie Addons",
+		"godot_dialogue_manager addon by Nathan Hoad",
+		"MIT License Copyright (c) 2022-present Nathan Hoad and Dialogue Manager contributors.",
+		"github.com",
+		"",
 		"godot-credits by benbishopnz",
 		"github.com",
 		"",
@@ -88,7 +92,23 @@ var credits = [
 		
 	],[
 		"Sound Effekte",
-		"SFX Name"
+		"rpg-essentials-sfx-free by Leohpaz",
+		"itch.io",
+		"",
+		"Tubular Bell of Death by ani_music",
+		"freesound.org",
+		"",
+		"PARROT SQUAWKS SOUND by https://quicksounds.com",
+		"quicksounds.com",
+		"",
+		"Landlubber! - pirate (Male) by Joshua Chivers",
+		"uppbeat.io",
+		"",
+		"Arrr - pirate (Male) by Joshua Chivers",
+		"uppbeat.io",
+		"Balbuceos_01.wav by hachiman935",
+		"freesound.org",
+		""
 	],[
 		"Fonts und Designelemente",
 		"Bell MT Font by Richard Austin",

@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://cp1vgvib6wjsi"]
+[gd_scene load_steps=85 format=3 uid="uid://cp1vgvib6wjsi"]
 
 [ext_resource type="Texture2D" uid="uid://cglo1endr14a8" path="res://Resources/Sprites/Player/Attack_1.png" id="1_6e20w"]
 [ext_resource type="Texture2D" uid="uid://881w03i3jj5q" path="res://Resources/Sprites/Player/Idle.png" id="1_fh0j3"]
@@ -12,6 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://bm6m4r4wu8llc" path="res://Resources/Sprites/Player/Run.png" id="9_km61p"]
 [ext_resource type="Texture2D" uid="uid://diwm05rgmetfc" path="res://Resources/Sprites/Player/Walk.png" id="10_e1ud7"]
 [ext_resource type="AudioStream" uid="uid://de46v6jxw1nuy" path="res://MusicAndSounds/PlayerSounds/12_Step_wood_03.wav" id="12_c687d"]
+[ext_resource type="AudioStream" uid="uid://cwum4uw6t33xu" path="res://MusicAndSounds/PlayerSounds/30_Jump_03.wav" id="13_pidhf"]
+[ext_resource type="AudioStream" uid="uid://dtcevx4umy3sq" path="res://MusicAndSounds/PlayerSounds/56_Attack_03.wav" id="14_jkoev"]
+[ext_resource type="AudioStream" uid="uid://bec3twpnmuub1" path="res://MusicAndSounds/PlayerSounds/61_Hit_03.wav" id="15_k2oui"]
+[ext_resource type="AudioStream" uid="uid://b2c7uc5bwgaa0" path="res://MusicAndSounds/otherSounds/165331__ani_music__tubular-bell-of-death.wav" id="16_dtf5e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fjmja"]
 radius = 5.0
@@ -731,6 +735,24 @@ one_shot = true
 [node name="WalkSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_c687d")
 volume_db = -8.0
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_pidhf")
+volume_db = -9.0
+pitch_scale = 1.41
+
+[node name="AttackSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_jkoev")
+volume_db = -9.0
+pitch_scale = 1.07
+
+[node name="getHitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_k2oui")
+volume_db = -8.0
+
+[node name="deathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_dtf5e")
+volume_db = -22.0
 
 [node name="detection_area" type="Area2D" parent="."]
 
