@@ -5,8 +5,10 @@ res://Shader/FogOfWar.gdshader
 res://Shader/FogWall.gdshader
 res://Shader/AcidFall.gdshader
 res://Shader/FogWall2.gdshader
+res://Scripts/parrot.gd
 res://Scenes/MainMenu.tscn
 res://Scenes/Recap.tscn
 res://Characters/Player.tscn
 res://Scenes/Gameworld.tscn
 res://Mobs/PirateBoss.tscn
+res://global.gd

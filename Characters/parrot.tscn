@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bi23c6431qn5i"]
+[gd_scene load_steps=11 format=3 uid="uid://bi23c6431qn5i"]
 
 [ext_resource type="Script" path="res://Scripts/parrot.gd" id="1_ala0d"]
 [ext_resource type="Texture2D" uid="uid://dwdhiefa1ilxr" path="res://Resources/Sprites/Parrot/ParrotWithCrown2.png" id="2_repij"]
+[ext_resource type="Texture2D" uid="uid://dgcsktj6h3mjo" path="res://Resources/Textures/Interagieren Anzeige v1.png" id="3_j6251"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lspqp"]
 atlas = ExtResource("2_repij")
@@ -43,6 +44,9 @@ animations = [{
 radius = 64.0
 height = 176.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_job72"]
+size = Vector2(632, 1256)
+
 [node name="Parrot" type="CharacterBody2D"]
 script = ExtResource("1_ala0d")
 
@@ -55,3 +59,17 @@ frame_progress = 0.254296
 position = Vector2(-16, 0)
 shape = SubResource("CapsuleShape2D_l4cqv")
 disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, 460)
+shape = SubResource("RectangleShape2D_job72")
+
+[node name="interact_view" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -334)
+texture = ExtResource("3_j6251")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,39 @@
+~ parrot
+
+if global.parrot_dialog_open == false
+	set global.parrot_dialog_open = true
+
+	Papagei: Ahoi mein treuer Untertan! Während du dir hier in der Gegend die Hände schmutzig machst wird der König hier etwas rasten und auf dich Warten.
+	- Majestät habt ihr einen Witz auf Lager?
+		
+		Papagei: Natürlich, mein Humor ist unschlagbar!
+		Papagei: [[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen]]
+		
+		- Was macht ihr wenn ich das zeitliche segnen sollte Majestät?
+			Papagei: Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen 	Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!
+			- Bis bald!
+			set global.parrot_dialog_open = false
+			=> END
+		
+		- Bis bald!
+		set global.parrot_dialog_open = false
+		=> END
+		
+	- Was macht ihr wenn ich das zeitliche segnen sollte Majestät?
+		Papagei: Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen 	Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!
+
+		- Majestät habt ihr einen Witz auf Lager?
+			Papagei: Natürlich, mein Humor ist unschlagbar!
+			Papagei: [[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen]]
+			
+			- Bis bald!
+			set global.parrot_dialog_open = false
+			=> END
+			
+		- Bis bald!
+		set global.parrot_dialog_open = false
+		=> END
+
+	- Bis bald!
+	set global.parrot_dialog_open = false
+	=> END

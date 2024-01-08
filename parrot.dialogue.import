@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bm65g4cuvus5n"
+path="res://.godot/imported/parrot.dialogue-a9abd22f818c290a15172bc957b7fb77.tres"
+
+[deps]
+
+source_file="res://parrot.dialogue"
+dest_files=["res://.godot/imported/parrot.dialogue-a9abd22f818c290a15172bc957b7fb77.tres"]
+
+[params]
+
+defaults=true
