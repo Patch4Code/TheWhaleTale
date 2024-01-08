@@ -1,0 +1,389 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_efpyx"]
+
+[resource]
+script = ExtResource("1_efpyx")
+using_states = PackedStringArray()
+titles = {
+"coinskull": "3"
+}
+character_names = PackedStringArray("Sprechender Schädel")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "coinskull",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"next_id_after": "end!",
+"parent_id": "6",
+"responses": PackedStringArray("10", "23"),
+"tags": PackedStringArray(),
+"text": "Münze einwerfen",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Münze einwerfen",
+"type": "response"
+},
+"11": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "coin_in_possession"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"id": "11",
+"next_conditional_id": "18",
+"next_id": "12",
+"next_id_after": "end!",
+"parent_id": "10",
+"type": "condition"
+},
+"12": {
+"id": "12",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "coin_in_possession"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "13",
+"parent_id": "11",
+"type": "mutation"
+},
+"13": {
+"id": "13",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "coin_already_thrown_in"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "14",
+"parent_id": "11",
+"type": "mutation"
+},
+"14": {
+"character": "Sprechender Schädel",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"parent_id": "11",
+"tags": PackedStringArray(),
+"text": "Danke Pirat! Nun könnt ihr durch die Nebelwand schreiten. Weitergehen",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Danke Pirat! Nun könnt ihr durch die Nebelwand schreiten. Weitergehen",
+"type": "dialogue"
+},
+"15": {
+"id": "15",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "coinskull_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "16",
+"parent_id": "11",
+"type": "mutation"
+},
+"16": {
+"id": "16",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "11",
+"type": "goto"
+},
+"18": {
+"id": "18",
+"next_conditional_id": "end!",
+"next_id": "19",
+"next_id_after": "end!",
+"parent_id": "10",
+"type": "condition"
+},
+"19": {
+"character": "Sprechender Schädel",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"parent_id": "18",
+"tags": PackedStringArray(),
+"text": "Keine Münze, kein Zutritt, du Landratte! Verschwinde jetzt ...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Keine Münze, kein Zutritt, du Landratte! Verschwinde jetzt ...",
+"type": "dialogue"
+},
+"20": {
+"id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "coinskull_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "21",
+"parent_id": "18",
+"type": "mutation"
+},
+"21": {
+"id": "21",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "18",
+"type": "goto"
+},
+"23": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"next_id_after": "24",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Tschüss, ich komm später wieder",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Tschüss, ich komm später wieder",
+"type": "response"
+},
+"24": {
+"id": "24",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "coinskull_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "25",
+"parent_id": "6",
+"type": "mutation"
+},
+"25": {
+"id": "25",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "6",
+"type": "goto"
+},
+"26": {
+"id": "26",
+"next_conditional_id": "end!",
+"next_id": "27",
+"next_id_after": "end!",
+"parent_id": "3",
+"type": "condition"
+},
+"27": {
+"character": "Sprechender Schädel",
+"character_replacements": Array[Dictionary]([]),
+"id": "27",
+"next_id": "28",
+"parent_id": "26",
+"tags": PackedStringArray(),
+"text": "Ahoi Pirat! Ihr könnt nun duch die Nebelwand schreiten! Weitergehen ...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahoi Pirat! Ihr könnt nun duch die Nebelwand schreiten! Weitergehen ...",
+"type": "dialogue"
+},
+"28": {
+"id": "28",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "coinskull_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "29",
+"parent_id": "26",
+"type": "mutation"
+},
+"29": {
+"id": "29",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "26",
+"type": "goto"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "coinskull_dialog_open"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "false"
+}, {
+"type": "colon"
+}])
+},
+"id": "3",
+"next_conditional_id": "end!",
+"next_id": "4",
+"next_id_after": "end!",
+"type": "condition"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "coinskull_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "6",
+"parent_id": "3",
+"type": "mutation"
+},
+"6": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "coin_already_thrown_in"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"id": "6",
+"next_conditional_id": "26",
+"next_id": "7",
+"next_id_after": "end!",
+"parent_id": "3",
+"type": "condition"
+},
+"7": {
+"character": "Sprechender Schädel",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Willkommen, wer durch die Nebelwand ins Reich des Piratenkönigs treten will, muss sich als wahrer Pirat ausweisen!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Willkommen, wer durch die Nebelwand ins Reich des Piratenkönigs treten will, muss sich als wahrer Pirat ausweisen!",
+"type": "dialogue"
+},
+"8": {
+"character": "Sprechender Schädel",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "10",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Wirf eine goldene Piratenmünze in meinen Münzschlitz, und du wirst den Nebel durchdringen können.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wirf eine goldene Piratenmünze in meinen Münzschlitz, und du wirst den Nebel durchdringen können.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

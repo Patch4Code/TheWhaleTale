@@ -7,13 +7,13 @@ var player_in_range = false
 func _ready():
 	if parrot_before_boss_arena:
 		visible = false
-
+		$Area2D.process_mode = Node.PROCESS_MODE_DISABLED
 
 func _on_pirate_coin_coin_collected():
 	#spawn parrot in front of arena
 	if parrot_before_boss_arena:
 		visible = true
-
+		$Area2D.process_mode = Node.PROCESS_MODE_INHERIT
 
 func _process(_delta):
 	if player_in_range:
