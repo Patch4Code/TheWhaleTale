@@ -72,11 +72,9 @@ offset_bottom = 40.0
 [node name="Panel" type="Panel" parent="ToBeContinued"]
 layout_mode = 0
 offset_left = -2.0
-offset_top = 4.0
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0gii1")
-metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="ToBeContinued"]
 layout_mode = 0
