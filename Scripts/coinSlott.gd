@@ -20,7 +20,7 @@ func _process(_delta):
 	if global.coin_already_thrown_in and throw_coin_in_block == false:
 		emit_signal("coin_thrown_in")
 		emit_signal("make_fogwall_passable")
-		throw_coin_in_block == true
+		throw_coin_in_block = true
 
 func _on_area_2d_body_entered(_body):
 	#Interagieren Anzeige einblenden

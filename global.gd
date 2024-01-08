@@ -2,6 +2,7 @@ extends Node
 
 var found_octootto_item = false
 var given_octootto_item = false
+var otto_dialog_open = false
 
 var parrot_dialog_open = false
 

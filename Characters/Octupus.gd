@@ -1,5 +1,21 @@
 extends CharacterBody2D
 
-func enemy():
-	pass
+var player_in_range = false
 
+func _process(_delta):
+	if player_in_range:
+		if Input.is_action_just_pressed("Interact"):
+			DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"), "main")
+			return
+
+
+func _on_area_2d_body_entered(body):
+	if body.name == "Player":
+		$interactionUi.visible = true
+		player_in_range = true
+
+
+func _on_area_2d_body_exited(body):
+	if body.name == "Player":
+		$interactionUi.visible = false
+		player_in_range = false

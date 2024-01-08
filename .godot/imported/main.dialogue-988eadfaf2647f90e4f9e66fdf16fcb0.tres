@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_jr1ho"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_jfcee"]
 
 [resource]
-script = ExtResource("1_jr1ho")
+script = ExtResource("1_jfcee")
 using_states = PackedStringArray()
 titles = {
 "main": "3"
@@ -21,29 +21,15 @@ lines = {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
 "id": "10",
-"next_id": "11",
-"parent_id": "9",
+"next_id": "12",
+"parent_id": "8",
 "tags": PackedStringArray(),
-"text": "Ja das könnte ich wohl. Mein Preis ist aber nicht ganz so bescheiden.",
+"text": "Nur ein bescheidener Fährmann.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ja das könnte ich wohl. Mein Preis ist aber nicht ganz so bescheiden.",
+"translation_key": "Nur ein bescheidener Fährmann.",
 "type": "dialogue"
 },
 "100": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "100",
-"next_id": "101",
-"next_id_after": "120",
-"parent_id": "98",
-"responses": PackedStringArray("100", "111"),
-"tags": PackedStringArray(),
-"text": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
-"type": "response"
-},
-"101": {
 "condition": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -61,36 +47,59 @@ lines = {
 "value": "true"
 }])
 },
-"id": "101",
-"next_conditional_id": "107",
-"next_id": "102",
-"next_id_after": "120",
-"parent_id": "100",
+"id": "100",
+"next_conditional_id": "106",
+"next_id": "101",
+"next_id_after": "149",
+"parent_id": "99",
 "type": "condition"
 },
-"102": {
+"101": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
-"id": "102",
-"next_id": "103",
-"parent_id": "101",
+"id": "101",
+"next_id": "102",
+"parent_id": "100",
 "tags": PackedStringArray(),
 "text": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
 "type": "dialogue"
 },
-"103": {
+"102": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
-"id": "103",
-"next_id": "104",
-"parent_id": "101",
+"id": "102",
+"next_id": "103",
+"parent_id": "100",
 "tags": PackedStringArray(),
 "text": "...",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "...",
 "type": "dialogue"
+},
+"103": {
+"id": "103",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "given_octootto_item"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "104",
+"parent_id": "100",
+"type": "mutation"
 },
 "104": {
 "id": "104",
@@ -101,22 +110,56 @@ lines = {
 }, {
 "type": "dot"
 }, {
-"type": "variable",
-"value": "given_octootto_item"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "variable",
-"value": "true"
+"function": "change_to_ending_scene",
+"type": "function",
+"value": Array[Array]([])
 }])
 },
 "next_id": "105",
-"parent_id": "101",
+"parent_id": "100",
 "type": "mutation"
 },
 "105": {
 "id": "105",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "100",
+"type": "goto"
+},
+"106": {
+"id": "106",
+"next_conditional_id": "149",
+"next_id": "107",
+"next_id_after": "149",
+"parent_id": "99",
+"type": "condition"
+},
+"107": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "107",
+"next_id": "108",
+"parent_id": "106",
+"tags": PackedStringArray(),
+"text": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
+"type": "dialogue"
+},
+"108": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "108",
+"next_id": "109",
+"parent_id": "106",
+"tags": PackedStringArray(),
+"text": "Auf Wiedersehen",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Auf Wiedersehen",
+"type": "dialogue"
+},
+"109": {
+"id": "109",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -124,80 +167,34 @@ lines = {
 }, {
 "type": "dot"
 }, {
-"function": "change_to_ending_scene",
-"type": "function",
-"value": Array[Array]([])
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
 }])
 },
-"next_id": "106",
-"parent_id": "101",
-"type": "mutation"
-},
-"106": {
-"id": "106",
-"is_snippet": false,
-"next_id": "end",
-"parent_id": "101",
-"type": "goto"
-},
-"107": {
-"id": "107",
-"next_conditional_id": "120",
-"next_id": "108",
-"next_id_after": "120",
-"parent_id": "100",
-"type": "condition"
-},
-"108": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "108",
-"next_id": "109",
-"parent_id": "107",
-"tags": PackedStringArray(),
-"text": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
-"type": "dialogue"
-},
-"109": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "109",
 "next_id": "110",
-"parent_id": "107",
-"tags": PackedStringArray(),
-"text": "Auf Wiedersehen",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Auf Wiedersehen",
-"type": "dialogue"
-},
-"11": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "11",
-"next_id": "12",
-"parent_id": "9",
-"tags": PackedStringArray(),
-"text": "Bring mir einen Haufen Gold und ich nehme euch auf meinem Boot mit.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Bring mir einen Haufen Gold und ich nehme euch auf meinem Boot mit.",
-"type": "dialogue"
+"parent_id": "106",
+"type": "mutation"
 },
 "110": {
 "id": "110",
 "is_snippet": false,
 "next_id": "end",
-"parent_id": "107",
+"parent_id": "106",
 "type": "goto"
 },
 "111": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "111",
-"next_id": "end",
-"next_id_after": "120",
-"parent_id": "98",
+"next_id": "112",
+"next_id_after": "112",
+"parent_id": "96",
 "tags": PackedStringArray(),
 "text": "Nein, war nur ein Witz",
 "text_replacements": Array[Dictionary]([]),
@@ -205,127 +202,132 @@ lines = {
 "type": "response"
 },
 "112": {
+"id": "112",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "113",
+"parent_id": "96",
+"type": "mutation"
+},
+"113": {
+"id": "113",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "96",
+"type": "goto"
+},
+"115": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "112",
-"next_id": "end",
-"next_id_after": "120",
-"parent_id": "3",
+"id": "115",
+"next_id": "116",
+"next_id_after": "116",
+"parent_id": "64",
 "tags": PackedStringArray(),
 "text": "Auf Wiedersehen.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Auf Wiedersehen.",
 "type": "response"
 },
-"114": {
-"id": "114",
-"next_conditional_id": "120",
-"next_id": "115",
-"next_id_after": "120",
-"type": "condition"
-},
-"115": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "115",
-"next_id": "116",
-"parent_id": "114",
-"tags": PackedStringArray(),
-"text": "[[Hi|Hello|Howdy]], thank you so much for finding my chest!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "[[Hi|Hello|Howdy]], thank you so much for finding my chest!",
-"type": "dialogue"
-},
 "116": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
 "id": "116",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
 "next_id": "117",
-"parent_id": "114",
-"tags": PackedStringArray(),
-"text": "I don't know what i would have done without you",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "I don't know what i would have done without you",
-"type": "dialogue"
+"parent_id": "64",
+"type": "mutation"
 },
 "117": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
 "id": "117",
-"next_id": "118",
-"parent_id": "114",
-"tags": PackedStringArray(),
-"text": "I am working on a massive surprise for you!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "I am working on a massive surprise for you!",
-"type": "dialogue"
-},
-"118": {
-"id": "118",
 "is_snippet": false,
 "next_id": "end",
-"parent_id": "114",
+"parent_id": "64",
 "type": "goto"
 },
 "12": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "12",
-"next_id": "14",
-"parent_id": "9",
-"tags": PackedStringArray(),
-"text": "Der Pirateschatz des Kapitän sollte ausreichen.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Der Pirateschatz des Kapitän sollte ausreichen.",
-"type": "dialogue"
-},
-"120": {
-"id": "120",
-"is_snippet": false,
-"next_id": "end",
-"type": "goto"
-},
-"14": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "14",
-"next_id": "16",
-"next_id_after": "120",
-"parent_id": "9",
-"responses": PackedStringArray("14", "31"),
+"id": "12",
+"next_id": "13",
+"next_id_after": "149",
+"parent_id": "8",
+"responses": PackedStringArray("12", "41", "60"),
+"tags": PackedStringArray(),
+"text": "Kannst du mich über den Säuresee bringen?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Kannst du mich über den Säuresee bringen?",
+"type": "response"
+},
+"121": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "121",
+"next_id": "122",
+"next_id_after": "149",
+"parent_id": "6",
 "tags": PackedStringArray(),
 "text": "Ich hab hier etwas für dich!",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ich hab hier etwas für dich!",
 "type": "response"
 },
-"16": {
+"122": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
-"id": "16",
-"next_id": "17",
-"parent_id": "14",
+"id": "122",
+"next_id": "123",
+"parent_id": "121",
 "tags": PackedStringArray(),
 "text": "Oh.. wirklich?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Oh.. wirklich?",
 "type": "dialogue"
 },
-"17": {
+"123": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "17",
-"next_id": "18",
-"next_id_after": "120",
-"parent_id": "14",
-"responses": PackedStringArray("17", "29"),
+"id": "123",
+"next_id": "124",
+"next_id_after": "149",
+"parent_id": "121",
+"responses": PackedStringArray("123", "135"),
 "tags": PackedStringArray(),
 "text": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
 "type": "response"
 },
-"18": {
+"124": {
 "condition": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -343,39 +345,39 @@ lines = {
 "value": "true"
 }])
 },
-"id": "18",
-"next_conditional_id": "25",
-"next_id": "19",
-"next_id_after": "120",
-"parent_id": "17",
+"id": "124",
+"next_conditional_id": "130",
+"next_id": "125",
+"next_id_after": "149",
+"parent_id": "123",
 "type": "condition"
 },
-"19": {
+"125": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
-"id": "19",
-"next_id": "20",
-"parent_id": "18",
+"id": "125",
+"next_id": "126",
+"parent_id": "124",
 "tags": PackedStringArray(),
 "text": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
 "type": "dialogue"
 },
-"20": {
+"126": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
-"id": "20",
-"next_id": "21",
-"parent_id": "18",
+"id": "126",
+"next_id": "127",
+"parent_id": "124",
 "tags": PackedStringArray(),
 "text": "...",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "...",
 "type": "dialogue"
 },
-"21": {
-"id": "21",
+"127": {
+"id": "127",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -393,12 +395,12 @@ lines = {
 "value": "true"
 }])
 },
-"next_id": "22",
-"parent_id": "18",
+"next_id": "128",
+"parent_id": "124",
 "type": "mutation"
 },
-"22": {
-"id": "22",
+"128": {
+"id": "128",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -411,70 +413,879 @@ lines = {
 "value": Array[Array]([])
 }])
 },
-"next_id": "24",
-"parent_id": "18",
+"next_id": "129",
+"parent_id": "124",
 "type": "mutation"
 },
-"24": {
-"id": "24",
+"129": {
+"id": "129",
 "is_snippet": false,
 "next_id": "end",
-"parent_id": "18",
+"parent_id": "124",
 "type": "goto"
 },
-"25": {
-"id": "25",
-"next_conditional_id": "120",
-"next_id": "26",
-"next_id_after": "120",
-"parent_id": "17",
-"type": "condition"
-},
-"26": {
+"13": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
-"id": "26",
-"next_id": "27",
-"parent_id": "25",
+"id": "13",
+"next_id": "14",
+"parent_id": "12",
+"tags": PackedStringArray(),
+"text": "Ja das könnte ich wohl. Mein Preis ist aber nicht ganz so bescheiden.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja das könnte ich wohl. Mein Preis ist aber nicht ganz so bescheiden.",
+"type": "dialogue"
+},
+"130": {
+"id": "130",
+"next_conditional_id": "149",
+"next_id": "131",
+"next_id_after": "149",
+"parent_id": "123",
+"type": "condition"
+},
+"131": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "131",
+"next_id": "132",
+"parent_id": "130",
 "tags": PackedStringArray(),
 "text": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
 "type": "dialogue"
 },
-"27": {
+"132": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
-"id": "27",
-"next_id": "28",
-"parent_id": "25",
+"id": "132",
+"next_id": "133",
+"parent_id": "130",
 "tags": PackedStringArray(),
 "text": "Auf Wiedersehen",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Auf Wiedersehen",
 "type": "dialogue"
 },
-"28": {
-"id": "28",
+"133": {
+"id": "133",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "134",
+"parent_id": "130",
+"type": "mutation"
+},
+"134": {
+"id": "134",
 "is_snippet": false,
 "next_id": "end",
-"parent_id": "25",
+"parent_id": "130",
 "type": "goto"
 },
-"29": {
+"135": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "29",
-"next_id": "end",
-"next_id_after": "120",
-"parent_id": "14",
+"id": "135",
+"next_id": "136",
+"next_id_after": "136",
+"parent_id": "121",
 "tags": PackedStringArray(),
 "text": "Nein, war nur ein Witz",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Nein, war nur ein Witz",
 "type": "response"
 },
+"136": {
+"id": "136",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "137",
+"parent_id": "121",
+"type": "mutation"
+},
+"137": {
+"id": "137",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "121",
+"type": "goto"
+},
+"138": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "138",
+"next_id": "139",
+"next_id_after": "139",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Auf Wiedersehen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Auf Wiedersehen.",
+"type": "response"
+},
+"139": {
+"id": "139",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "140",
+"parent_id": "6",
+"type": "mutation"
+},
+"14": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"parent_id": "12",
+"tags": PackedStringArray(),
+"text": "Bring mir einen Haufen Gold und ich nehme euch auf meinem Boot mit.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bring mir einen Haufen Gold und ich nehme euch auf meinem Boot mit.",
+"type": "dialogue"
+},
+"140": {
+"id": "140",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "6",
+"type": "goto"
+},
+"142": {
+"id": "142",
+"next_conditional_id": "149",
+"next_id": "143",
+"next_id_after": "149",
+"parent_id": "3",
+"type": "condition"
+},
+"143": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "143",
+"next_id": "144",
+"parent_id": "142",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello|Howdy]], thank you so much for finding my chest!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello|Howdy]], thank you so much for finding my chest!",
+"type": "dialogue"
+},
+"144": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "144",
+"next_id": "145",
+"parent_id": "142",
+"tags": PackedStringArray(),
+"text": "I don't know what i would have done without you",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I don't know what i would have done without you",
+"type": "dialogue"
+},
+"145": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "145",
+"next_id": "146",
+"parent_id": "142",
+"tags": PackedStringArray(),
+"text": "I am working on a massive surprise for you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I am working on a massive surprise for you!",
+"type": "dialogue"
+},
+"146": {
+"id": "146",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "147",
+"parent_id": "142",
+"type": "mutation"
+},
+"147": {
+"id": "147",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "142",
+"type": "goto"
+},
+"149": {
+"id": "149",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "150",
+"parent_id": "3",
+"type": "mutation"
+},
+"15": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "17",
+"parent_id": "12",
+"tags": PackedStringArray(),
+"text": "Der Pirateschatz des Kapitän sollte ausreichen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Der Pirateschatz des Kapitän sollte ausreichen.",
+"type": "dialogue"
+},
+"150": {
+"id": "150",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "3",
+"type": "goto"
+},
+"17": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "19",
+"next_id_after": "149",
+"parent_id": "12",
+"responses": PackedStringArray("17", "37"),
+"tags": PackedStringArray(),
+"text": "Ich hab hier etwas für dich!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ich hab hier etwas für dich!",
+"type": "response"
+},
+"19": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"parent_id": "17",
+"tags": PackedStringArray(),
+"text": "Oh.. wirklich?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh.. wirklich?",
+"type": "dialogue"
+},
+"20": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"next_id_after": "149",
+"parent_id": "17",
+"responses": PackedStringArray("20", "33"),
+"tags": PackedStringArray(),
+"text": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
+"type": "response"
+},
+"21": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "found_octootto_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"id": "21",
+"next_conditional_id": "28",
+"next_id": "22",
+"next_id_after": "149",
+"parent_id": "20",
+"type": "condition"
+},
+"22": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"parent_id": "21",
+"tags": PackedStringArray(),
+"text": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
+"type": "dialogue"
+},
+"23": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"parent_id": "21",
+"tags": PackedStringArray(),
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": "dialogue"
+},
+"24": {
+"id": "24",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "given_octootto_item"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "25",
+"parent_id": "21",
+"type": "mutation"
+},
+"25": {
+"id": "25",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"function": "change_to_ending_scene",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "27",
+"parent_id": "21",
+"type": "mutation"
+},
+"27": {
+"id": "27",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "21",
+"type": "goto"
+},
+"28": {
+"id": "28",
+"next_conditional_id": "149",
+"next_id": "29",
+"next_id_after": "149",
+"parent_id": "20",
+"type": "condition"
+},
+"29": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"parent_id": "28",
+"tags": PackedStringArray(),
+"text": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
+"type": "dialogue"
+},
 "3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"id": "3",
+"next_conditional_id": "end!",
+"next_id": "4",
+"next_id_after": "end!",
+"type": "condition"
+},
+"30": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "30",
+"next_id": "31",
+"parent_id": "28",
+"tags": PackedStringArray(),
+"text": "Auf Wiedersehen",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Auf Wiedersehen",
+"type": "dialogue"
+},
+"31": {
+"id": "31",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "32",
+"parent_id": "28",
+"type": "mutation"
+},
+"32": {
+"id": "32",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "28",
+"type": "goto"
+},
+"33": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "33",
+"next_id": "34",
+"next_id_after": "34",
+"parent_id": "17",
+"tags": PackedStringArray(),
+"text": "Nein, war nur ein Witz",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein, war nur ein Witz",
+"type": "response"
+},
+"34": {
+"id": "34",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "35",
+"parent_id": "17",
+"type": "mutation"
+},
+"35": {
+"id": "35",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "17",
+"type": "goto"
+},
+"37": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "37",
+"next_id": "38",
+"next_id_after": "38",
+"parent_id": "12",
+"tags": PackedStringArray(),
+"text": "Auf Wiedersehen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Auf Wiedersehen.",
+"type": "response"
+},
+"38": {
+"id": "38",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "39",
+"parent_id": "12",
+"type": "mutation"
+},
+"39": {
+"id": "39",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "12",
+"type": "goto"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "6",
+"parent_id": "3",
+"type": "mutation"
+},
+"41": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "41",
+"next_id": "43",
+"next_id_after": "149",
+"parent_id": "8",
+"tags": PackedStringArray(),
+"text": "Ich hab hier etwas für dich!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ich hab hier etwas für dich!",
+"type": "response"
+},
+"43": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "43",
+"next_id": "44",
+"parent_id": "41",
+"tags": PackedStringArray(),
+"text": "Oh.. wirklich?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh.. wirklich?",
+"type": "dialogue"
+},
+"44": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "44",
+"next_id": "45",
+"next_id_after": "149",
+"parent_id": "41",
+"responses": PackedStringArray("44", "56"),
+"tags": PackedStringArray(),
+"text": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
+"type": "response"
+},
+"45": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "found_octootto_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"id": "45",
+"next_conditional_id": "51",
+"next_id": "46",
+"next_id_after": "149",
+"parent_id": "44",
+"type": "condition"
+},
+"46": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "46",
+"next_id": "47",
+"parent_id": "45",
+"tags": PackedStringArray(),
+"text": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
+"type": "dialogue"
+},
+"47": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "47",
+"next_id": "48",
+"parent_id": "45",
+"tags": PackedStringArray(),
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": "dialogue"
+},
+"48": {
+"id": "48",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "given_octootto_item"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "49",
+"parent_id": "45",
+"type": "mutation"
+},
+"49": {
+"id": "49",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"function": "change_to_ending_scene",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "50",
+"parent_id": "45",
+"type": "mutation"
+},
+"50": {
+"id": "50",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "45",
+"type": "goto"
+},
+"51": {
+"id": "51",
+"next_conditional_id": "149",
+"next_id": "52",
+"next_id_after": "149",
+"parent_id": "45",
+"type": "condition"
+},
+"52": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "52",
+"next_id": "53",
+"parent_id": "51",
+"tags": PackedStringArray(),
+"text": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
+"type": "dialogue"
+},
+"53": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "53",
+"next_id": "54",
+"parent_id": "51",
+"tags": PackedStringArray(),
+"text": "Auf Wiedersehen",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Auf Wiedersehen",
+"type": "dialogue"
+},
+"54": {
+"id": "54",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "55",
+"parent_id": "51",
+"type": "mutation"
+},
+"55": {
+"id": "55",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "51",
+"type": "goto"
+},
+"56": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "56",
+"next_id": "57",
+"next_id_after": "57",
+"parent_id": "44",
+"tags": PackedStringArray(),
+"text": "Nein, war nur ein Witz",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nein, war nur ein Witz",
+"type": "response"
+},
+"57": {
+"id": "57",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "58",
+"parent_id": "44",
+"type": "mutation"
+},
+"58": {
+"id": "58",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "44",
+"type": "goto"
+},
+"6": {
 "condition": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -492,393 +1303,29 @@ lines = {
 "value": "false"
 }])
 },
-"id": "3",
-"next_conditional_id": "114",
-"next_id": "4",
-"next_id_after": "120",
-"type": "condition"
-},
-"31": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "31",
-"next_id": "end",
-"next_id_after": "120",
-"parent_id": "9",
-"tags": PackedStringArray(),
-"text": "Auf Wiedersehen.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Auf Wiedersehen.",
-"type": "response"
-},
-"33": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "33",
-"next_id": "35",
-"next_id_after": "120",
-"parent_id": "5",
-"tags": PackedStringArray(),
-"text": "Ich hab hier etwas für dich!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Ich hab hier etwas für dich!",
-"type": "response"
-},
-"35": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "35",
-"next_id": "36",
-"parent_id": "33",
-"tags": PackedStringArray(),
-"text": "Oh.. wirklich?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Oh.. wirklich?",
-"type": "dialogue"
-},
-"36": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "36",
-"next_id": "37",
-"next_id_after": "120",
-"parent_id": "33",
-"responses": PackedStringArray("36", "47"),
-"tags": PackedStringArray(),
-"text": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
-"type": "response"
-},
-"37": {
-"condition": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "global"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "found_octootto_item"
-}, {
-"type": "comparison",
-"value": "=="
-}, {
-"type": "variable",
-"value": "true"
-}])
-},
-"id": "37",
-"next_conditional_id": "43",
-"next_id": "38",
-"next_id_after": "120",
-"parent_id": "36",
-"type": "condition"
-},
-"38": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "38",
-"next_id": "39",
-"parent_id": "37",
-"tags": PackedStringArray(),
-"text": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
-"type": "dialogue"
-},
-"39": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "39",
-"next_id": "40",
-"parent_id": "37",
-"tags": PackedStringArray(),
-"text": "...",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "...",
-"type": "dialogue"
-},
-"4": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "4",
-"next_id": "5",
-"parent_id": "3",
-"tags": PackedStringArray(),
-"text": "[[Hi|Hallo|Howdy]] Fremder ... wie kann ich dir helfen?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "[[Hi|Hallo|Howdy]] Fremder ... wie kann ich dir helfen?",
-"type": "dialogue"
-},
-"40": {
-"id": "40",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "global"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "given_octootto_item"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "variable",
-"value": "true"
-}])
-},
-"next_id": "41",
-"parent_id": "37",
-"type": "mutation"
-},
-"41": {
-"id": "41",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "global"
-}, {
-"type": "dot"
-}, {
-"function": "change_to_ending_scene",
-"type": "function",
-"value": Array[Array]([])
-}])
-},
-"next_id": "42",
-"parent_id": "37",
-"type": "mutation"
-},
-"42": {
-"id": "42",
-"is_snippet": false,
-"next_id": "end",
-"parent_id": "37",
-"type": "goto"
-},
-"43": {
-"id": "43",
-"next_conditional_id": "120",
-"next_id": "44",
-"next_id_after": "120",
-"parent_id": "37",
-"type": "condition"
-},
-"44": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "44",
-"next_id": "45",
-"parent_id": "43",
-"tags": PackedStringArray(),
-"text": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
-"type": "dialogue"
-},
-"45": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "45",
-"next_id": "46",
-"parent_id": "43",
-"tags": PackedStringArray(),
-"text": "Auf Wiedersehen",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Auf Wiedersehen",
-"type": "dialogue"
-},
-"46": {
-"id": "46",
-"is_snippet": false,
-"next_id": "end",
-"parent_id": "43",
-"type": "goto"
-},
-"47": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "47",
-"next_id": "end",
-"next_id_after": "120",
-"parent_id": "36",
-"tags": PackedStringArray(),
-"text": "Nein, war nur ein Witz",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Nein, war nur ein Witz",
-"type": "response"
-},
-"49": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "49",
-"next_id": "end",
-"next_id_after": "120",
-"parent_id": "5",
-"tags": PackedStringArray(),
-"text": "Auf Wiedersehen.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Auf Wiedersehen.",
-"type": "response"
-},
-"5": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "5",
-"next_id": "6",
-"next_id_after": "120",
-"parent_id": "3",
-"responses": PackedStringArray("5", "51", "98", "112"),
-"tags": PackedStringArray(),
-"text": "Wer bist du?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Wer bist du?",
-"type": "response"
-},
-"51": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "51",
-"next_id": "52",
-"next_id_after": "120",
-"parent_id": "3",
-"tags": PackedStringArray(),
-"text": "Kannst du mich über den Säuresee bringen?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Kannst du mich über den Säuresee bringen?",
-"type": "response"
-},
-"52": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "52",
-"next_id": "53",
-"parent_id": "51",
-"tags": PackedStringArray(),
-"text": "Ja das könnte ich wohl. Mein Preis ist aber nicht ganz so bescheiden.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Ja das könnte ich wohl. Mein Preis ist aber nicht ganz so bescheiden.",
-"type": "dialogue"
-},
-"53": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "53",
-"next_id": "54",
-"parent_id": "51",
-"tags": PackedStringArray(),
-"text": "Bring mir einen Haufen Gold und ich nehme euch auf meinem Boot mit.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Bring mir einen Haufen Gold und ich nehme euch auf meinem Boot mit.",
-"type": "dialogue"
-},
-"54": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "54",
-"next_id": "56",
-"parent_id": "51",
-"tags": PackedStringArray(),
-"text": "Der Pirateschatz des Kapitän sollte ausreichen.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Der Pirateschatz des Kapitän sollte ausreichen.",
-"type": "dialogue"
-},
-"56": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "56",
-"next_id": "57",
-"next_id_after": "120",
-"parent_id": "51",
-"responses": PackedStringArray("56", "78", "94"),
-"tags": PackedStringArray(),
-"text": "Wer bist du?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Wer bist du?",
-"type": "response"
-},
-"57": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "57",
-"next_id": "58",
-"parent_id": "56",
-"tags": PackedStringArray(),
-"text": "Ich bin einfach ... Otto, nichts weiter.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Ich bin einfach ... Otto, nichts weiter.",
-"type": "dialogue"
-},
-"58": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "58",
-"next_id": "60",
-"parent_id": "56",
-"tags": PackedStringArray(),
-"text": "Nur ein bescheidener Fährmann.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Nur ein bescheidener Fährmann.",
-"type": "dialogue"
-},
-"6": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
 "id": "6",
+"next_conditional_id": "142",
 "next_id": "7",
-"parent_id": "5",
-"tags": PackedStringArray(),
-"text": "Ich bin einfach ... Otto, nichts weiter.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Ich bin einfach ... Otto, nichts weiter.",
-"type": "dialogue"
+"next_id_after": "149",
+"parent_id": "3",
+"type": "condition"
 },
 "60": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "60",
-"next_id": "62",
-"next_id_after": "120",
-"parent_id": "56",
-"responses": PackedStringArray("60", "76"),
+"next_id": "61",
+"next_id_after": "61",
+"parent_id": "8",
 "tags": PackedStringArray(),
-"text": "Ich hab hier etwas für dich!",
+"text": "Auf Wiedersehen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ich hab hier etwas für dich!",
+"translation_key": "Auf Wiedersehen.",
 "type": "response"
 },
-"62": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "62",
-"next_id": "63",
-"parent_id": "60",
-"tags": PackedStringArray(),
-"text": "Oh.. wirklich?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Oh.. wirklich?",
-"type": "dialogue"
-},
-"63": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "63",
-"next_id": "64",
-"next_id_after": "120",
-"parent_id": "60",
-"responses": PackedStringArray("63", "74"),
-"tags": PackedStringArray(),
-"text": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
-"type": "response"
-},
-"64": {
-"condition": {
+"61": {
+"id": "61",
+"mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
 "value": "global"
@@ -886,21 +1333,38 @@ lines = {
 "type": "dot"
 }, {
 "type": "variable",
-"value": "found_octootto_item"
+"value": "otto_dialog_open"
 }, {
-"type": "comparison",
-"value": "=="
+"type": "assignment",
+"value": "="
 }, {
 "type": "variable",
-"value": "true"
+"value": "false"
 }])
 },
+"next_id": "62",
+"parent_id": "8",
+"type": "mutation"
+},
+"62": {
+"id": "62",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "8",
+"type": "goto"
+},
+"64": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
 "id": "64",
-"next_conditional_id": "70",
 "next_id": "65",
-"next_id_after": "120",
-"parent_id": "63",
-"type": "condition"
+"next_id_after": "149",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Kannst du mich über den Säuresee bringen?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Kannst du mich über den Säuresee bringen?",
+"type": "response"
 },
 "65": {
 "character": "Octootto",
@@ -909,9 +1373,9 @@ lines = {
 "next_id": "66",
 "parent_id": "64",
 "tags": PackedStringArray(),
-"text": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
+"text": "Ja das könnte ich wohl. Mein Preis ist aber nicht ganz so bescheiden.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
+"translation_key": "Ja das könnte ich wohl. Mein Preis ist aber nicht ganz so bescheiden.",
 "type": "dialogue"
 },
 "66": {
@@ -921,176 +1385,114 @@ lines = {
 "next_id": "67",
 "parent_id": "64",
 "tags": PackedStringArray(),
-"text": "...",
+"text": "Bring mir einen Haufen Gold und ich nehme euch auf meinem Boot mit.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "...",
+"translation_key": "Bring mir einen Haufen Gold und ich nehme euch auf meinem Boot mit.",
 "type": "dialogue"
 },
 "67": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
 "id": "67",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "global"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "given_octootto_item"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "variable",
-"value": "true"
-}])
-},
-"next_id": "68",
-"parent_id": "64",
-"type": "mutation"
-},
-"68": {
-"id": "68",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "global"
-}, {
-"type": "dot"
-}, {
-"function": "change_to_ending_scene",
-"type": "function",
-"value": Array[Array]([])
-}])
-},
 "next_id": "69",
 "parent_id": "64",
-"type": "mutation"
+"tags": PackedStringArray(),
+"text": "Der Pirateschatz des Kapitän sollte ausreichen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Der Pirateschatz des Kapitän sollte ausreichen.",
+"type": "dialogue"
 },
 "69": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
 "id": "69",
-"is_snippet": false,
-"next_id": "end",
+"next_id": "70",
+"next_id_after": "149",
 "parent_id": "64",
-"type": "goto"
+"responses": PackedStringArray("69", "96", "115"),
+"tags": PackedStringArray(),
+"text": "Wer bist du?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wer bist du?",
+"type": "response"
 },
 "7": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
-"next_id": "9",
-"parent_id": "5",
+"next_id": "8",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hallo|Howdy]] Fremder ... wie kann ich dir helfen?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hallo|Howdy]] Fremder ... wie kann ich dir helfen?",
+"type": "dialogue"
+},
+"70": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "70",
+"next_id": "71",
+"parent_id": "69",
+"tags": PackedStringArray(),
+"text": "Ich bin einfach ... Otto, nichts weiter.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ich bin einfach ... Otto, nichts weiter.",
+"type": "dialogue"
+},
+"71": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "71",
+"next_id": "73",
+"parent_id": "69",
 "tags": PackedStringArray(),
 "text": "Nur ein bescheidener Fährmann.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Nur ein bescheidener Fährmann.",
 "type": "dialogue"
 },
-"70": {
-"id": "70",
-"next_conditional_id": "120",
-"next_id": "71",
-"next_id_after": "120",
-"parent_id": "63",
-"type": "condition"
-},
-"71": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "71",
-"next_id": "72",
-"parent_id": "70",
-"tags": PackedStringArray(),
-"text": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
-"type": "dialogue"
-},
-"72": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "72",
-"next_id": "73",
-"parent_id": "70",
-"tags": PackedStringArray(),
-"text": "Auf Wiedersehen",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Auf Wiedersehen",
-"type": "dialogue"
-},
 "73": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
 "id": "73",
-"is_snippet": false,
-"next_id": "end",
-"parent_id": "70",
-"type": "goto"
-},
-"74": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "74",
-"next_id": "end",
-"next_id_after": "120",
-"parent_id": "60",
-"tags": PackedStringArray(),
-"text": "Nein, war nur ein Witz",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Nein, war nur ein Witz",
-"type": "response"
-},
-"76": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "76",
-"next_id": "end",
-"next_id_after": "120",
-"parent_id": "56",
-"tags": PackedStringArray(),
-"text": "Auf Wiedersehen.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Auf Wiedersehen.",
-"type": "response"
-},
-"78": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "78",
-"next_id": "80",
-"next_id_after": "120",
-"parent_id": "51",
+"next_id": "75",
+"next_id_after": "149",
+"parent_id": "69",
+"responses": PackedStringArray("73", "92"),
 "tags": PackedStringArray(),
 "text": "Ich hab hier etwas für dich!",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ich hab hier etwas für dich!",
 "type": "response"
 },
-"80": {
+"75": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
-"id": "80",
-"next_id": "81",
-"parent_id": "78",
+"id": "75",
+"next_id": "76",
+"parent_id": "73",
 "tags": PackedStringArray(),
 "text": "Oh.. wirklich?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Oh.. wirklich?",
 "type": "dialogue"
 },
-"81": {
+"76": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "81",
-"next_id": "82",
-"next_id_after": "120",
-"parent_id": "78",
-"responses": PackedStringArray("81", "92"),
+"id": "76",
+"next_id": "77",
+"next_id_after": "149",
+"parent_id": "73",
+"responses": PackedStringArray("76", "88"),
 "tags": PackedStringArray(),
 "text": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
 "type": "response"
 },
-"82": {
+"77": {
 "condition": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -1108,39 +1510,53 @@ lines = {
 "value": "true"
 }])
 },
-"id": "82",
-"next_conditional_id": "88",
-"next_id": "83",
-"next_id_after": "120",
-"parent_id": "81",
+"id": "77",
+"next_conditional_id": "83",
+"next_id": "78",
+"next_id_after": "149",
+"parent_id": "76",
 "type": "condition"
 },
-"83": {
+"78": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
-"id": "83",
-"next_id": "84",
-"parent_id": "82",
+"id": "78",
+"next_id": "79",
+"parent_id": "77",
 "tags": PackedStringArray(),
 "text": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.",
 "type": "dialogue"
 },
-"84": {
+"79": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
-"id": "84",
-"next_id": "85",
-"parent_id": "82",
+"id": "79",
+"next_id": "80",
+"parent_id": "77",
 "tags": PackedStringArray(),
 "text": "...",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "...",
 "type": "dialogue"
 },
-"85": {
-"id": "85",
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"next_id_after": "149",
+"parent_id": "6",
+"responses": PackedStringArray("8", "64", "121", "138"),
+"tags": PackedStringArray(),
+"text": "Wer bist du?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wer bist du?",
+"type": "response"
+},
+"80": {
+"id": "80",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -1158,9 +1574,66 @@ lines = {
 "value": "true"
 }])
 },
-"next_id": "86",
-"parent_id": "82",
+"next_id": "81",
+"parent_id": "77",
 "type": "mutation"
+},
+"81": {
+"id": "81",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"function": "change_to_ending_scene",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "82",
+"parent_id": "77",
+"type": "mutation"
+},
+"82": {
+"id": "82",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "77",
+"type": "goto"
+},
+"83": {
+"id": "83",
+"next_conditional_id": "149",
+"next_id": "84",
+"next_id_after": "149",
+"parent_id": "76",
+"type": "condition"
+},
+"84": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "84",
+"next_id": "85",
+"parent_id": "83",
+"tags": PackedStringArray(),
+"text": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
+"type": "dialogue"
+},
+"85": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "85",
+"next_id": "86",
+"parent_id": "83",
+"tags": PackedStringArray(),
+"text": "Auf Wiedersehen",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Auf Wiedersehen",
+"type": "dialogue"
 },
 "86": {
 "id": "86",
@@ -1171,125 +1644,163 @@ lines = {
 }, {
 "type": "dot"
 }, {
-"function": "change_to_ending_scene",
-"type": "function",
-"value": Array[Array]([])
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
 }])
 },
 "next_id": "87",
-"parent_id": "82",
+"parent_id": "83",
 "type": "mutation"
 },
 "87": {
 "id": "87",
 "is_snippet": false,
 "next_id": "end",
-"parent_id": "82",
+"parent_id": "83",
 "type": "goto"
 },
 "88": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
 "id": "88",
-"next_conditional_id": "120",
 "next_id": "89",
-"next_id_after": "120",
-"parent_id": "81",
-"type": "condition"
-},
-"89": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "89",
-"next_id": "90",
-"parent_id": "88",
-"tags": PackedStringArray(),
-"text": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.",
-"type": "dialogue"
-},
-"9": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "9",
-"next_id": "10",
-"next_id_after": "120",
-"parent_id": "5",
-"responses": PackedStringArray("9", "33", "49"),
-"tags": PackedStringArray(),
-"text": "Kannst du mich über den Säuresee bringen?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Kannst du mich über den Säuresee bringen?",
-"type": "response"
-},
-"90": {
-"character": "Octootto",
-"character_replacements": Array[Dictionary]([]),
-"id": "90",
-"next_id": "91",
-"parent_id": "88",
-"tags": PackedStringArray(),
-"text": "Auf Wiedersehen",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Auf Wiedersehen",
-"type": "dialogue"
-},
-"91": {
-"id": "91",
-"is_snippet": false,
-"next_id": "end",
-"parent_id": "88",
-"type": "goto"
-},
-"92": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "92",
-"next_id": "end",
-"next_id_after": "120",
-"parent_id": "78",
+"next_id_after": "89",
+"parent_id": "73",
 "tags": PackedStringArray(),
 "text": "Nein, war nur ein Witz",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Nein, war nur ein Witz",
 "type": "response"
 },
-"94": {
+"89": {
+"id": "89",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "90",
+"parent_id": "73",
+"type": "mutation"
+},
+"9": {
+"character": "Octootto",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"parent_id": "8",
+"tags": PackedStringArray(),
+"text": "Ich bin einfach ... Otto, nichts weiter.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ich bin einfach ... Otto, nichts weiter.",
+"type": "dialogue"
+},
+"90": {
+"id": "90",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "73",
+"type": "goto"
+},
+"92": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "94",
-"next_id": "end",
-"next_id_after": "120",
-"parent_id": "51",
+"id": "92",
+"next_id": "93",
+"next_id_after": "93",
+"parent_id": "69",
 "tags": PackedStringArray(),
 "text": "Auf Wiedersehen.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Auf Wiedersehen.",
 "type": "response"
 },
-"98": {
+"93": {
+"id": "93",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "otto_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "94",
+"parent_id": "69",
+"type": "mutation"
+},
+"94": {
+"id": "94",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "69",
+"type": "goto"
+},
+"96": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "98",
-"next_id": "99",
-"next_id_after": "120",
-"parent_id": "3",
+"id": "96",
+"next_id": "98",
+"next_id_after": "149",
+"parent_id": "64",
 "tags": PackedStringArray(),
 "text": "Ich hab hier etwas für dich!",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ich hab hier etwas für dich!",
 "type": "response"
 },
-"99": {
+"98": {
 "character": "Octootto",
 "character_replacements": Array[Dictionary]([]),
-"id": "99",
-"next_id": "100",
-"parent_id": "98",
+"id": "98",
+"next_id": "99",
+"parent_id": "96",
 "tags": PackedStringArray(),
 "text": "Oh.. wirklich?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Oh.. wirklich?",
 "type": "dialogue"
+},
+"99": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "99",
+"next_id": "100",
+"next_id_after": "149",
+"parent_id": "96",
+"responses": PackedStringArray("99", "111"),
+"tags": PackedStringArray(),
+"text": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.",
+"type": "response"
 }
 }
 metadata/dialogue_manager_version = "2.31.0"

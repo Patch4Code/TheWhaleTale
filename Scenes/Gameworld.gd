@@ -33,9 +33,6 @@ func _on_new_checkpoint_detection_body_entered(body):
 func _on_player_player_death():
 	respawn_player()
 
-func _process(_delta):
-	if global.found_octootto_item == true:
-		$chest.visible = false
 
 
 

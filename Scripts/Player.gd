@@ -8,9 +8,6 @@ const wall_jump_pushback = 1000
 const wall_slide_gravity = 30 #980 #100
 var is_wall_sliding = false
 
-var octootto_in_range = false
-
-var in_chest_dec = false
 
 #fightvariables
 var attack = false
@@ -32,14 +29,6 @@ var first_death_call = true
 
 func _physics_process(delta):
 	if death == false:
-		if in_chest_dec == true:
-			if Input.is_action_just_pressed("ui_down"):
-				global.found_octootto_item = true
-	
-		if octootto_in_range == true:
-			if Input.is_action_just_pressed("ui_up"):
-				DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"), "main")
-				return
 	
 		# Add the gravity.
 		if not is_on_floor():
@@ -110,29 +99,6 @@ func _on_gameworld_player_revived():
 	first_death_call = true
 
 
-func _on_detection_area_body_entered(body):
-	if body.has_method("enemy"):
-		octootto_in_range = true
-
-
-func _on_detection_area_body_exited(body):
-	if body.has_method("enemy"):
-		octootto_in_range = false
-
-
-func player():
-	pass
-
-func _on_chestdetection_body_entered(body):
-	if body.has_method("player"):
-		in_chest_dec = true
-
-
-func _on_chestdetection_body_exited(body):
-	if body.has_method("player"):
-		in_chest_dec = false
-
-
 func wall_slide(delta):
 	if is_on_wall() and !is_on_floor():
 		if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"):
@@ -181,7 +147,3 @@ func _on_take_damage_area_area_entered(area):
 		hit(5)
 	if area.name == "AttackArea":
 		hit(15)
-
-
-
-

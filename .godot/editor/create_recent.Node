@@ -1,9 +1,9 @@
-Label
 Sprite2D
 CollisionShape2D
 Area2D
-AudioStreamPlayer
 Node2D
+Label
+AudioStreamPlayer
 Control
 RayCast2D
 StaticBody2D

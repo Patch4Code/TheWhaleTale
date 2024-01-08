@@ -1,64 +1,100 @@
 ~ main
 
-if global.given_octootto_item == false
-	Octootto: [[Hi|Hallo|Howdy]] Fremder ... wie kann ich dir helfen?
-	- Wer bist du?
-		Octootto: Ich bin einfach ... Otto, nichts weiter.
-		Octootto: Nur ein bescheidener Fährmann.
-		
+if global.otto_dialog_open == false
+	set global.otto_dialog_open = true
+	
+	if global.given_octootto_item == false
+		Octootto: [[Hi|Hallo|Howdy]] Fremder ... wie kann ich dir helfen?
+		- Wer bist du?
+			Octootto: Ich bin einfach ... Otto, nichts weiter.
+			Octootto: Nur ein bescheidener Fährmann.
+			
+			- Kannst du mich über den Säuresee bringen?
+				Octootto: Ja das könnte ich wohl. Mein Preis ist aber nicht ganz so bescheiden. 
+				Octootto: Bring mir einen Haufen Gold und ich nehme euch auf meinem Boot mit.
+				Octootto: Der Pirateschatz des Kapitän sollte ausreichen.
+				
+				- Ich hab hier etwas für dich!
+			
+					Octootto: Oh.. wirklich?
+					- Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.
+						if global.found_octootto_item == true 
+							Octootto: Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.
+							Octootto: ...
+							set global.given_octootto_item = true
+							set global.change_to_ending_scene()
+							
+							=> END
+						else: 
+							Octootto: Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.
+							Octootto: Auf Wiedersehen
+							set global.otto_dialog_open = false
+							=> END
+					- Nein, war nur ein Witz 
+					set global.otto_dialog_open = false
+					=> END
+			
+				- Auf Wiedersehen. 
+				set global.otto_dialog_open = false
+				=> END
+				
+			- Ich hab hier etwas für dich!
+			
+					Octootto: Oh.. wirklich?
+					- Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.
+						if global.found_octootto_item == true 
+							Octootto: Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.
+							Octootto: ...
+							set global.given_octootto_item = true
+							set global.change_to_ending_scene()
+							=> END
+						else: 
+							Octootto: Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.
+							Octootto: Auf Wiedersehen
+							set global.otto_dialog_open = false
+							=> END
+					- Nein, war nur ein Witz 
+					set global.otto_dialog_open = false
+					=> END
+			
+			- Auf Wiedersehen. 
+			set global.otto_dialog_open = false
+			=> END
+			
 		- Kannst du mich über den Säuresee bringen?
 			Octootto: Ja das könnte ich wohl. Mein Preis ist aber nicht ganz so bescheiden. 
 			Octootto: Bring mir einen Haufen Gold und ich nehme euch auf meinem Boot mit.
 			Octootto: Der Pirateschatz des Kapitän sollte ausreichen.
 			
-			- Ich hab hier etwas für dich!
-		
-				Octootto: Oh.. wirklich?
-				- Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.
-					if global.found_octootto_item == true 
-						Octootto: Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.
-						Octootto: ...
-						set global.given_octootto_item = true
-						set global.change_to_ending_scene()
-						
-						=> END
-					else: 
-						Octootto: Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.
-						Octootto: Auf Wiedersehen
-						=> END
-				- Nein, war nur ein Witz => END
-		
-			- Auf Wiedersehen. => END
+			- Wer bist du?
+				Octootto: Ich bin einfach ... Otto, nichts weiter.
+				Octootto: Nur ein bescheidener Fährmann.
+				
+				- Ich hab hier etwas für dich!
 			
-		- Ich hab hier etwas für dich!
-		
-				Octootto: Oh.. wirklich?
-				- Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.
-					if global.found_octootto_item == true 
-						Octootto: Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.
-						Octootto: ...
-						set global.given_octootto_item = true
-						set global.change_to_ending_scene()
-						=> END
-					else: 
-						Octootto: Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.
-						Octootto: Auf Wiedersehen
-						=> END
-				- Nein, war nur ein Witz => END
-		
-		- Auf Wiedersehen. => END
-		
-	- Kannst du mich über den Säuresee bringen?
-		Octootto: Ja das könnte ich wohl. Mein Preis ist aber nicht ganz so bescheiden. 
-		Octootto: Bring mir einen Haufen Gold und ich nehme euch auf meinem Boot mit.
-		Octootto: Der Pirateschatz des Kapitän sollte ausreichen.
-		
-		- Wer bist du?
-			Octootto: Ich bin einfach ... Otto, nichts weiter.
-			Octootto: Nur ein bescheidener Fährmann.
+					Octootto: Oh.. wirklich?
+					- Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.
+						if global.found_octootto_item == true 
+							Octootto: Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.
+							Octootto: ...
+							set global.given_octootto_item = true
+							set global.change_to_ending_scene()
+							=> END
+						else: 
+							Octootto: Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.
+							Octootto: Auf Wiedersehen
+							set global.otto_dialog_open = false
+							=> END
+					- Nein, war nur ein Witz 
+					set global.otto_dialog_open = false
+					=> END
+			
+				- Auf Wiedersehen. 
+				set global.otto_dialog_open = false
+				=> END
 			
 			- Ich hab hier etwas für dich!
-		
+			
 				Octootto: Oh.. wirklich?
 				- Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.
 					if global.found_octootto_item == true 
@@ -70,13 +106,19 @@ if global.given_octootto_item == false
 					else: 
 						Octootto: Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.
 						Octootto: Auf Wiedersehen
+						set global.otto_dialog_open = false
 						=> END
-				- Nein, war nur ein Witz => END
+				- Nein, war nur ein Witz 
+				set global.otto_dialog_open = false
+				=> END
+			
+			- Auf Wiedersehen. 
+			set global.otto_dialog_open = false
+			=> END
+			
 		
-			- Auf Wiedersehen. => END
-		
+
 		- Ich hab hier etwas für dich!
-		
 			Octootto: Oh.. wirklich?
 			- Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.
 				if global.found_octootto_item == true 
@@ -88,33 +130,21 @@ if global.given_octootto_item == false
 				else: 
 					Octootto: Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.
 					Octootto: Auf Wiedersehen
+					set global.otto_dialog_open = false
 					=> END
-			- Nein, war nur ein Witz => END
-		
-		- Auf Wiedersehen. => END
-		
-	
+			- Nein, war nur ein Witz 
+			set global.otto_dialog_open = false
+			=> END
+		- Auf Wiedersehen. 
+		set global.otto_dialog_open = false
+		=> END
 
-	- Ich hab hier etwas für dich!
-		Octootto: Oh.. wirklich?
-		- Ja ich habe einen Haufen Gold für euch. Hier ist der Piratenschatz des Kapitän.
-			if global.found_octootto_item == true 
-				Octootto: Ahh der Goldschatz. Vielen Dank! Nun werde ich euch über den Säuresee bringen.
-				Octootto: ...
-				set global.given_octootto_item = true
-				set global.change_to_ending_scene()
-				=> END
-			else: 
-				Octootto: Lüge! Das was ihr habt ist nur heiße Luft. Kommt wieder wenn ihr wirklich den Haufen Gold habt.
-				Octootto: Auf Wiedersehen
-				=> END
-		- Nein, war nur ein Witz => END
-	- Auf Wiedersehen. => END
+	else:
+		Octootto: [[Hi|Hello|Howdy]], thank you so much for finding my chest!
+		Octootto: I don't know what i would have done without you
+		Octootto: I am working on a massive surprise for you!
+		set global.otto_dialog_open = false
+		=> END
 
-else:
-	Octootto: [[Hi|Hello|Howdy]], thank you so much for finding my chest!
-	Octootto: I don't know what i would have done without you
-	Octootto: I am working on a massive surprise for you!
+	set global.otto_dialog_open = false
 	=> END
-
-=> END

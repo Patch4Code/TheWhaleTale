@@ -1,6 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dtrbk0oicyuko"]
+[gd_scene load_steps=12 format=3 uid="uid://dtrbk0oicyuko"]
 
 [ext_resource type="Texture2D" uid="uid://dm4va71e4xfb6" path="res://Resources/Sprites/Octupus/Octopus.png" id="1_ee28o"]
+[ext_resource type="Script" path="res://Characters/Octupus.gd" id="1_i8qse"]
+[ext_resource type="Texture2D" uid="uid://dgcsktj6h3mjo" path="res://Resources/Textures/Interagieren Anzeige v1.png" id="2_20igm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4tv1b"]
 atlas = ExtResource("1_ee28o")
@@ -52,7 +54,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2rbka"]
+size = Vector2(256, 264)
+
 [node name="Octopus" type="CharacterBody2D"]
+script = ExtResource("1_i8qse")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(16, -24)
@@ -65,3 +71,18 @@ frame = 4
 position = Vector2(8, -20)
 scale = Vector2(1.22482, 0.99381)
 polygon = PackedVector2Array(-52.2527, 52.3239, -45.7211, -4.02491, -13.0632, -68.4235, 26.1264, -68.4235, 52.2527, 52.3239)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -44)
+shape = SubResource("RectangleShape2D_2rbka")
+
+[node name="interactionUi" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(7.62939e-06, -184)
+scale = Vector2(0.263333, 0.263333)
+texture = ExtResource("2_20igm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

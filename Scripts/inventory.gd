@@ -12,9 +12,5 @@ func _on_coin_slot_coin_thrown_in():
 	
 
 #on treasure collected
-
-
-
-
-
-
+func _on_pirate_treasure_treasure_collected():
+	$Items/PirateTreasure.visible = true
