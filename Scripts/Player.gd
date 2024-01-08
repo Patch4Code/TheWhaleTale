@@ -159,7 +159,7 @@ func hit(damage : int):
 		health -= damage
 		anim.play("Hurt")
 		print(health)
-	else:
+	if health <= 0:
 		death = true
 		#anim.play("Dead")
 		await get_tree().create_timer(0.3).timeout

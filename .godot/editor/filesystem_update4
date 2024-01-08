@@ -10,6 +10,4 @@ res://Scenes/Recap.tscn
 res://Characters/Player.tscn
 res://Mobs/PirateBoss.tscn
 res://Characters/parrot.tscn
-res://Scripts/parrot.gd
-res://Scripts/coinSlott.gd
-res://global.gd
+res://Scripts/Player.gd
