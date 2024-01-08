@@ -1,3 +1,4 @@
+res://Mobs/PirateBoss.gd
 res://Scenes/Gameworld.tscn
 res://Shader/Water.gdshader
 res://Shader/Acid.gdshader
@@ -10,4 +11,3 @@ res://Scenes/Recap.tscn
 res://Characters/Player.tscn
 res://Mobs/PirateBoss.tscn
 res://Characters/parrot.tscn
-res://Scripts/Player.gd

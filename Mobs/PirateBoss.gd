@@ -151,3 +151,8 @@ func _on_player_in_attack_range_body_exited(body):
 func _on_damageble_area_area_entered(area):
 	if area.name == "PlayerAttackArea":
 		damaged = true
+
+
+#reset boss hp when player dies-----------------------------------------------
+func _on_player_player_death():
+	HEALTH = 60
