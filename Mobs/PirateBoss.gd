@@ -17,6 +17,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction
 
 signal disable_fogwall
+signal drop_treasure
 
 #Setup of the Boss
 func _ready():
@@ -105,6 +106,7 @@ func Die():
 	anim.play("Death")
 	await get_tree().create_timer(1.0).timeout
 	emit_signal("disable_fogwall")
+	emit_signal("drop_treasure", self.global_position)
 	self.queue_free()
 
 #chatacter recieved damage Lock other animations 

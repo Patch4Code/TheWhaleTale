@@ -37,7 +37,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("Attack"):
 			executeAttack()
 		# Handle jump.
-		if Input.is_action_just_pressed("ui_accept") and attack == false:
+		if Input.is_action_just_pressed("Jump") and attack == false:
 			if is_on_floor():
 				velocity.y = JUMP_VELOCITY
 				anim.play("Jump")

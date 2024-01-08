@@ -8,24 +8,24 @@
 radius = 32.0
 
 [node name="pirate_treasure" type="Node2D"]
-position = Vector2(-1616, -624)
 script = ExtResource("1_bt2ls")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1616, 624)
+position = Vector2(0.323072, 0.323071)
 scale = Vector2(0.110006, 0.110006)
 texture = ExtResource("1_wsdyy")
 
 [node name="chestdetection" type="Area2D" parent="."]
+position = Vector2(0.322948, 0.323009)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chestdetection"]
-position = Vector2(1616, 624)
+position = Vector2(3.8147e-06, -1.43051e-06)
 scale = Vector2(2.72, 2.72)
 shape = SubResource("CircleShape2D_qyuub")
 
 [node name="InteractUI" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(1616, 488)
+position = Vector2(-4.54747e-13, -168)
 scale = Vector2(0.29682, 0.29682)
 texture = ExtResource("3_cm680")
 

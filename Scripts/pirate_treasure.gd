@@ -25,3 +25,7 @@ func _on_chestdetection_body_exited(body):
 	if body.name == "Player":
 		player_inside_zone = false
 		$InteractUI.visible = false
+
+
+func _on_pirate_boss_2_drop_treasure(treasure_spawn_position):
+	self.global_position = treasure_spawn_position
