@@ -122,7 +122,7 @@ func wall_slide(delta):
 
 func executeAttack():
 	attack = true
-	anim.play("Attack")
+	anim.play("Attack_slash")
 	velocity.x = 0 
 	await get_tree().create_timer(0.5).timeout
 	attack = false

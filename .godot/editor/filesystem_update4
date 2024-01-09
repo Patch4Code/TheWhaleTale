@@ -1,13 +1,14 @@
-res://Scenes/Gameworld.tscn
+res://Characters/Player.tscn
 res://Shader/Water.gdshader
 res://Shader/Acid.gdshader
 res://Shader/FogOfWar.gdshader
 res://Shader/FogWall2.gdshader
 res://Shader/AcidFall.gdshader
 res://Shader/FogWall.gdshader
+res://Scripts/Player.gd
 res://Scenes/MainMenu.tscn
 res://Scenes/Recap.tscn
-res://Characters/Player.tscn
+res://Scenes/Gameworld.tscn
 res://Characters/parrot.tscn
 res://Scenes/Credits.tscn
 res://GameElements/FogWall.tscn

@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://cp1vgvib6wjsi"]
+[gd_scene load_steps=91 format=3 uid="uid://cp1vgvib6wjsi"]
 
 [ext_resource type="Texture2D" uid="uid://cglo1endr14a8" path="res://Resources/Sprites/Player/Attack_1.png" id="1_6e20w"]
 [ext_resource type="Texture2D" uid="uid://881w03i3jj5q" path="res://Resources/Sprites/Player/Idle.png" id="1_fh0j3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b1yaht3asevtf" path="res://Resources/Sprites/Player/Attack_2.png" id="2_pkdag"]
 [ext_resource type="Texture2D" uid="uid://d0ty2lpyc1y8p" path="res://Resources/Sprites/Player/Attack_3.png" id="3_v6nnf"]
 [ext_resource type="Texture2D" uid="uid://c830sxu8bei1v" path="res://Resources/Sprites/Player/Dead.png" id="4_4b14d"]
+[ext_resource type="Texture2D" uid="uid://bcpms1235kcr4" path="res://Resources/Sprites/Player/Attack_3_with_slash.png" id="5_0imvf"]
 [ext_resource type="Texture2D" uid="uid://dr61m1tjlh48x" path="res://Resources/Sprites/Player/Jump.png" id="5_apxna"]
 [ext_resource type="Texture2D" uid="uid://325vic8dca5" path="res://Resources/Sprites/Player/Hurt.png" id="6_0v6bc"]
 [ext_resource type="Texture2D" uid="uid://bxvq28lgitia4" path="res://Resources/Sprites/Player/Idle_2.png" id="8_emqo1"]
@@ -71,6 +72,22 @@ region = Rect2(256, 48, 128, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_euu30"]
 atlas = ExtResource("3_v6nnf")
+region = Rect2(384, 48, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y23yd"]
+atlas = ExtResource("5_0imvf")
+region = Rect2(0, 48, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7p5j"]
+atlas = ExtResource("5_0imvf")
+region = Rect2(128, 48, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31w4d"]
+atlas = ExtResource("5_0imvf")
+region = Rect2(256, 48, 128, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6j65"]
+atlas = ExtResource("5_0imvf")
 region = Rect2(384, 48, 128, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33w1w"]
@@ -291,6 +308,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y23yd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7p5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31w4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6j65")
+}],
+"loop": true,
+"name": &"Attack3withSlash",
 "speed": 5.0
 }, {
 "frames": [{
@@ -652,6 +686,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [1]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Attack3withSlash"]
+}
 
 [sub_resource type="Animation" id="Animation_0liv1"]
 resource_name = "Run"
@@ -682,9 +728,50 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
+[sub_resource type="Animation" id="Animation_0l6yv"]
+resource_name = "Attack_slash"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../PlayerAttackArea/AttackShape2d:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Attack3withSlash"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hl3e2"]
 _data = {
 "Attack": SubResource("Animation_peguv"),
+"Attack_slash": SubResource("Animation_0l6yv"),
 "Dead": SubResource("Animation_mudrf"),
 "Fall": SubResource("Animation_qj3fi"),
 "Hurt": SubResource("Animation_tcnlj"),
@@ -716,7 +803,7 @@ shape = SubResource("CapsuleShape2D_fjmja")
 position = Vector2(-1, -1)
 scale = Vector2(0.234375, 0.234375)
 sprite_frames = SubResource("SpriteFrames_qqbnn")
-animation = &"Idle"
+animation = &"Attack3withSlash"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
