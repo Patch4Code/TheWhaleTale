@@ -1,5 +1,5 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1704752650
+::res://::1704790640
 coinskull.dialogue::Resource::6129598916039169299::1704712830::1704712830::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 export_presets.cfg::TextFile::-1::1704752126::0::1::::<><>::
 global.gd::GDScript::-1::1704726457::0::1::::<>Node<>::
@@ -63,12 +63,12 @@ main_view.gd::GDScript::-1::1704466044::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1704466044::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cpg4lg1r3ff6m::::res://addons/dialogue_manager/views/settings_view.tscn
 settings_view.gd::GDScript::-1::1704466044::0::1::::<>TabContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1704466044::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://Characters/::1704751257
+::res://Characters/::1704792423
 Octupus.gd::GDScript::-1::1704747968::0::1::::<>CharacterBody2D<>::
 Octupus.tscn::PackedScene::8528024412030888338::1704747936::0::1::::<><>::uid://dm4va71e4xfb6::::res://Resources/Sprites/Octupus/Octopus.png<>res://Characters/Octupus.gd<>uid://dgcsktj6h3mjo::::res://Resources/Textures/Interagieren Anzeige v1.png<>uid://ck8ph5g7jg2xu::::res://MusicAndSounds/NPCsounds/443585__hachiman935__balbuceos_01.wav
-parrot.tscn::PackedScene::3005374953873008920::1704751257::0::1::::<><>::res://Scripts/parrot.gd<>uid://dwdhiefa1ilxr::::res://Resources/Sprites/Parrot/ParrotWithCrown2.png<>uid://dgcsktj6h3mjo::::res://Resources/Textures/Interagieren Anzeige v1.png<>uid://onjkt6jmhllt::::res://MusicAndSounds/NPCsounds/Parrot Squawks - QuickSounds.com.mp3
-Player.tscn::PackedScene::5880634730610293072::1704751256::0::1::::<><>::uid://cglo1endr14a8::::res://Resources/Sprites/Player/Attack_1.png<>uid://881w03i3jj5q::::res://Resources/Sprites/Player/Idle.png<>res://Scripts/Player.gd<>uid://b1yaht3asevtf::::res://Resources/Sprites/Player/Attack_2.png<>uid://d0ty2lpyc1y8p::::res://Resources/Sprites/Player/Attack_3.png<>uid://c830sxu8bei1v::::res://Resources/Sprites/Player/Dead.png<>uid://dr61m1tjlh48x::::res://Resources/Sprites/Player/Jump.png<>uid://325vic8dca5::::res://Resources/Sprites/Player/Hurt.png<>uid://bxvq28lgitia4::::res://Resources/Sprites/Player/Idle_2.png<>uid://bm6m4r4wu8llc::::res://Resources/Sprites/Player/Run.png<>uid://diwm05rgmetfc::::res://Resources/Sprites/Player/Walk.png<>uid://de46v6jxw1nuy::::res://MusicAndSounds/PlayerSounds/12_Step_wood_03.wav<>uid://cwum4uw6t33xu::::res://MusicAndSounds/PlayerSounds/30_Jump_03.wav<>uid://dtcevx4umy3sq::::res://MusicAndSounds/PlayerSounds/56_Attack_03.wav<>uid://bec3twpnmuub1::::res://MusicAndSounds/PlayerSounds/61_Hit_03.wav<>uid://b2c7uc5bwgaa0::::res://MusicAndSounds/otherSounds/165331__ani_music__tubular-bell-of-death.wav
-::res://GameElements/::1704752072
+parrot.tscn::PackedScene::3005374953873008920::1704792423::0::1::::<><>::res://Scripts/parrot.gd<>uid://dwdhiefa1ilxr::::res://Resources/Sprites/Parrot/ParrotWithCrown2.png<>uid://dgcsktj6h3mjo::::res://Resources/Textures/Interagieren Anzeige v1.png<>uid://onjkt6jmhllt::::res://MusicAndSounds/NPCsounds/Parrot Squawks - QuickSounds.com.mp3
+Player.tscn::PackedScene::5880634730610293072::1704792422::0::1::::<><>::uid://cglo1endr14a8::::res://Resources/Sprites/Player/Attack_1.png<>uid://881w03i3jj5q::::res://Resources/Sprites/Player/Idle.png<>res://Scripts/Player.gd<>uid://b1yaht3asevtf::::res://Resources/Sprites/Player/Attack_2.png<>uid://d0ty2lpyc1y8p::::res://Resources/Sprites/Player/Attack_3.png<>uid://c830sxu8bei1v::::res://Resources/Sprites/Player/Dead.png<>uid://dr61m1tjlh48x::::res://Resources/Sprites/Player/Jump.png<>uid://325vic8dca5::::res://Resources/Sprites/Player/Hurt.png<>uid://bxvq28lgitia4::::res://Resources/Sprites/Player/Idle_2.png<>uid://bm6m4r4wu8llc::::res://Resources/Sprites/Player/Run.png<>uid://diwm05rgmetfc::::res://Resources/Sprites/Player/Walk.png<>uid://de46v6jxw1nuy::::res://MusicAndSounds/PlayerSounds/12_Step_wood_03.wav<>uid://cwum4uw6t33xu::::res://MusicAndSounds/PlayerSounds/30_Jump_03.wav<>uid://dtcevx4umy3sq::::res://MusicAndSounds/PlayerSounds/56_Attack_03.wav<>uid://bec3twpnmuub1::::res://MusicAndSounds/PlayerSounds/61_Hit_03.wav<>uid://b2c7uc5bwgaa0::::res://MusicAndSounds/otherSounds/165331__ani_music__tubular-bell-of-death.wav
+::res://GameElements/::1704792423
 AcidFall.tscn::PackedScene::844937420291129412::1704466044::0::1::::<><>::res://Scripts/AcidFall.gd<>uid://rbov06mr0cbj::::res://Resources/Sprites/AcidFall/AcidFall(Acid).png
 BasicPlatform.gd::GDScript::-1::1704466044::0::1::::<>StaticBody2D<>::
 BasicPlatform.tscn::PackedScene::1491016697355119633::1704466044::0::1::::<><>::uid://cb0pdkpd6sogq::::res://Resources/Textures/Wood.jpg
@@ -76,7 +76,7 @@ ckeckpoint_1.tscn::PackedScene::3103840652635059157::1704548908::0::1::::<><>::r
 coinSlottscn.tscn::PackedScene::7170757033735492195::1704466044::0::1::::<><>::uid://cd87f1tk1yafp::::res://Resources/Textures/münzeinwurf.png<>res://Scripts/coinSlott.gd<>uid://dgcsktj6h3mjo::::res://Resources/Textures/Interagieren Anzeige v1.png
 CounterPlatform.tscn::PackedScene::324166186852844136::1704546568::0::1::::<><>::res://Scripts/CounterPlatform.gd<>uid://lmoe8ayengp4::::res://Resources/Textures/woodcracked.jpg
 door.tscn::PackedScene::9165016424765434313::1704466044::0::1::::<><>::res://Scripts/door.gd<>uid://miovjgbu3yjo::::res://Resources/Sprites/Door/strange_door_closed_anim_strip_10.png<>uid://nmhp1ukajnve::::res://Resources/Sprites/Door/strange_door_opening_anim_strip_14.png
-FogWall.tscn::PackedScene::2605089876962376916::1704752072::0::1::::<><>::uid://cy33krubqvm25::::res://Resources/Textures/glas.png<>res://Scripts/FogWall.gd<>res://Shader/FogWall2.gdshader
+FogWall.tscn::PackedScene::2605089876962376916::1704792423::0::1::::<><>::uid://cy33krubqvm25::::res://Resources/Textures/glas.png<>res://Scripts/FogWall.gd<>res://Shader/FogWall2.gdshader
 inventory.tscn::PackedScene::4992024788295948668::1704747551::0::1::::<><>::res://Scripts/inventory.gd<>uid://buu15kxtfig7::::res://Resources/Textures/InventoryElement.png<>uid://b2tryhewkf4rr::::res://Resources/Textures/pirateCoin.png<>uid://bd1ayeng748ng::::res://Resources/Textures/pirateSchatz.png
 Laser.tscn::PackedScene::8888611544330745286::1704546568::0::1::::<><>::res://Scripts/Laser.gd
 Mirror.tscn::PackedScene::5147884951889655284::1704466044::0::1::::<><>::res://Scripts/Mirror.gd<>uid://cy33krubqvm25::::res://Resources/Textures/glas.png
@@ -189,7 +189,7 @@ Idle_2.png::CompressedTexture2D::4045137459070259413::1704466044::1704466044::1:
 Jump.png::CompressedTexture2D::8418069570022809525::1704466044::1704466044::1::::<><>::
 Run.png::CompressedTexture2D::3293463848385678956::1704466044::1704466044::1::::<><>::
 Walk.png::CompressedTexture2D::7766963961784704600::1704466044::1704466044::1::::<><>::
-::res://Resources/Textures/::1704550631
+::res://Resources/Textures/::1704792894
 AcidFallGland.png::CompressedTexture2D::1930250567901735797::1704466044::1704466044::1::::<><>::
 acidTexture.png::CompressedTexture2D::8501655792151828104::1704466044::1704466044::1::::<><>::
 Boat.png::CompressedTexture2D::9119592658621199957::1704466044::1704466044::1::::<><>::
@@ -198,6 +198,7 @@ BossArna2test.jpg::CompressedTexture2D::2661346573701669949::1704466044::1704466
 Controlls.png::CompressedTexture2D::1698121176758216741::1704466044::1704466044::1::::<><>::
 gamescreen-pause.png::CompressedTexture2D::3726822137297074821::1704466044::1704466044::1::::<><>::
 glas.png::CompressedTexture2D::6516895049409860780::1704466044::1704466044::1::::<><>::
+hangigSkeletton.png::CompressedTexture2D::6997959360346653291::1704792882::1704792900::1::::<><>::
 Interagieren Anzeige v1.png::CompressedTexture2D::7585635645490322016::1704466044::1704466044::1::::<><>::
 Interagieren Anzeige v2.png::CompressedTexture2D::141741358476597388::1704466044::1704466044::1::::<><>::
 InventoryElement.png::CompressedTexture2D::112738761435244100::1704466044::1704466044::1::::<><>::
@@ -207,6 +208,7 @@ münzeinwurf.png::CompressedTexture2D::5053485632370753305::1704466044::17044660
 parrot_perch.png::CompressedTexture2D::6082695384088177119::1704466044::1704466044::1::::<><>::
 pirateCoin.png::CompressedTexture2D::4321818062033700559::1704466044::1704466044::1::::<><>::
 pirateSchatz.png::CompressedTexture2D::2650704125758881580::1704466044::1704466044::1::::<><>::
+pirateTable.png::CompressedTexture2D::1039465332924185435::1704792050::1704792094::1::::<><>::
 Signpost.png::CompressedTexture2D::6748987759118713465::1704466044::1704466044::1::::<><>::
 water.png::CompressedTexture2D::831290247985700396::1704466044::1704466044::1::::<><>::
 Wood.jpg::CompressedTexture2D::4895556315732964788::1704466044::1704466044::1::::<><>::
@@ -220,15 +222,15 @@ tile_cave_bg_rock.png::CompressedTexture2D::4245499711266252642::1704466044::170
 wood_tileset.png::CompressedTexture2D::4961688370420006883::1704466044::1704466044::1::::<><>::
 ::res://Resources/Videos/::1704466044
 WhaleTaleExpanded3_animation.ogv::VideoStreamTheora::-1::1704466044::0::1::::<><>::
-::res://Scenes/::1704752128
-Credits.tscn::PackedScene::1728739279967795595::1704751257::0::1::::<><>::res://Scripts/Credits.gd<>uid://d3cnk0ctpjwey::::res://MusicAndSounds/guitar-melody-imitation_170bpm_D__major.mp3
-Ending.tscn::PackedScene::2547392332096717782::1704752099::0::1::::<><>::uid://dg1382flwro8::::res://Resources/Images/textrahmen.png<>res://Scripts/Ending.gd<>uid://b54nrummf311q::::res://Resources/Images/boatOverAcidLake.png<>uid://b2r7cala357u6::::res://Resources/Fonts/Bell MT.ttf
+::res://Scenes/::1704792456
+Credits.tscn::PackedScene::1728739279967795595::1704792423::0::1::::<><>::res://Scripts/Credits.gd<>uid://d3cnk0ctpjwey::::res://MusicAndSounds/guitar-melody-imitation_170bpm_D__major.mp3
+Ending.tscn::PackedScene::2547392332096717782::1704792423::0::1::::<><>::uid://dg1382flwro8::::res://Resources/Images/textrahmen.png<>res://Scripts/Ending.gd<>uid://b54nrummf311q::::res://Resources/Images/boatOverAcidLake.png<>uid://b2r7cala357u6::::res://Resources/Fonts/Bell MT.ttf
 Game.tscn::PackedScene::5906431521634219920::1704466044::0::1::::<><>::uid://cppdmlkms1rv3::::res://Resources/Tiles/Living Tissue_tileset.png<>uid://cp1vgvib6wjsi::::res://Characters/Player.tscn<>uid://x566ot2pasip::::res://Resources/Tiles/Living Tissue_bakground.png
 Gameworld.gd::GDScript::-1::1704724400::0::1::::<>Node2D<>::
-Gameworld.tscn::PackedScene::6541429160076907928::1704751257::0::1::::<><>::res://Scenes/Gameworld.gd<>uid://cppdmlkms1rv3::::res://Resources/Tiles/Living Tissue_tileset.png<>uid://x566ot2pasip::::res://Resources/Tiles/Living Tissue_bakground.png<>uid://cp1vgvib6wjsi::::res://Characters/Player.tscn<>uid://dsd1rcclh6f14::::res://MusicAndSounds/Mysterious_Adventure-fadeout.mp3<>uid://vii3eg5umd2p::::res://GameElements/BasicPlatform.tscn<>res://Shader/Water.gdshader<>res://Shader/Acid.gdshader<>uid://eva78arnen6g::::res://GameElements/CounterPlatform.tscn<>uid://d1cvf7c4sdbc2::::res://MusicAndSounds/I-am-the-Sea-The-Room-4.mp3<>uid://dyvyesk2eycvu::::res://GameElements/Laser.tscn<>uid://cy33krubqvm25::::res://Resources/Textures/glas.png<>uid://cflw6bqhglar1::::res://GameElements/Mirror.tscn<>uid://d26umgwjqwp7j::::res://Resources/Textures/Boat.png<>uid://dh1qwqx3fh20s::::res://Resources/Textures/lightsensor.png<>uid://d3tuqmuqyyhwb::::res://GameElements/door.tscn<>uid://w3xdiad7qrx1::::res://Resources/Textures/lighsource.png<>uid://bk6rh1a40bou8::::res://Resources/Tiles/bg_cave.png<>uid://b1qs03r3kw5vq::::res://Resources/Tiles/tile_cave_bg_rock.png<>uid://ccxqjuvkq80o2::::res://Resources/Tiles/wood_tileset.png<>res://Shader/FogOfWar.gdshader<>res://Scripts/FogOfWar.gd<>uid://dtrbk0oicyuko::::res://Characters/Octupus.tscn<>uid://c3fi3v037kwl2::::res://Resources/Textures/Signpost.png<>uid://daftk5yg13i5h::::res://GameElements/coinSlottscn.tscn<>uid://mbj84hqv3fb5::::res://GameElements/AcidFall.tscn<>uid://2ra7eh88j5rd::::res://Resources/Textures/AcidFallGland.png<>uid://bdd6pj2v06vay::::res://GameElements/FogWall.tscn<>uid://cawpve3g8q0s::::res://Resources/Textures/Interagieren Anzeige v2.png<>uid://d33kvc0vb5yeh::::res://Resources/Textures/BossArna2.jpeg<>uid://cdef6ijg6lmd5::::res://GameElements/inventory.tscn<>uid://bi23c6431qn5i::::res://Characters/parrot.tscn<>uid://dnt11kb0s0x21::::res://GameElements/pause_menu.tscn<>uid://bd6oli7huqnr8::::res://GameElements/pirate_coin.tscn<>uid://du1bmv1c6a0p::::res://Resources/Textures/youdied.png<>uid://cswrdss0e8tmt::::res://Resources/Textures/parrot_perch.png<>uid://57odfoyo06fy::::res://Scenes/moving_platform.tscn<>uid://dc03ie8nfujip::::res://GameElements/pirate_treasure.tscn<>uid://bw5uje3xlvp7m::::res://Mobs/Skeleton.tscn<>uid://cn7s0t86neh2n::::res://Mobs/Fish.tscn<>uid://03w37y1pnhv0::::res://Mobs/PirateBoss.tscn
-MainMenu.tscn::PackedScene::8445518944364116618::1704752128::0::1::::<><>::res://Scripts/MainMenu.gd<>res://Resources/Videos/WhaleTaleExpanded3_animation.ogv<>uid://b2coextqbi7qt::::res://MusicAndSounds/Clement-Panchout-_-Journey-_-2017.mp3
+Gameworld.tscn::PackedScene::6541429160076907928::1704792455::0::1::::<><>::res://Scenes/Gameworld.gd<>uid://cppdmlkms1rv3::::res://Resources/Tiles/Living Tissue_tileset.png<>uid://x566ot2pasip::::res://Resources/Tiles/Living Tissue_bakground.png<>uid://cp1vgvib6wjsi::::res://Characters/Player.tscn<>uid://dsd1rcclh6f14::::res://MusicAndSounds/Mysterious_Adventure-fadeout.mp3<>uid://vii3eg5umd2p::::res://GameElements/BasicPlatform.tscn<>res://Shader/Water.gdshader<>res://Shader/Acid.gdshader<>uid://eva78arnen6g::::res://GameElements/CounterPlatform.tscn<>uid://d1cvf7c4sdbc2::::res://MusicAndSounds/I-am-the-Sea-The-Room-4.mp3<>uid://dyvyesk2eycvu::::res://GameElements/Laser.tscn<>uid://cy33krubqvm25::::res://Resources/Textures/glas.png<>uid://cflw6bqhglar1::::res://GameElements/Mirror.tscn<>uid://d26umgwjqwp7j::::res://Resources/Textures/Boat.png<>uid://dh1qwqx3fh20s::::res://Resources/Textures/lightsensor.png<>uid://d3tuqmuqyyhwb::::res://GameElements/door.tscn<>uid://w3xdiad7qrx1::::res://Resources/Textures/lighsource.png<>uid://bk6rh1a40bou8::::res://Resources/Tiles/bg_cave.png<>uid://b1qs03r3kw5vq::::res://Resources/Tiles/tile_cave_bg_rock.png<>uid://ccxqjuvkq80o2::::res://Resources/Tiles/wood_tileset.png<>res://Shader/FogOfWar.gdshader<>res://Scripts/FogOfWar.gd<>uid://dtrbk0oicyuko::::res://Characters/Octupus.tscn<>uid://c3fi3v037kwl2::::res://Resources/Textures/Signpost.png<>uid://daftk5yg13i5h::::res://GameElements/coinSlottscn.tscn<>uid://mbj84hqv3fb5::::res://GameElements/AcidFall.tscn<>uid://2ra7eh88j5rd::::res://Resources/Textures/AcidFallGland.png<>uid://bdd6pj2v06vay::::res://GameElements/FogWall.tscn<>uid://cawpve3g8q0s::::res://Resources/Textures/Interagieren Anzeige v2.png<>uid://d33kvc0vb5yeh::::res://Resources/Textures/BossArna2.jpeg<>uid://cdef6ijg6lmd5::::res://GameElements/inventory.tscn<>uid://bi23c6431qn5i::::res://Characters/parrot.tscn<>uid://dnt11kb0s0x21::::res://GameElements/pause_menu.tscn<>uid://o2r3vsqbpwo6::::res://Resources/Textures/pirateTable.png<>uid://bd6oli7huqnr8::::res://GameElements/pirate_coin.tscn<>uid://du1bmv1c6a0p::::res://Resources/Textures/youdied.png<>uid://cswrdss0e8tmt::::res://Resources/Textures/parrot_perch.png<>uid://57odfoyo06fy::::res://Scenes/moving_platform.tscn<>uid://dc03ie8nfujip::::res://GameElements/pirate_treasure.tscn<>uid://bw5uje3xlvp7m::::res://Mobs/Skeleton.tscn<>uid://cn7s0t86neh2n::::res://Mobs/Fish.tscn<>uid://03w37y1pnhv0::::res://Mobs/PirateBoss.tscn
+MainMenu.tscn::PackedScene::8445518944364116618::1704792422::0::1::::<><>::res://Scripts/MainMenu.gd<>res://Resources/Videos/WhaleTaleExpanded3_animation.ogv<>uid://b2coextqbi7qt::::res://MusicAndSounds/Clement-Panchout-_-Journey-_-2017.mp3
 moving_platform.tscn::PackedScene::2172581077905519590::1704466044::0::1::::<><>::res://moving_platform.gd<>uid://bpmw67pdtbeth::::res://ui/text box/moving_Platform_Texture.png
-Recap.tscn::PackedScene::7659985148227069265::1704751278::0::1::::<><>::res://Scripts/Recap.gd<>uid://dg1382flwro8::::res://Resources/Images/textrahmen.png<>uid://kxgp8oen8br6::::res://Resources/Images/verschluckt.jpeg<>uid://etfxii4lxer1::::res://Resources/Images/wasbeshergeschah.png<>uid://dg03tvwukdne5::::res://Resources/Images/ship-edit.jpg<>uid://ck07qf133284s::::res://Resources/Images/papagei-edit.jpg<>uid://dpiwwxlk8j66s::::res://Resources/Images/FreedFromHandcuffs-edit.jpg<>uid://hetl1mk52t4v::::res://Resources/Images/WhaleMap.jpg<>uid://ygt2pxfllt4x::::res://Resources/Textures/Controlls.png
+Recap.tscn::PackedScene::7659985148227069265::1704792422::0::1::::<><>::res://Scripts/Recap.gd<>uid://dg1382flwro8::::res://Resources/Images/textrahmen.png<>uid://kxgp8oen8br6::::res://Resources/Images/verschluckt.jpeg<>uid://etfxii4lxer1::::res://Resources/Images/wasbeshergeschah.png<>uid://dg03tvwukdne5::::res://Resources/Images/ship-edit.jpg<>uid://ck07qf133284s::::res://Resources/Images/papagei-edit.jpg<>uid://dpiwwxlk8j66s::::res://Resources/Images/FreedFromHandcuffs-edit.jpg<>uid://hetl1mk52t4v::::res://Resources/Images/WhaleMap.jpg<>uid://ygt2pxfllt4x::::res://Resources/Textures/Controlls.png
 ::res://Scripts/::1704751236
 AcidFall.gd::GDScript::-1::1704466044::0::1::::<>StaticBody2D<>::
 ckeckpoint_1.gd::GDScript::-1::1704549628::0::1::::<>Node2D<>::
@@ -249,13 +251,13 @@ pirate_coin.gd::GDScript::-1::1704578029::0::1::::<>Node2D<>::
 pirate_treasure.gd::GDScript::-1::1704729876::0::1::::<>Node2D<>::
 Player.gd::GDScript::-1::1704746771::0::1::::<>CharacterBody2D<>::
 Recap.gd::GDScript::-1::1704742653::0::1::::<>Node2D<>::
-::res://Shader/::1704752132
-Acid.gdshader::Shader::-1::1704752132::0::1::::<><>::
-AcidFall.gdshader::Shader::-1::1704752132::0::1::::<><>::
-FogOfWar.gdshader::Shader::-1::1704752132::0::1::::<><>::
-FogWall2.gdshader::Shader::-1::1704752132::0::1::::<><>::
-FogWall.gdshader::Shader::-1::1704752132::0::1::::<><>::
-Water.gdshader::Shader::-1::1704752132::0::1::::<><>::
+::res://Shader/::1704792456
+Acid.gdshader::Shader::-1::1704792456::0::1::::<><>::
+AcidFall.gdshader::Shader::-1::1704792456::0::1::::<><>::
+FogOfWar.gdshader::Shader::-1::1704792456::0::1::::<><>::
+FogWall2.gdshader::Shader::-1::1704792456::0::1::::<><>::
+FogWall.gdshader::Shader::-1::1704792456::0::1::::<><>::
+Water.gdshader::Shader::-1::1704792456::0::1::::<><>::
 ::res://singletons/::1704466044
 DialogManager.gd::GDScript::-1::1704466044::0::1::::<>Node<>::
 ::res://ui/::1704466044
