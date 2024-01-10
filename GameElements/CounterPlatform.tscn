@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://lmoe8ayengp4" path="res://Resources/Textures/woodcracked.jpg" id="2_5lcw1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkowp"]
-size = Vector2(256, 32)
+size = Vector2(288, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m4ro8"]
 size = Vector2(256, 16)
