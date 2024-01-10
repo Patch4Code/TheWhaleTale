@@ -1,9 +1,10 @@
 extends StaticBody2D
 
 @onready var anim = get_node("AnimationPlayer")
-
+signal AcidFallHit
 var rng = RandomNumberGenerator.new()
 var elements_active = true
+
 
 func _ready():
 	create_timer()
@@ -41,6 +42,7 @@ func _on_animation_player_animation_finished(anim_name):
 func _on_area_2d_body_entered(body):
 	if body.name == "Player":
 		print("Acid Fall entered")
+		emit_signal("AcidFallHit")
 
 
 

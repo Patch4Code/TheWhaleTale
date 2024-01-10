@@ -155,3 +155,26 @@ func _on_take_damage_area_area_entered(area):
 		hit(5)
 	if area.name == "AttackArea":
 		hit(15)
+	if area.name == "AcidSea":
+		hit(100)
+	if area.name == "SpikePit":
+		hit(100)
+	if area.name == "WallSpikes":
+		hit(10)
+
+
+func _on_acid_fall_acid_fall_hit():
+	hit (70)
+
+
+func _on_acid_fall_2_acid_fall_hit():
+	hit (70)
+
+
+func _on_acid_fall_3_acid_fall_hit():
+	hit (70)
+
+
+func _on_acid_fall_4_acid_fall_hit():
+	hit (100)
+	

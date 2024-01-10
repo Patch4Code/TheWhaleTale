@@ -1,11 +1,11 @@
+CollisionShape2D
+Area2D
+Control
 Sprite2D
 AudioStreamPlayer
 Timer
 Button
 Panel
-Control
-CollisionShape2D
-Area2D
 Node2D
 Label
 RayCast2D
