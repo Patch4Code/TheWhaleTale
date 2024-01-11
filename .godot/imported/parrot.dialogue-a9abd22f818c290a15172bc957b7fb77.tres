@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_oh740"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_rpc1q"]
 
 [resource]
-script = ExtResource("1_oh740")
+script = ExtResource("1_rpc1q")
 using_states = PackedStringArray()
 titles = {
 "parrot": "3"
@@ -24,9 +24,9 @@ lines = {
 "next_id": "12",
 "parent_id": "7",
 "tags": PackedStringArray(),
-"text": "[[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen]]",
+"text": "[[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen|Zwei Piraten unterhalten sich. Sagt der eine: \"Einen schönen Haken und ein schönes Holzbein hast du da?\" Darauf der andere: \"Das will ich aber auch hoffen. Hat mich schließlich ein Bein und einen Arm gekostet.|Hast du schon mal was von dem Piraten gehört, der Boxwelt- meister wurde? Er hatte einen ge- fürchteten rechten Haken!|Merke: Wenn du jeden Tag glücklich neben deinem Schatz aufwachst, hast du eine perfekte Beziehung! (oder bist Pirat...)|Wie nennt man einen Piraten mit zwei Augen, zwei Händen und zwei Beinen? Einen Anfänger|Einer ausländischen Freundin sind die Wörter \"Rundfunkbeitrag\" und \"GEZ\" nicht mehr eingefallen. Nach kurzem Überlegen hat sie es dann mit \"deutsche Fernsehpiraten\" umschrieben|Welche Auszeichnung erhält der beste Weltraumpirat der Galaxis? Den Raumschiff-Enter-Preis.|Sprechstundenhilfe: \"Warum tragen Sie eine Augenklappe?\" \"Ich bin Piratpatient|Ein echter Pirat weint nicht. Ein echter Pirat heult Rum|In meinem nächsten Leben werde ich Pirat, dann muss ich morgens nur ein Auge aufmachen|Wenn man einem Piraten mit Holzbein ins Holzbein schießt, ist das dann Körperverletzung oder Sachbeschädigung?|Mama, ich mach meine Kanone sauber. Weißt du, warum?\" \"Warum?\" \"Weil ich ein aufgeräumter Pirat bin!\" Der Fluch der Akribik]]",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "[[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen]]",
+"translation_key": "[[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen|Zwei Piraten unterhalten sich. Sagt der eine: \"Einen schönen Haken und ein schönes Holzbein hast du da?\" Darauf der andere: \"Das will ich aber auch hoffen. Hat mich schließlich ein Bein und einen Arm gekostet.|Hast du schon mal was von dem Piraten gehört, der Boxwelt- meister wurde? Er hatte einen ge- fürchteten rechten Haken!|Merke: Wenn du jeden Tag glücklich neben deinem Schatz aufwachst, hast du eine perfekte Beziehung! (oder bist Pirat...)|Wie nennt man einen Piraten mit zwei Augen, zwei Händen und zwei Beinen? Einen Anfänger|Einer ausländischen Freundin sind die Wörter \"Rundfunkbeitrag\" und \"GEZ\" nicht mehr eingefallen. Nach kurzem Überlegen hat sie es dann mit \"deutsche Fernsehpiraten\" umschrieben|Welche Auszeichnung erhält der beste Weltraumpirat der Galaxis? Den Raumschiff-Enter-Preis.|Sprechstundenhilfe: \"Warum tragen Sie eine Augenklappe?\" \"Ich bin Piratpatient|Ein echter Pirat weint nicht. Ein echter Pirat heult Rum|In meinem nächsten Leben werde ich Pirat, dann muss ich morgens nur ein Auge aufmachen|Wenn man einem Piraten mit Holzbein ins Holzbein schießt, ist das dann Körperverletzung oder Sachbeschädigung?|Mama, ich mach meine Kanone sauber. Weißt du, warum?\" \"Warum?\" \"Weil ich ein aufgeräumter Pirat bin!\" Der Fluch der Akribik]]",
 "type": "dialogue"
 },
 "12": {
@@ -50,9 +50,9 @@ lines = {
 "next_id": "14",
 "parent_id": "12",
 "tags": PackedStringArray(),
-"text": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen 	Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
+"text": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen 	Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
+"translation_key": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
 "type": "dialogue"
 },
 "14": {
@@ -162,9 +162,9 @@ lines = {
 "next_id": "25",
 "parent_id": "22",
 "tags": PackedStringArray(),
-"text": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen 	Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
+"text": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen 	Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
+"translation_key": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
 "type": "dialogue"
 },
 "25": {

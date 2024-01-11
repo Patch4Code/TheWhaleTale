@@ -9,9 +9,9 @@ func _process(_delta):
 		if Input.is_action_pressed("Interact"):
 			
 			#spawn parrot
-			var script_parrot = get_node("res://Characters/parrot.tscn")
-			if script_parrot:
-				script_parrot.set_process(true)
+			#var script_parrot = get_node("res://Characters/parrot.tscn")
+			#if script_parrot:
+			#	script_parrot.set_process(true)
 			
 			#here the inventory is called with the signal
 			emit_signal("coin_collected")

@@ -16,4 +16,7 @@ res://GameElements/BasicPlatform.tscn
 res://GameElements/CounterPlatform.tscn
 res://GameElements/AcidFall.tscn
 res://Mobs/PirateBoss.tscn
-res://Scripts/FogOfWar.gd
+res://GameElements/pirate_coin.tscn
+res://Scripts/pirate_coin.gd
+res://GameElements/Laser.tscn
+res://Scripts/Laser.gd

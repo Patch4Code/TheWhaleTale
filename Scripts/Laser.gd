@@ -14,7 +14,7 @@ func _process(_delta):
 	line.add_point(Vector2.ZERO)
 	
 	ray.global_position = line.global_position
-	ray.target_position = ((line.global_position+Vector2(1000,0))-line.global_position).normalized()*1000
+	ray.target_position = ((line.global_position+Vector2(1000,0))-line.global_position).normalized()*2000
 	ray.force_raycast_update()
 	
 	var prev = null
