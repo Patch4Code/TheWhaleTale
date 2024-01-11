@@ -6,8 +6,8 @@ func _on_area_2d_body_entered(body):
 		$"../../../MainGameMusic".playing = false
 		
 		
-		print("Fog of war entered")
-		$Area2D.monitoring = false
+		#print("Fog of war entered")
+		#$Area2D.monitoring = false
 		$".".visible = false
 
 func _on_area_2d_body_exited(body):
