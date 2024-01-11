@@ -38,7 +38,7 @@ func _physics_process(delta):
 		if not is_on_floor():
 			velocity.y += gravity * delta
 			
-		if Input.is_action_just_pressed("Attack"):
+		if Input.is_action_just_pressed("Attack") and attack == false:
 			attack_sound .play()
 			executeAttack()
 		# Handle jump.
@@ -124,7 +124,7 @@ func executeAttack():
 	attack = true
 	anim.play("Attack_slash")
 	velocity.x = 0 
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.8).timeout
 	attack = false
 	
 func hit(damage : int):
@@ -154,7 +154,8 @@ func _on_take_damage_area_area_entered(area):
 		print("Fish hit")
 		hit(5)
 	if area.name == "AttackArea":
-		hit(15)
+		print("Boss Hit")
+		hit(15) #CHANGE
 	if area.name == "AcidSea":
 		hit(100)
 	if area.name == "SpikePit":

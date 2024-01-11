@@ -16,6 +16,8 @@ var player
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction
 
+var insideAttack = false
+
 signal disable_fogwall
 signal drop_treasure
 
@@ -66,18 +68,20 @@ func _physics_process(delta):
 			attack = false
 			arr_sound.play()
 			anim.play("Idle")
-			await get_tree().create_timer(0.5).timeout
+			await get_tree().create_timer(0.7).timeout
 			recharge = false
-			chase = true
-		
-		if attack == true and recharge == false and damaged == false:
-			if attackcounter <= 2:
-				WeakAttack()
+			#pirate should continue attack if player is still there
+			if insideAttack == true:
+				chase = false
+				attack = true
 			else:
-				StrongAttack()
+				attack = false
+				chase = true
+				
+
 			
-			if attackcounter >= 4:
-				attackcounter = 0
+		if attack == true and recharge == false and damaged == false:
+			fighting()
 		
 		if damaged == true:
 			Damaged()
@@ -101,6 +105,7 @@ func StrongAttack():
 	velocity.x = 0
 	anim.play("Attack_1")
 	await get_tree().create_timer(1.0).timeout 
+	attack = true
 	recharge = true
 	
 #fast but weaker attack
@@ -112,6 +117,15 @@ func WeakAttack():
 	anim.play("Attack_2")
 	await get_tree().create_timer(0.7).timeout #timeout to prevent spam
 	recharge = true
+
+#mixes strong and weak attacks
+func fighting():
+	if attackcounter <= 2:
+		WeakAttack()
+	else:
+		StrongAttack()
+	if attackcounter >= 4:
+		attackcounter = 0
 
 #Character dies, death is used to lock other actions 
 #state death is final and ends "Statemachine"
@@ -129,14 +143,14 @@ func Damaged():
 	get_hit_sound.play()
 	damaged = true
 	hurting = true
-	HEALTH -= 10
+	HEALTH -= 10 #CHANGE ONLY FOR TESTING
 	damaged = false
 	
 	
 func hurtAnim():
 	#if HEALTH >= 0:
 	anim.play("Hurt")
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.3).timeout
 	hurting = false
 	
 	
@@ -157,6 +171,7 @@ func _on_player_detected_body_exited(body):
 func _on_player_in_attack_range_body_entered(body):
 	if body.name == "Player":
 		attackcounter += 1
+		insideAttack = true
 		#print(attackcounter)
 		attack = true
 		
@@ -164,6 +179,7 @@ func _on_player_in_attack_range_body_entered(body):
 func _on_player_in_attack_range_body_exited(body):
 	if body.name == "Player":
 		attack = false
+		insideAttack = false
 
 #player hit Pirate boss
 func _on_damageble_area_area_entered(area):

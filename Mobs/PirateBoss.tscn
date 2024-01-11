@@ -327,8 +327,8 @@ script = ExtResource("1_7uakw")
 [node name="PirateSprite" type="Sprite2D" parent="."]
 position = Vector2(-0.999996, -8)
 scale = Vector2(1.7, 1.579)
-texture = ExtResource("4_07lg1")
-hframes = 6
+texture = ExtResource("1_a5mod")
+hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 1)
