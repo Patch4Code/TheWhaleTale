@@ -42,7 +42,7 @@ func _physics_process(delta):
 			attack_sound .play()
 			executeAttack()
 		# Handle jump.
-		if Input.is_action_just_pressed("Jump") and attack == false:
+		if Input.is_action_just_pressed("Jump") and attack == false and !(global.otto_dialog_open or global.parrot_dialog_open or global.coinskull_dialog_open):
 			if is_on_floor():
 				velocity.y = JUMP_VELOCITY
 				jump_sound .play()
