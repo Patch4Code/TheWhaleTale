@@ -52,12 +52,12 @@ func _on_player_detection_body_exited(body):
 func _on_player_death_body_entered(body): #has to be edited to be damaged by weapon
 	if body.name == "Player":
 		get_hit_sound.play()
-		damageMe(10)
+		damageMe(100)
 
 func _on_player_death_area_entered(area):
 	if area.name == "PlayerAttackArea":
 		get_hit_sound.play()
-		damageMe(5)
+		damageMe(100)
 		
 
 func damageMe(damageDealt : int):

@@ -199,7 +199,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cwb3f"]
-radius = 146.003
+radius = 230.139
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g72pt"]
 size = Vector2(36, 23)
@@ -221,7 +221,6 @@ sprite_frames = SubResource("SpriteFrames_1hljj")
 animation = &"Walk"
 
 [node name="PlayerDetection" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
 position = Vector2(2, 0)
