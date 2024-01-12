@@ -29,16 +29,21 @@ signal drop_treasure
 @onready var landlubber_sound = $landlubberSound
 var pirate_already_greeted = false
 
+var spawn_position
+var player_dead = false
+
 #Setup of the Boss
 func _ready():
 		anim = get_node("AnimationPlayer")
 		anim.play("Idle")
 		player = get_node("../Player")
+		
+		spawn_position = self.global_position
 
 func _physics_process(delta):
 	#Player falls down with gravity
 	velocity.y += gravity * delta
-	if death == false:
+	if death == false and not player_dead:
 		#Decide Position:
 		if recharge == false:
 			direction = (player.position - self.position).normalized()
@@ -77,6 +82,7 @@ func _physics_process(delta):
 			else:
 				attack = false
 				chase = true
+				print("recharge chase-true")
 				
 
 			
@@ -158,7 +164,8 @@ func hurtAnim():
 
 #Player entered line of sight
 func _on_player_detected_body_entered(body):
-	if body.name == "Player":
+	if body.name == "Player" and not player_dead:
+		print("chase")
 		chase = true
 
 #Player exiteded line of sight
@@ -190,3 +197,18 @@ func _on_damageble_area_area_entered(area):
 #reset boss hp when player dies-----------------------------------------------
 func _on_player_player_death():
 	HEALTH = 60
+	player_dead = true
+func _on_gameworld_reposition_boss_on_revive():
+	print("respawned and reposition boss now")
+	
+	damaged = false
+	death = false
+	chase = false
+	attack = false
+	recharge = false
+	hurting = false
+	attackcounter = 0
+
+	self.global_position = spawn_position
+	
+	player_dead = false

@@ -4,6 +4,7 @@ extends Node2D
 @export var second_respawn: Node2D
 
 signal player_revived
+signal reposition_boss_on_revive
 
 var current_respawn
 
@@ -17,7 +18,8 @@ func respawn_player():
 	$Player/DeathScreen.visible = false
 	emit_signal("player_revived")
 	$Player.position = current_respawn.global_position
-
+	emit_signal("reposition_boss_on_revive")
+	
 #activate respawn2 detection zone
 func _on_pirate_coin_coin_collected():
 	$Checkpoint2.process_mode = Node.PROCESS_MODE_INHERIT
