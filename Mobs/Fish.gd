@@ -1,11 +1,12 @@
 extends CharacterBody2D
-var HP = 10
+var HP = 5
 var SPEED = 5
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
 var chase = false
 var attacking = false
-var health = 10  
+var death = false
+var hurt = false
 
 @onready var attack_sound = $attackSound
 @onready var get_hit_sound = $getHitSound
@@ -18,9 +19,8 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 	
 	if chase == true:
-		if get_node("AnimatedSprite2D").animation != "Death" and get_node("AnimatedSprite2D").animation != "Hurt" :
-			if attacking == false:
-				get_node("AnimatedSprite2D").play("Walk") 
+		if death == false and hurt == false and attacking == false:
+			get_node("AnimatedSprite2D").play("Walk") 
 			player = get_node("../Player")
 			var direction  = (player.position - self.position).normalized()
 	
@@ -33,8 +33,7 @@ func _physics_process(delta):
 			velocity.x += direction.x * SPEED
 
 	else:
-		if get_node("AnimatedSprite2D").animation != "Death" and get_node("AnimatedSprite2D").animation != "Hurt" :
-			
+		if death == false and hurt == false and attacking == false :
 			get_node("AnimatedSprite2D").play("Idle")
 			velocity.x = 0
 	move_and_slide()
@@ -51,23 +50,28 @@ func _on_player_detection_body_exited(body):
 		
 func _on_player_death_body_entered(body): #has to be edited to be damaged by weapon
 	if body.name == "Player":
+		hurt = true
 		get_hit_sound.play()
-		damageMe(100)
+		damageMe(20)
 
 func _on_player_death_area_entered(area):
 	if area.name == "PlayerAttackArea":
+		velocity.y = 0
+		hurt = true
 		get_hit_sound.play()
-		damageMe(100)
+		damageMe(20)
 		
 
 func damageMe(damageDealt : int):
 	HP = HP - damageDealt
 	print(HP)
-	get_node("AnimatedSprite2D").play("Hurt")
-	await get_node("AnimatedSprite2D").animation_finished
-	get_node("AnimatedSprite2D").play("Idle")
-		
+	if HP > 0:
+		get_node("AnimatedSprite2D").play("Hurt")
+		await get_node("AnimatedSprite2D").animation_finished
+		get_node("AnimatedSprite2D").play("Idle")
+	var hurt = false
 	if HP <= 0:
+		death == true
 		velocity.x = 0
 		chase = false
 		death_sound.play()
@@ -79,8 +83,9 @@ func damageMe(damageDealt : int):
 func _on_player_attack_fish_body_entered(body):
 	if body.name == "Player":
 		attacking = true;
-		get_node("AnimatedSprite2D").play("Attack")
-		attack_sound.play()
+		if HP > 0:
+			get_node("AnimatedSprite2D").play("Attack")
+			attack_sound.play()
 
 
 func _on_player_attack_fish_body_exited(_body):
