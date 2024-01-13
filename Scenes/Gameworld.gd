@@ -11,6 +11,18 @@ var current_respawn
 func _ready():
 	current_respawn = start_respawn
 	$Checkpoint2.process_mode = Node.PROCESS_MODE_DISABLED
+	
+	#reset global variables
+	global.found_octootto_item = false
+	global.given_octootto_item = false
+	global.otto_dialog_open = false
+
+	global.parrot_dialog_open = false
+
+	global.coinskull_dialog_open = false
+	global.coin_in_possession = false
+	global.coin_already_thrown_in = false
+	
 
 func respawn_player():
 	$Player/DeathScreen.visible = true
