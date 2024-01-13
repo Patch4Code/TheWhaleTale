@@ -71,7 +71,6 @@ func _physics_process(delta):
 		#creates Timeout after each attack
 		if recharge == true:
 			attack = false
-			arr_sound.play()
 			anim.play("Idle")
 			await get_tree().create_timer(0.7).timeout
 			recharge = false
@@ -111,6 +110,7 @@ func StrongAttack():
 	velocity.x = 0
 	anim.play("Attack_1")
 	await get_tree().create_timer(1.0).timeout 
+	arr_sound.play()
 	attack = true
 	recharge = true
 	
@@ -147,7 +147,7 @@ func Die():
 #chatacter recieved damage Lock other animations 
 func Damaged():
 	get_hit_sound.play()
-	damaged = true
+	#damaged = true
 	hurting = true
 	HEALTH -= 10 #CHANGE ONLY FOR TESTING
 	damaged = false

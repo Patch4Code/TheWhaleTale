@@ -316,7 +316,7 @@ size = Vector2(32, 65)
 size = Vector2(121.75, 47.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6tnj"]
-size = Vector2(1211, 82)
+size = Vector2(1024, 82)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fsusd"]
 size = Vector2(102.5, 68)
@@ -341,6 +341,7 @@ libraries = {
 autoplay = "Idle"
 
 [node name="DamagebleArea" type="Area2D" parent="."]
+scale = Vector2(0.946215, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamagebleArea"]
 position = Vector2(-1, 1)
@@ -356,7 +357,6 @@ disabled = true
 [node name="PlayerDetected" type="Area2D" parent="."]
 
 [node name="ViewDistance" type="CollisionShape2D" parent="PlayerDetected"]
-position = Vector2(-3.5, 0)
 shape = SubResource("RectangleShape2D_v6tnj")
 
 [node name="PlayerInAttackRange" type="Area2D" parent="."]
