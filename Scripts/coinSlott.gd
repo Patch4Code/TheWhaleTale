@@ -14,7 +14,7 @@ func _process(_delta):
 	if player_inside_zone:
 		#Eingabe abfragen
 		if Input.is_action_pressed("Interact"): #press e
-			DialogueManager.show_dialogue_balloon(load("res://coinskull.dialogue"), "coinskull")
+			DialogueManager.show_dialogue_balloon(load("res://Scripts/Dialog/coinskull.dialogue"), "coinskull")
 			return
 	
 	if global.coin_already_thrown_in and throw_coin_in_block == false:

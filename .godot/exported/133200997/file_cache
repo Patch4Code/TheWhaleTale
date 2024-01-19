@@ -1,9 +1,9 @@
 res://Scenes/Game.tscn::5f0af42aaa3aa27cb0f07e707417f420::1704466044::res://.godot/exported/133200997/export-8ec1ce4394550eef6b399142f35b815f-Game.scn
-res://Scenes/MainMenu.tscn::64d7ab7fadcf4ee8295e44596aae8fb6::1704967251::res://.godot/exported/133200997/export-5d46f2c25b5b7595677274e5845c73b8-MainMenu.scn
-res://Scenes/Recap.tscn::958fcf3661d25219bc5fdf1173012dda::1704967251::res://.godot/exported/133200997/export-e085a01fd548fef919bda284b77b2bed-Recap.scn
+res://Scenes/MainMenu.tscn::64d7ab7fadcf4ee8295e44596aae8fb6::1705139082::res://.godot/exported/133200997/export-5d46f2c25b5b7595677274e5845c73b8-MainMenu.scn
+res://Scenes/Recap.tscn::958fcf3661d25219bc5fdf1173012dda::1705139082::res://.godot/exported/133200997/export-e085a01fd548fef919bda284b77b2bed-Recap.scn
 res://Characters/Octupus.tscn::35f6da252c44617636cad3e0883c1ac5::1704747936::res://.godot/exported/133200997/export-f2f72a5fb6fefc36220f294e61b6928b-Octupus.scn
-res://Characters/parrot.tscn::1489b07ad9b348363c56bb9572ed92d8::1704967252::res://.godot/exported/133200997/export-35807a835f3af67ed7b2d58aacd3ce41-parrot.scn
-res://Characters/Player.tscn::73b6dc14489448abb1d893c643a1ffed::1704967251::res://.godot/exported/133200997/export-12ce906236e3832e731c97b40399c114-Player.scn
+res://Characters/parrot.tscn::1489b07ad9b348363c56bb9572ed92d8::1705139083::res://.godot/exported/133200997/export-35807a835f3af67ed7b2d58aacd3ce41-parrot.scn
+res://Characters/Player.tscn::73b6dc14489448abb1d893c643a1ffed::1705139082::res://.godot/exported/133200997/export-12ce906236e3832e731c97b40399c114-Player.scn
 res://GameElements/AcidFall.tscn::515727699eb70d39c6dca74b721e25d7::1704966069::res://.godot/exported/133200997/export-e0b4bf7191850e13108539d54ea15a47-AcidFall.scn
 res://GameElements/BasicPlatform.tscn::8f05d49a49e1e2a2d472ac45e99601fe::1704966069::res://.godot/exported/133200997/export-fb5c8e39955031ca79059b5a0370256e-BasicPlatform.scn
 res://GameElements/coinSlottscn.tscn::d72619bedb37bb3770288b110ae9534f::1704466044::res://.godot/exported/133200997/export-ca6b5d2ba4b279d10d55b4887ea5a208-coinSlottscn.scn
@@ -11,14 +11,14 @@ res://GameElements/CounterPlatform.tscn::64ea80aef56de06fcbe468f7887d3480::17049
 res://GameElements/door.tscn::8c791fd3ab5a62294f941625b3688c57::1704466044::res://.godot/exported/133200997/export-0fc4950e1effbc3be3d2829fd3bc8bf7-door.scn
 res://GameElements/FogWall.tscn::ee65633852eff76af38623f02f656386::1704966069::res://.godot/exported/133200997/export-68b97fe24f7cc12fcd806c6a66d5f6e9-FogWall.scn
 res://GameElements/inventory.tscn::8c2846a5d7fe6e06b8fb7bfc2f76a231::1704747551::res://.godot/exported/133200997/export-e6e127258059286255fd852d66a12a0d-inventory.scn
-res://GameElements/Laser.tscn::4f81276af464ae3b265010732d38adbf::1704967253::res://.godot/exported/133200997/export-30888d7482035939b445f9533f46a759-Laser.scn
+res://GameElements/Laser.tscn::4f81276af464ae3b265010732d38adbf::1705136478::res://.godot/exported/133200997/export-30888d7482035939b445f9533f46a759-Laser.scn
 res://GameElements/Mirror.tscn::ed57c039a87692fd7a86cb0c3800b2de::1704466044::res://.godot/exported/133200997/export-52162841865e996edf45cc0399b1a580-Mirror.scn
 res://GameElements/pause_menu.tscn::18591a4b88d54ba32af17e4c9ea971d2::1704466044::res://.godot/exported/133200997/export-cb6421f779f5433f436e211335568524-pause_menu.scn
-res://GameElements/pirate_coin.tscn::0ad76c911327eeadedc8eff5843cbc26::1704967253::res://.godot/exported/133200997/export-72bde6dd2d927ccae554f128243b1d36-pirate_coin.scn
-res://Scenes/Credits.tscn::bda9ff1f0866138b3a584217d9ba1a16::1704967253::res://.godot/exported/133200997/export-ba10b6bf9b68ff95e16c5bbd546b3ea2-Credits.scn
-res://Scenes/Gameworld.tscn::285ed08394389c7a945b20d3214516ea::1704977280::res://.godot/exported/133200997/export-9ed308aa525b233219274e1cfddfd0ac-Gameworld.scn
+res://GameElements/pirate_coin.tscn::0ad76c911327eeadedc8eff5843cbc26::1705139083::res://.godot/exported/133200997/export-72bde6dd2d927ccae554f128243b1d36-pirate_coin.scn
+res://Scenes/Credits.tscn::bda9ff1f0866138b3a584217d9ba1a16::1705139083::res://.godot/exported/133200997/export-ba10b6bf9b68ff95e16c5bbd546b3ea2-Credits.scn
+res://Scenes/Gameworld.tscn::8cabfab7458b8c7cb74733e27aad36f9::1705141227::res://.godot/exported/133200997/export-9ed308aa525b233219274e1cfddfd0ac-Gameworld.scn
 res://ui/text box/text_box.tscn::6bb6257771f82326ef09f821a5a167aa::1704466044::res://.godot/exported/133200997/export-c158afb6bcd2e98298aa97e1782fd614-text_box.scn
-res://Scenes/Ending.tscn::98f38e47f6b3e11658e4276db2038133::1704967253::res://.godot/exported/133200997/export-a6bcd9be48e9e992b71ad92df708dacf-Ending.scn
+res://Scenes/Ending.tscn::98f38e47f6b3e11658e4276db2038133::1705139083::res://.godot/exported/133200997/export-a6bcd9be48e9e992b71ad92df708dacf-Ending.scn
 res://addons/dialogue_manager/components/code_edit.tscn::e04ee284f48613839c68ca1bd0183562::1704466044::res://.godot/exported/133200997/export-afb545b170719e27a7fd3f1340116b10-code_edit.scn
 res://addons/dialogue_manager/components/download_update_panel.tscn::273031a8480d1fc7c4bd55649aba4c48::1704466044::res://.godot/exported/133200997/export-dd2309c54bebb1b8b4e2968b0836701e-download_update_panel.scn
 res://addons/dialogue_manager/components/errors_panel.tscn::c49d09fc2e4d8e70c68f258d10cda97e::1704466044::res://.godot/exported/133200997/export-ea6e1bfc6d22f187ea4da24ace7b5dce-errors_panel.scn
@@ -32,8 +32,8 @@ res://addons/dialogue_manager/views/main_view.tscn::53c538206e52f5d4bdea44071930
 res://addons/dialogue_manager/views/settings_view.tscn::7790482d771cfc907c89e76599397616::1704466044::res://.godot/exported/133200997/export-e616ee8b42797cb31c0c61fda637fec0-settings_view.scn
 res://addons/dialogue_manager/dialogue_label.tscn::9717321495ac9f2baec5bd0a738ccb2d::1704466044::res://.godot/exported/133200997/export-e41b7d5321416240678013b406b79557-dialogue_label.scn
 res://addons/dialogue_manager/test_scene.tscn::d8e9b90c05d6fb604bd1372a6aea4e30::1704466044::res://.godot/exported/133200997/export-74a175fe1e216df3bdf79c5c27a2ac2c-test_scene.scn
-res://Mobs/Fish.tscn::cde8ad37da7fc71ba40cdcaf900628c4::1704964987::res://.godot/exported/133200997/export-94c888fb9d8d32fd1c7d7c51c5134660-Fish.scn
-res://Mobs/PirateBoss.tscn::d082fa520422b5dca0e32e0f5fdc349d::1704966069::res://.godot/exported/133200997/export-03172bbba3c1d11b926516e628f35a5e-PirateBoss.scn
+res://Mobs/Fish.tscn::69068aa81fbefc5bbc398e27f73fe7d4::1705139083::res://.godot/exported/133200997/export-94c888fb9d8d32fd1c7d7c51c5134660-Fish.scn
+res://Mobs/PirateBoss.tscn::c98b06b37aea81f4d5f70c39bbb73c06::1705139083::res://.godot/exported/133200997/export-03172bbba3c1d11b926516e628f35a5e-PirateBoss.scn
 res://Mobs/Skeleton.tscn::44643cdb8d2a24e606ae05de0d827e3e::1704964987::res://.godot/exported/133200997/export-cf9a12a915e086ebe8bd3d3d13e79356-Skeleton.scn
 res://Scenes/moving_platform.tscn::689a1faf2999f74e55f8422e0dc5c562::1704466044::res://.godot/exported/133200997/export-d934cee069791a74156a908fefc4c41f-moving_platform.scn
 res://GameElements/ckeckpoint_1.tscn::a7db434567f3b9d432d93e9c6e1e4d02::1704548908::res://.godot/exported/133200997/export-45854114e7d466176fb40bacdd89948f-ckeckpoint_1.scn

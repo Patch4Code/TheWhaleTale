@@ -1,7 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://57odfoyo06fy"]
 
-[ext_resource type="Script" path="res://moving_platform.gd" id="1_roeem"]
-[ext_resource type="Texture2D" uid="uid://bpmw67pdtbeth" path="res://ui/text box/moving_Platform_Texture.png" id="2_8g644"]
+[ext_resource type="Script" path="res://Scripts/moving_platform.gd" id="1_roeem"]
+[ext_resource type="Texture2D" uid="uid://bpmw67pdtbeth" path="res://GameElements/ui/text box/moving_Platform_Texture.png" id="2_8g644"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhnx6"]
 size = Vector2(64, 16)

@@ -22,7 +22,7 @@ func _process(_delta):
 		if Input.is_action_just_pressed("Interact"):
 			if not global.parrot_dialog_open:
 				parrot_sound.play()
-			DialogueManager.show_dialogue_balloon(load("res://parrot.dialogue"), "parrot")
+			DialogueManager.show_dialogue_balloon(load("res://Scripts/Dialog/parrot.dialogue"), "parrot")
 			return
 
 func _on_area_2d_body_entered(body):

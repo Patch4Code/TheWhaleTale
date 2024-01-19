@@ -1,0 +1,39 @@
+~ parrot
+
+if global.parrot_dialog_open == false
+	set global.parrot_dialog_open = true
+
+	Papagei: Ahoi mein treuer Untertan! Während du dir hier in der Gegend die Hände schmutzig machst wird der König hier etwas rasten und auf dich Warten.
+	- Majestät habt ihr einen Witz auf Lager?
+		
+		Papagei: Natürlich, mein Humor ist unschlagbar!
+		Papagei: [[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen|Zwei Piraten unterhalten sich. Sagt der eine: "Einen schönen Haken und ein schönes Holzbein hast du da?" Darauf der andere: "Das will ich aber auch hoffen. Hat mich schließlich ein Bein und einen Arm gekostet.|Hast du schon mal was von dem Piraten gehört, der Boxwelt- meister wurde? Er hatte einen ge- fürchteten rechten Haken!|Merke: Wenn du jeden Tag glücklich neben deinem Schatz aufwachst, hast du eine perfekte Beziehung! (oder bist Pirat...)|Wie nennt man einen Piraten mit zwei Augen, zwei Händen und zwei Beinen? Einen Anfänger|Welche Auszeichnung erhält der beste Weltraumpirat der Galaxis? Den Raumschiff-Enter-Preis.|Sprechstundenhilfe: "Warum tragen Sie eine Augenklappe?" "Ich bin Piratpatient|Ein echter Pirat weint nicht. Ein echter Pirat heult Rum|In meinem nächsten Leben werde ich Pirat, dann muss ich morgens nur ein Auge aufmachen|Wenn man einem Piraten mit Holzbein ins Holzbein schießt, ist das dann Körperverletzung oder Sachbeschädigung?|Mama, ich mach meine Kanone sauber. Weißt du, warum?" "Warum?" "Weil ich ein aufgeräumter Pirat bin!" Der Fluch der Akribik]]
+		
+		- Was macht ihr wenn ich das zeitliche segnen sollte Majestät?
+			Papagei: Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!
+			- Bis bald!
+			set global.parrot_dialog_open = false
+			=> END
+		
+		- Bis bald!
+		set global.parrot_dialog_open = false
+		=> END
+		
+	- Was macht ihr wenn ich das zeitliche segnen sollte Majestät?
+		Papagei: Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!
+
+		- Majestät habt ihr einen Witz auf Lager?
+			Papagei: Natürlich, mein Humor ist unschlagbar!
+			Papagei: [[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen]]
+			
+			- Bis bald!
+			set global.parrot_dialog_open = false
+			=> END
+			
+		- Bis bald!
+		set global.parrot_dialog_open = false
+		=> END
+
+	- Bis bald!
+	set global.parrot_dialog_open = false
+	=> END

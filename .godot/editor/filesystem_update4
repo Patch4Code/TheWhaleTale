@@ -12,10 +12,8 @@ res://Characters/parrot.tscn
 res://Scenes/Credits.tscn
 res://Scenes/Ending.tscn
 res://GameElements/pirate_coin.tscn
-res://GameElements/Laser.tscn
 res://Mobs/PirateBoss.tscn
-res://Scenes/Gameworld.gd
-res://Scripts/Mirror.gd
 res://Mobs/Fish.tscn
-res://Mobs/Fish.gd
-res://Mobs/PirateBoss.gd
+res://Scripts/parrot.gd
+res://Characters/Octupus.gd
+res://Scripts/coinSlott.gd

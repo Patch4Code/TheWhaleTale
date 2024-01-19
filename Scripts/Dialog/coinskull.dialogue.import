@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ctlhul8o2qyhv"
+path="res://.godot/imported/coinskull.dialogue-52adcdda4c176f1f5ada9ea5cb7b4cfb.tres"
+
+[deps]
+
+source_file="res://Scripts/Dialog/coinskull.dialogue"
+dest_files=["res://.godot/imported/coinskull.dialogue-52adcdda4c176f1f5ada9ea5cb7b4cfb.tres"]
+
+[params]
+
+defaults=true

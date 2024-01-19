@@ -1,0 +1,424 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_wsowd"]
+
+[resource]
+script = ExtResource("1_wsowd")
+using_states = PackedStringArray()
+titles = {
+"parrot": "3"
+}
+character_names = PackedStringArray("Papagei")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "parrot",
+"type": "title"
+},
+"10": {
+"character": "Papagei",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "12",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "[[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen|Zwei Piraten unterhalten sich. Sagt der eine: \"Einen schönen Haken und ein schönes Holzbein hast du da?\" Darauf der andere: \"Das will ich aber auch hoffen. Hat mich schließlich ein Bein und einen Arm gekostet.|Hast du schon mal was von dem Piraten gehört, der Boxwelt- meister wurde? Er hatte einen ge- fürchteten rechten Haken!|Merke: Wenn du jeden Tag glücklich neben deinem Schatz aufwachst, hast du eine perfekte Beziehung! (oder bist Pirat...)|Wie nennt man einen Piraten mit zwei Augen, zwei Händen und zwei Beinen? Einen Anfänger|Welche Auszeichnung erhält der beste Weltraumpirat der Galaxis? Den Raumschiff-Enter-Preis.|Sprechstundenhilfe: \"Warum tragen Sie eine Augenklappe?\" \"Ich bin Piratpatient|Ein echter Pirat weint nicht. Ein echter Pirat heult Rum|In meinem nächsten Leben werde ich Pirat, dann muss ich morgens nur ein Auge aufmachen|Wenn man einem Piraten mit Holzbein ins Holzbein schießt, ist das dann Körperverletzung oder Sachbeschädigung?|Mama, ich mach meine Kanone sauber. Weißt du, warum?\" \"Warum?\" \"Weil ich ein aufgeräumter Pirat bin!\" Der Fluch der Akribik]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen|Zwei Piraten unterhalten sich. Sagt der eine: \"Einen schönen Haken und ein schönes Holzbein hast du da?\" Darauf der andere: \"Das will ich aber auch hoffen. Hat mich schließlich ein Bein und einen Arm gekostet.|Hast du schon mal was von dem Piraten gehört, der Boxwelt- meister wurde? Er hatte einen ge- fürchteten rechten Haken!|Merke: Wenn du jeden Tag glücklich neben deinem Schatz aufwachst, hast du eine perfekte Beziehung! (oder bist Pirat...)|Wie nennt man einen Piraten mit zwei Augen, zwei Händen und zwei Beinen? Einen Anfänger|Welche Auszeichnung erhält der beste Weltraumpirat der Galaxis? Den Raumschiff-Enter-Preis.|Sprechstundenhilfe: \"Warum tragen Sie eine Augenklappe?\" \"Ich bin Piratpatient|Ein echter Pirat weint nicht. Ein echter Pirat heult Rum|In meinem nächsten Leben werde ich Pirat, dann muss ich morgens nur ein Auge aufmachen|Wenn man einem Piraten mit Holzbein ins Holzbein schießt, ist das dann Körperverletzung oder Sachbeschädigung?|Mama, ich mach meine Kanone sauber. Weißt du, warum?\" \"Warum?\" \"Weil ich ein aufgeräumter Pirat bin!\" Der Fluch der Akribik]]",
+"type": "dialogue"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"next_id_after": "19",
+"parent_id": "7",
+"responses": PackedStringArray("12", "18"),
+"tags": PackedStringArray(),
+"text": "Was macht ihr wenn ich das zeitliche segnen sollte Majestät?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Was macht ihr wenn ich das zeitliche segnen sollte Majestät?",
+"type": "response"
+},
+"13": {
+"character": "Papagei",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"parent_id": "12",
+"tags": PackedStringArray(),
+"text": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
+"type": "dialogue"
+},
+"14": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"next_id_after": "15",
+"parent_id": "12",
+"responses": PackedStringArray("14"),
+"tags": PackedStringArray(),
+"text": "Bis bald!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bis bald!",
+"type": "response"
+},
+"15": {
+"id": "15",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "parrot_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "16",
+"parent_id": "12",
+"type": "mutation"
+},
+"16": {
+"id": "16",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "12",
+"type": "goto"
+},
+"18": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"next_id_after": "19",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "Bis bald!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bis bald!",
+"type": "response"
+},
+"19": {
+"id": "19",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "parrot_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "20",
+"parent_id": "7",
+"type": "mutation"
+},
+"20": {
+"id": "20",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "7",
+"type": "goto"
+},
+"22": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"next_id_after": "38",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "Was macht ihr wenn ich das zeitliche segnen sollte Majestät?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Was macht ihr wenn ich das zeitliche segnen sollte Majestät?",
+"type": "response"
+},
+"23": {
+"character": "Papagei",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "25",
+"parent_id": "22",
+"tags": PackedStringArray(),
+"text": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh, mein kluger Freund! Sollte dein Abenteuer unerwartet turbulent enden, wirst du hier an diesem gemütlichen Ort wieder auftauchen. Ich bin sozusagen dein bunt gefiederter Schutzengel!",
+"type": "dialogue"
+},
+"25": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"next_id_after": "34",
+"parent_id": "22",
+"responses": PackedStringArray("25", "33"),
+"tags": PackedStringArray(),
+"text": "Majestät habt ihr einen Witz auf Lager?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Majestät habt ihr einen Witz auf Lager?",
+"type": "response"
+},
+"26": {
+"character": "Papagei",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "Natürlich, mein Humor ist unschlagbar!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Natürlich, mein Humor ist unschlagbar!",
+"type": "dialogue"
+},
+"27": {
+"character": "Papagei",
+"character_replacements": Array[Dictionary]([]),
+"id": "27",
+"next_id": "29",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "[[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Was sagt ein Pirat, wenn er trockenes Gras sieht? - A, Heu.|Chuck Norris wurde schon einmal von einer Bande Piraten besiegt. Das ist nur ein Gerücht. Chuck Norris hat es selbst in die Welt gesetzt, damit noch mehr Piraten kommen!|Was essen Piraten am liebsten? -- Kapern.|Warum können Seeräuber den Flächeninhalt eines Kreises nicht berechnen? – Weil sie Pi raten.|Warum können Piraten keine Karten spielen? Weil sie auf dem Deck sitzen]]",
+"type": "dialogue"
+},
+"29": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"next_id_after": "30",
+"parent_id": "25",
+"responses": PackedStringArray("29"),
+"tags": PackedStringArray(),
+"text": "Bis bald!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bis bald!",
+"type": "response"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "parrot_dialog_open"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"id": "3",
+"next_conditional_id": "end!",
+"next_id": "4",
+"next_id_after": "end!",
+"type": "condition"
+},
+"30": {
+"id": "30",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "parrot_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "31",
+"parent_id": "25",
+"type": "mutation"
+},
+"31": {
+"id": "31",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "25",
+"type": "goto"
+},
+"33": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "33",
+"next_id": "34",
+"next_id_after": "34",
+"parent_id": "22",
+"tags": PackedStringArray(),
+"text": "Bis bald!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bis bald!",
+"type": "response"
+},
+"34": {
+"id": "34",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "parrot_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "35",
+"parent_id": "22",
+"type": "mutation"
+},
+"35": {
+"id": "35",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "22",
+"type": "goto"
+},
+"37": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "37",
+"next_id": "38",
+"next_id_after": "38",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "Bis bald!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bis bald!",
+"type": "response"
+},
+"38": {
+"id": "38",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "parrot_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "39",
+"parent_id": "3",
+"type": "mutation"
+},
+"39": {
+"id": "39",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "3",
+"type": "goto"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "parrot_dialog_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "6",
+"parent_id": "3",
+"type": "mutation"
+},
+"6": {
+"character": "Papagei",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "Ahoi mein treuer Untertan! Während du dir hier in der Gegend die Hände schmutzig machst wird der König hier etwas rasten und auf dich Warten.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahoi mein treuer Untertan! Während du dir hier in der Gegend die Hände schmutzig machst wird der König hier etwas rasten und auf dich Warten.",
+"type": "dialogue"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "9",
+"next_id_after": "38",
+"parent_id": "3",
+"responses": PackedStringArray("7", "22", "37"),
+"tags": PackedStringArray(),
+"text": "Majestät habt ihr einen Witz auf Lager?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Majestät habt ihr einen Witz auf Lager?",
+"type": "response"
+},
+"9": {
+"character": "Papagei",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "Natürlich, mein Humor ist unschlagbar!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Natürlich, mein Humor ist unschlagbar!",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"
