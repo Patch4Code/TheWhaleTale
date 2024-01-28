@@ -15,8 +15,23 @@ have to embark on an adventure through the whale's body and unravel all kinds of
 
 <br>
 
-#### Screen-Shots
-
+#### Screen-Shots (click to expand)
+<details>
+<summary> NPC Screenshot </summary>
+<img src="https://github.com/Patch4Code/TheWhaleTale/assets/116561421/0244d8fd-a427-4779-94d3-bf640b866830" height = 575 style="float:left; margin-right:10px;">
+</details>
+  
+<details>
+<summary> Jump and Run Screenshots </summary>
+<img src="https://github.com/Patch4Code/TheWhaleTale/assets/116561421/092e1165-f53f-4679-81d5-43a9227fd0cc" height = 422 style="float:left; margin-right:10px;">
+<img src="https://github.com/Patch4Code/TheWhaleTale/assets/116561421/57fcc4fb-cc3b-4103-b632-a9b40e8fec8a" height = 422 style="float:left; height = 50">
+</details>
+  
+<details>
+<summary> Enemys Screenshots </summary>
+<img src="https://github.com/Patch4Code/TheWhaleTale/assets/116561421/22eaac45-d019-4f4b-b91d-7504555c5945" height = 400 style="float:left; margin-right:10px;">
+<img src="https://github.com/Patch4Code/TheWhaleTale/assets/116561421/47d7663e-84b5-4416-b470-db12224618d8" height = 400 style="float:left; height = 50">
+</details>
 
 <br>
 
