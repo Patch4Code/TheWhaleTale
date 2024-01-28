@@ -54,7 +54,7 @@ have to embark on an adventure through the whale's body and unravel all kinds of
 - Bell MT Font by Richard Austin
 - Baskerville Old Face Font by Isaac Moore
 - Comic Sans Font by Vincent Connare
-- Hand-drawn divider collection designed by Freepik (www.freepik.com)
+- Hand-drawn divider collection designed by Freepik (freepik.com)
 
 ##### Verwendete Tools
 - Developed with Godot Engine (godotengine.org/license)
