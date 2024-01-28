@@ -1,5 +1,7 @@
 # The Whale Tale
 
+![ItchICoverWhaleTale](https://github.com/Patch4Code/TheWhaleTale/assets/116561421/6267d28e-5994-4895-aa61-e9fdca0b1b1f)
+
 - This is a game prototype for a 2d platformer adventure game made with Godot 4
 - The game was developed as part of the game design course in my studies together with [@joaoo97](https://github.com/joaoo97) and [@MichiJudge](https://github.com/MichiJudge)
 - The game language is German and it is playable on Windows or Mac and also as a browser game
@@ -56,7 +58,7 @@ have to embark on an adventure through the whale's body and unravel all kinds of
 - Comic Sans Font by Vincent Connare
 - Hand-drawn divider collection designed by Freepik (freepik.com)
 
-##### Verwendete Tools
+##### Used Tools
 - Developed with Godot Engine (godotengine.org/license)
 - Bing Image Creator based on DALL·E 3 (bing.com/images/create)
 - Leonardo Ai - Image Creator (leonardo.ai)
