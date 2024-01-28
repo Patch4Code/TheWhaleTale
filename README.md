@@ -29,8 +29,8 @@ have to embark on an adventure through the whale's body and unravel all kinds of
   
 <details>
 <summary> Enemys Screenshots </summary>
-<img src="https://github.com/Patch4Code/TheWhaleTale/assets/116561421/22eaac45-d019-4f4b-b91d-7504555c5945" height = 350 style="float:left; margin-right:10px;">
-<img src="https://github.com/Patch4Code/TheWhaleTale/assets/116561421/47d7663e-84b5-4416-b470-db12224618d8" height = 350 style="float:left; height = 50">
+<img src="https://github.com/Patch4Code/TheWhaleTale/assets/116561421/22eaac45-d019-4f4b-b91d-7504555c5945" height = 330 style="float:left; margin-right:10px;">
+<img src="https://github.com/Patch4Code/TheWhaleTale/assets/116561421/47d7663e-84b5-4416-b470-db12224618d8" height = 330 style="float:left; height = 50">
 </details>
 
 <br>
